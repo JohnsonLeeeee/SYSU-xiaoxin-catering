@@ -12,7 +12,7 @@ from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 class User(UserMixin, Base):
     __tablename__ = 'user'
 
-    uid = Column( BigInteger, primary_key=True)
+    id = Column( BigInteger, primary_key=True)
     username =  Column( String(100), nullable=False, server_default= FetchedValue())
     address = relationship('Address')
     aid = Column(Integer, ForeignKey('address.id'), nullable=False, server_default=FetchedValue())

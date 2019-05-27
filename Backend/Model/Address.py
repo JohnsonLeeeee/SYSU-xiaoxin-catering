@@ -1,7 +1,7 @@
 from sqlalchemy import Integer, Column, String, FetchedValue, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from .base import Base, db
-
+from .user import User
 
 
 class Address(Base):
@@ -9,7 +9,7 @@ class Address(Base):
 
     id = Column(Integer, primary_key=True)
     uid =  Column( Integer, ForeignKey('user.id'), nullable=False, server_default= FetchedValue())
-    user = relationship('User')
+    user = relationship('user')
     province_id =  Column( Integer, nullable=False, server_default= FetchedValue())
     province_str =  Column( String(50), nullable=False, server_default= FetchedValue())
     city_id =  Column( Integer, nullable=False, server_default= FetchedValue())

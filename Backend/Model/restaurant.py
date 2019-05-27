@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, FetchedValue, String, DateTime, Numeric, ForeignKey
 from sqlalchemy.orm import relationship
-
+from .Address import Address
 from .base import Base
 
 class restaurant(Base):

@@ -9,6 +9,6 @@ class Coupon(Base):
 
     id =  Column( Integer, primary_key=True)
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
-    user = relationship('User')
+    user = relationship('user')
     discount =  Column( Integer, nullable=False, server_default= FetchedValue())
     expiration_date = Column( DateTime, nullable=False, server_default= FetchedValue())
