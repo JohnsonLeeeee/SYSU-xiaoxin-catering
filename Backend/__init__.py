@@ -8,19 +8,24 @@ from .libs.email import mail
 login_manager = LoginManager()
 cache = Cache(config={'CACHE_TYPE': 'simple'})
 
+def register_plugin(app):
+    from .Model.base import db
+    db.init_app(app)
+    with app.app_context():
+        db.create_all()
 
 def register_web_blueprint(app):
     from .Web import web
     app.register_blueprint(web)
 
 def create_app(config=None):
-    app = Flask(__name__)
+    app = Flask(__name__, template_folder="template",static_folder="static")
 
     #: load default configuration
-    app.config.from_object('Config.settings')
-    app.config.from_object('Config.secure')
+    app.config.from_object('Backend.Config.settings')
+    app.config.from_object('Backend.Config.secure')
 
-    db.init_app(app)
+    register_plugin(app)
 
     # 注册email模块
     mail.init_app(app)
@@ -35,7 +40,7 @@ def create_app(config=None):
     # csrf = CsrfProtect()
     # csrf.init_app(app)
 
-    register_web_blueprint(app)
+    # register_web_blueprint(app)
 
     if config is not None:
         if isinstance(config, dict):
