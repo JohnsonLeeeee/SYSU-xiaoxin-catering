@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, ForeignKey, FetchedValue
 from sqlalchemy.orm import relationship
 
-from Model.user import  User
+from .user import  User
 
 class Adminstrator(User):
     __tablename__ = 'Adminstrator'

@@ -2,7 +2,8 @@ from flask import current_app
 from sqlalchemy import Column, Integer, FetchedValue, String, DateTime, Numeric, ForeignKey, Text, BigInteger
 from sqlalchemy.orm import relationship
 
-from Model.base import Base, db
+
+from .base import Base
 
 class Order(Base):
     __tablename__ = 'Order'
@@ -12,7 +13,7 @@ class Order(Base):
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
     user = relationship('User')
     cid = Column(Integer, ForeignKey('coupon.id'), nullable=False, server_default=FetchedValue())
-    coupon = relationship('User')
+    coupon = relationship('Coupon')
     total_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     fair_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     pay_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
@@ -24,6 +25,8 @@ class Order(Base):
     aid = Column(Integer, ForeignKey('address.id'), nullable=False, server_default=FetchedValue())
     address = relationship('Address')
     pay_time =  Column( DateTime, nullable=False, server_default= FetchedValue())
+    rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())
+    restaurant = relationship('restaurant')
 
     @property
     def pay_status(self):
@@ -39,4 +42,5 @@ class Order(Base):
     @property
     def status_desc(self):
         return current_app.config['PAY_STATUS_DISPLAY_MAPPING'][str(self.pay_status)]
+
 

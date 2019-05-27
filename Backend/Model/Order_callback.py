@@ -2,7 +2,7 @@ from flask import current_app
 from sqlalchemy import Column, Integer, FetchedValue, String, DateTime, Numeric, ForeignKey, Text, BigInteger
 from sqlalchemy.orm import relationship
 
-from Model.base import Base, db
+from .base import Base, db
 
 class Order_callback(Base):
     __tablename__ = 'Order_callback'

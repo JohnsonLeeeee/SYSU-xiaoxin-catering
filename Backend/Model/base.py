@@ -1,6 +1,5 @@
 import datetime
 
-from click import DateTime
 from sqlalchemy import Column, SmallInteger, Integer, FetchedValue
 from contextlib import contextmanager
 from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy

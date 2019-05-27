@@ -1,5 +1,6 @@
 from flask import current_app
 from flask_login import UserMixin
+from sqlalchemy.orm import relationship
 
 from .base import db, Base
 from sqlalchemy import Column, ForeignKey, func, BigInteger, FetchedValue
@@ -13,6 +14,8 @@ class User(UserMixin, Base):
 
     uid = Column( BigInteger, primary_key=True)
     username =  Column( String(100), nullable=False, server_default= FetchedValue())
+    address = relationship('Address')
+    aid = Column(Integer, ForeignKey('address.id'), nullable=False, server_default=FetchedValue())
     phone_number =  Column( String(20),unique=True, nullable=False, server_default= FetchedValue())
     email =  Column( String(100), unique=True, nullable=False, server_default= FetchedValue())
     sex =  Column( Integer, nullable=False, server_default= FetchedValue())
