@@ -58,3 +58,4 @@ class FormError(APIException):
         if current_app.config['SHOW_DETAIL_ERROR']:
             self.error = str(self.form.errors)
         return super().get_body(environ)
+

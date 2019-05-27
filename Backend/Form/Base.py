@@ -1,9 +1,7 @@
 from flask import request
 from wtforms import Form
 from wtforms.validators import DataRequired as WTFDataRrequired
-
-from ..libs.exception import FormError
-
+from ..libs.exception_api import ParameterException
 
 class DataRequired(WTFDataRrequired):
     """
@@ -21,15 +19,13 @@ class DataRequired(WTFDataRrequired):
 
 class BaseForm(Form):
     def __init__(self):
-        body_data = request.form.to_dict()
-        query_data = request.args.to_dict()
-        super(BaseForm, self).__init__(**body_data, **query_data)
+        data = request.get_json(silent=True)
+        args = request.args.to_dict()
+        super(BaseForm, self).__init__(data=data, **args)
 
-    def validate(self):
-        passed = super(BaseForm, self).validate()
-        if passed:
-            return True
-        else:
-            if request.accept_mimetypes.accept_json and \
-                    not request.accept_mimetypes.accept_html:
-                raise FormError(self)
+    def validate_for_api(self):
+        valid = super(BaseForm, self).validate()
+        if not valid:
+            # form errors
+            raise ParameterException(msg=self.errors)
+        return self
