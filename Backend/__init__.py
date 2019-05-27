@@ -2,6 +2,8 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_cache import Cache
+from flask_wtf import CsrfProtect
+
 from .Model.base import db
 from .libs.email import mail
 
@@ -36,9 +38,9 @@ def create_app(config=None):
 
     cache.init_app(app)
 
-    # 注册CSRF保护
-    # csrf = CsrfProtect()
-    # csrf.init_app(app)
+    #注册CSRF保护
+    csrf = CsrfProtect()
+    csrf.init_app(app)
 
     # register_web_blueprint(app)
 

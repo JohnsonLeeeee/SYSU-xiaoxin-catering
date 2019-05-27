@@ -2,21 +2,30 @@ import datetime
 
 from sqlalchemy import Column, SmallInteger, Integer, FetchedValue
 from contextlib import contextmanager
-from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy, BaseQuery
+from flask import current_app
 __all__ = ['db','Base']
 
 class SQLAlchemy(_SQLAlchemy):
     @contextmanager
-    def auto_commit(self):
+    def auto_commit(self, throw = True):
         try:
             yield
             self.session.commit()
         except Exception as e:
             self.session.rollback()
-            raise e
+            current_app.logger.exception('%r' % e)
+            if throw:
+                raise e
+
+class Query(BaseQuery):
+    def filter_by(self, **kwargs):
+        if 'status' not in kwargs.keys():
+            kwargs['status'] = 1
+        return super(Query, self).filter_by(**kwargs)
 
 
-db = SQLAlchemy()
+db = SQLAlchemy(query_class=Query)
 
 class Base(db.Model):
     __abstract__ = True

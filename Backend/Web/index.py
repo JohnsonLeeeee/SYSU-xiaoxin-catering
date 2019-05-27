@@ -2,7 +2,7 @@
 
 from flask import Blueprint
 from ..libs.web_help import ops_render
-from ..Service.restaurant import RestaurantService
+from ..Service.RestaurantService import RestaurantService
 
 route_index = Blueprint( '',__name__ )
 

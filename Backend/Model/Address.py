@@ -17,4 +17,9 @@ class Address(Base):
     area_id =  Column( Integer, nullable=False, server_default= FetchedValue())
     area_str =  Column( String(50), nullable=False, server_default= FetchedValue())
     address =  Column( String(100), nullable=False, server_default= FetchedValue())
-    is_default =  Column( Integer, nullable=False, server_default= FetchedValue())
+
+    @property
+    def content(self):
+        return ' '.join([self.province_str,self.city_str,self.area_str,self.address])
+
+

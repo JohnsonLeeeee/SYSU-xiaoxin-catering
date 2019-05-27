@@ -1,6 +1,6 @@
 from flask import Flask
 from .libs.web_help import ops_render
-from .Service.restaurant import RestaurantService
+from .Service.RestaurantService import RestaurantService
 from .libs.UrlManager import UrlManager
 from Backend import create_app
 

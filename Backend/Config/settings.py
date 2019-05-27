@@ -12,3 +12,5 @@ PAY_STATUS_DISPLAY_MAPPING = {
     "-6":"待确认",
     "-5":"待评价"
 }
+
+SHOW_DETAIL_ERROR = True
