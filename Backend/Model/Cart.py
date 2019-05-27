@@ -1,7 +1,6 @@
 from sqlalchemy import Integer, Column, String, FetchedValue, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from Model.base import Base, db
-from Model.user import User
+from .base import Base, db
 
 
 class Cart(Base):

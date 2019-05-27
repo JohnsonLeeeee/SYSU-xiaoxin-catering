@@ -2,15 +2,15 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_cache import Cache
-from Model.base import db
-from libs.email import mail
+from .Model.base import db
+from .libs.email import mail
 
 login_manager = LoginManager()
 cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 
 def register_web_blueprint(app):
-    from Web import web
+    from .Web import web
     app.register_blueprint(web)
 
 def create_app(config=None):
