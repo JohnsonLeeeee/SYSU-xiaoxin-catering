@@ -3,6 +3,7 @@ from sqlalchemy import Column, Integer, FetchedValue, String, DateTime, Numeric,
 from sqlalchemy.orm import relationship
 from .restaurant import restaurant
 from .Coupon import Coupon
+from .Cart import Cart
 
 from .base import Base
 
