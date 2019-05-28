@@ -2,14 +2,13 @@
 from flask import Blueprint,request,jsonify,redirect
 from ..libs.web_help import ops_render,getCurrentDate,iPagination,getDictFilterField
 from ..Model.base import db
-from common.models.food.Food import Food
-from common.models.food.FoodCat import FoodCat
-from common.models.food.FoodStockChangeLog import FoodStockChangeLog
+from ..Model.Dish import Dish as Food
+from ..libs.enums import DishCategory as Foodcat
 from ..libs.UrlManager import UrlManager
-from common.libs.food.FoodService import FoodService
+from ..Service.Food import FoodService
 from decimal import Decimal
 from sqlalchemy import  or_
-route_food = Blueprint( 'food_page',__name__ )
+route_food = Blueprint( 'food',__name__ )
 
 @route_food.route( "/index" )
 def index():
