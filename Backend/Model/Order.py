@@ -11,7 +11,6 @@ class Order(Base):
     __tablename__ = 'Order'
 
     id =  Column( Integer, primary_key=True)
-    order_sn =  Column( String(40), nullable=False, unique=True, server_default= FetchedValue())
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
     user = relationship('user')
     cid = Column(Integer, ForeignKey('Coupon.id'), nullable=False, server_default=FetchedValue())
@@ -19,11 +18,9 @@ class Order(Base):
     total_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     fair_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     pay_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
-    pay_sn =  Column( String(128), nullable=False, server_default= FetchedValue())
-    prepay_id =  Column( String(128), nullable=False, server_default= FetchedValue())
+    # pay_sn =  Column( String(128), nullable=False, server_default= FetchedValue())
+    # prepay_id =  Column( String(128), nullable=False, server_default= FetchedValue())
     note =  Column( Text, nullable=False)
-    express_status =  Column( Integer, nullable=False, server_default= FetchedValue())
-    comment_status = Column(Integer, nullable=False, server_default=FetchedValue())
     aid = Column(Integer, ForeignKey('address.id'), nullable=False, server_default=FetchedValue())
     address = relationship('address')
     pay_time =  Column( DateTime, nullable=False, server_default= FetchedValue())
