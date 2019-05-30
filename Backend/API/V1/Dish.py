@@ -11,4 +11,5 @@ api = MyBluePrint('dish')
 @auth.login_required
 def get_restaurant_dish(rid):
     dish = Dish.query.filter_by(rid=rid).all()
+    #显示具体，名称而非id
     return jsonify(dish)

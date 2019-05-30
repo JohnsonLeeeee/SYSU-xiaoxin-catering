@@ -16,6 +16,7 @@ api = MyBluePrint('order')
 def get_user_order():
     uid = g.user.uid
     order = Order.query.filter_by(uid=uid).all()
+    #要显示具体菜单
     return jsonify(order)
 
 

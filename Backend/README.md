@@ -7,6 +7,14 @@
 
 # 当下工作(TODO)：
 ### 修改数据库设计，并画出ER图。
+（菜单）Item:[
+ {
+ "itemId":(int),
+ "Name":(string),
+ "Type":(string),
+ "Price":(float),
+ "Img_url":(string)
+ },
 ### 完成form目录中，cart与auth表单
 ### 完成web目录中，管理员的各个界面和对应的路由函数
 + index页面 （yyh）
