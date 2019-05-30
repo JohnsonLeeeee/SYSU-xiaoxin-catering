@@ -1,8 +1,9 @@
 from sqlalchemy import Column, Integer, FetchedValue, String, DateTime, Numeric, ForeignKey, SmallInteger
 from sqlalchemy.orm import relationship
 
-from .base import Base, db
+from .base import Base
 
+from .FoodCategory import FoodCat
 class Dish(Base):
     __tablename__ = 'Dish'
 
@@ -14,6 +15,7 @@ class Dish(Base):
     main_image =  Column( String(100), nullable=False, server_default= FetchedValue())
     summary =  Column( String(2000), nullable=False, server_default= FetchedValue())
     stock =  Column( Integer, nullable=False, server_default= FetchedValue())
-    category = Column( SmallInteger, nullable=False, server_default= FetchedValue())
+    FoodCat = relationship('FoodCat')
+    cid = Column(Integer, ForeignKey('FoodCat.id'), nullable=False, server_default=FetchedValue())
     tags =  Column( String(200), nullable=False, server_default= FetchedValue())
    

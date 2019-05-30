@@ -3,7 +3,8 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_cache import Cache
 from flask_wtf import CsrfProtect
-
+from .Web.index import route_index
+from .Web.food import route_food
 from .Model.base import db
 from .libs.email import mail
 
@@ -18,7 +19,8 @@ def register_plugin(app):
 
 def register_web_blueprint(app):
     from .Web import web
-    app.register_blueprint(web)
+    app.register_blueprint(route_index)
+    app.register_blueprint(route_food)
 
 def create_app(config=None):
     app = Flask(__name__, template_folder="template",static_folder="static")
@@ -42,7 +44,7 @@ def create_app(config=None):
     csrf = CsrfProtect()
     csrf.init_app(app)
 
-    # register_web_blueprint(app)
+    register_web_blueprint(app)
 
     if config is not None:
         if isinstance(config, dict):

@@ -5,7 +5,7 @@ from .user import User
 
 
 class Address(Base):
-    __tablename__ = 'address'
+    __tablename__ = 'Address'
 
     id = Column(Integer, primary_key=True)
     uid =  Column( Integer, ForeignKey('user.id'), nullable=False, server_default= FetchedValue())

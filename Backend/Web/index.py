@@ -4,7 +4,7 @@ from flask import Blueprint
 from ..libs.web_help import ops_render
 from ..Service.Restaurant import RestaurantService
 
-route_index = Blueprint( '',__name__ )
+route_index = Blueprint( 'index',__name__,url_prefix='/index' )
 
 @route_index.route("/")
 def index():

@@ -2,13 +2,14 @@
 from flask import Blueprint,request,jsonify,redirect
 from ..libs.web_help import ops_render,getCurrentDate,iPagination,getDictFilterField
 from ..Model.base import db
+from ..Config import settings
 from ..Model.Dish import Dish as Food
-from ..libs.enums import DishCategory as Foodcat
+from ..Model.FoodCategory import FoodCat
 from ..libs.UrlManager import UrlManager
 from ..Service.Food import FoodService
 from decimal import Decimal
 from sqlalchemy import  or_
-route_food = Blueprint( 'food',__name__ )
+route_food = Blueprint( 'food',__name__,url_prefix='/food' )
 
 @route_food.route( "/index" )
 def index():
@@ -23,51 +24,51 @@ def index():
     if 'status' in req and int( req['status'] ) > -1 :
         query = query.filter( Food.status == int( req['status'] ) )
 
-    if 'cat_id' in req and int( req['cat_id'] ) > 0 :
-        query = query.filter( Food.cat_id == int( req['cat_id'] ) )
+    if 'cid' in req and int( req['cid'] ) > 0 :
+        query = query.filter( Food.cid == int( req['cid'] ) )
 
     page_params = {
         'total':query.count(),
-        'page_size': app.config['PAGE_SIZE'],
+        'page_size': settings.PAGE_SIZE,
         'page':page,
-        'display':app.config['PAGE_DISPLAY'],
+        'display':settings.PAGE_DISPLAY,
         'url': request.full_path.replace("&p={}".format(page),"")
     }
 
     pages = iPagination( page_params )
-    offset = ( page - 1 ) * app.config['PAGE_SIZE']
-    list = query.order_by( Food.id.desc() ).offset( offset ).limit( app.config['PAGE_SIZE'] ).all()
+    offset = ( page - 1 ) * settings.PAGE_SIZE
+    list = query.order_by( Food.id.desc() ).offset( offset ).limit( settings.PAGE_SIZE ).all()
 
     cat_mapping = getDictFilterField( FoodCat,FoodCat.id,"id",[] )
     resp_data['list'] = list
     resp_data['pages'] = pages
     resp_data['search_con'] = req
-    resp_data['status_mapping'] = app.config['STATUS_MAPPING']
+    resp_data['status_mapping'] = settings.STATUS_MAPPING
     resp_data['cat_mapping'] = cat_mapping
     resp_data['current'] = 'index'
     return ops_render( "food/index.html",resp_data )
 
-@route_food.route( "/info" )
-def info():
-    resp_data = {}
-    req = request.args
-    id = int(req.get("id", 0))
-    reback_url = UrlManager.buildUrl("/food/index")
-
-    if id < 1:
-        return redirect( reback_url )
-
-    info = Food.query.filter_by( id =id ).first()
-    if not info:
-        return redirect( reback_url )
-
-    stock_change_list = FoodStockChangeLog.query.filter( FoodStockChangeLog.food_id == id )\
-        .order_by( FoodStockChangeLog.id.desc() ).all()
-
-    resp_data['info'] = info
-    resp_data['stock_change_list'] = stock_change_list
-    resp_data['current'] = 'index'
-    return ops_render( "food/info.html",resp_data )
+# @route_food.route( "/info" )
+# def info():
+#     resp_data = {}
+#     req = request.args
+#     id = int(req.get("id", 0))
+#     reback_url = UrlManager.buildUrl("/food/index")
+#
+#     if id < 1:
+#         return redirect( reback_url )
+#
+#     info = Food.query.filter_by( id =id ).first()
+#     if not info:
+#         return redirect( reback_url )
+#
+#     stock_change_list = FoodStockChangeLog.query.filter( FoodStockChangeLog.food_id == id )\
+#         .order_by( FoodStockChangeLog.id.desc() ).all()
+#
+#     resp_data['info'] = info
+#     resp_data['stock_change_list'] = stock_change_list
+#     resp_data['current'] = 'index'
+#     return ops_render( "food/info.html",resp_data )
 
 
 @route_food.route( "/set" ,methods = [ 'GET','POST'] )
@@ -89,7 +90,7 @@ def set():
     resp = {'code': 200, 'msg': '操作成功~~', 'data': {}}
     req = request.values
     id = int(req['id']) if 'id' in req and req['id'] else 0
-    cat_id = int(req['cat_id']) if 'cat_id' in req else 0
+    cid = int(req['cid']) if 'cid' in req else 0
     name = req['name'] if 'name' in req else ''
     price = req['price'] if 'price' in req else ''
     main_image = req['main_image'] if 'main_image' in req else ''
@@ -97,7 +98,7 @@ def set():
     stock = int(req['stock']) if 'stock' in req else ''
     tags = req['tags'] if 'tags' in req else ''
 
-    if cat_id < 1:
+    if cid < 1:
         resp['code'] = -1
         resp['msg'] = "请选择分类~~"
         return jsonify(resp)
@@ -150,7 +151,7 @@ def set():
         model_food.status = 1
         model_food.created_time = getCurrentDate()
 
-    model_food.cat_id = cat_id
+    model_food.cid = cid
     model_food.name = name
     model_food.price = price
     model_food.main_image = main_image
@@ -178,7 +179,7 @@ def cat():
     list = query.order_by( FoodCat.weight.desc(),FoodCat.id.desc() ).all()
     resp_data['list'] = list
     resp_data['search_con'] = req
-    resp_data['status_mapping'] = app.config['STATUS_MAPPING']
+    resp_data['status_mapping'] = settings.STATUS_MAPPING
     resp_data['current'] = 'cat'
     return ops_render( "food/cat.html",resp_data )
 

@@ -1,10 +1,10 @@
 # coding: utf-8
-from .base import db
+from .base import Base
 from sqlalchemy import Column, Integer, FetchedValue, ForeignKey
 from sqlalchemy.orm import relationship
 
 
-class ShareHistory(db.Model):
+class ShareHistory(Base):
     __tablename__ = 'share_history'
 
     id = db.Column(db.Integer, primary_key=True)
