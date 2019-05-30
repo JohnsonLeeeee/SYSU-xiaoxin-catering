@@ -8,15 +8,16 @@ from sqlalchemy import String, Unicode, DateTime, Boolean
 from sqlalchemy import SmallInteger, Integer, Float
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from .Address import Address
 
 class User(UserMixin, Base):
     __tablename__ = 'user'
     id = Column( BigInteger, primary_key=True)
     username =  Column( String(100), nullable=False, server_default= FetchedValue())
     address = relationship('Address')
-    aid = Column(Integer, ForeignKey('address.id'), nullable=False, server_default=FetchedValue()) #默认地址
-    phone_number =  Column( String(20),unique=True, nullable=False, server_default= FetchedValue())
-    email =  Column( String(100), unique=True, nullable=False, server_default= FetchedValue())
+    aid = Column(Integer, ForeignKey('address.id'),  server_default=FetchedValue()) #默认地址
+    phone_number =  Column( String(20),unique=True, server_default= FetchedValue())
+    email =  Column( String(100), unique=True, server_default= FetchedValue())
     sex =  Column( Integer, nullable=False, server_default= FetchedValue())
     avatar =  Column( String(64), nullable=False, server_default= FetchedValue())
     _pwd =  Column( 'password', String(100))
@@ -53,6 +54,24 @@ class User(UserMixin, Base):
     def generate_token(self, expiration=600):
         s = Serializer(current_app.config['SECRET_KEY'], expiration)
         return s.dumps({'id': self.id}).decode('utf-8')
+
+    @staticmethod
+    def register_by_email(nickname, account, secret):
+        with db.auto_commit():
+            user = User()
+            user.username = nickname
+            user.email = account
+            user.password = secret
+            db.session.add(user)
+
+    @staticmethod
+    def register_by_phone(nickname, account, secret):
+        with db.auto_commit():
+            user = User()
+            user.username = nickname
+            user.phone_number = account
+            user.password = secret
+            db.session.add(user)
 
 
 

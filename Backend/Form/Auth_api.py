@@ -38,3 +38,6 @@ class UserEmailForm(ClientForm):
     def validate_account(self, value):
         if User.query.filter_by(email=value.data).first():
             raise ValidationError()
+
+class TokenForm(Form):
+    token = StringField(validators=[DataRequired()])

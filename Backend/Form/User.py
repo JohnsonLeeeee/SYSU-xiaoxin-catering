@@ -9,4 +9,7 @@ class UserForm(Form):
     email = StringField('邮箱',validators=[DataRequired(),
                                             Regexp('^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$', 0, '请输入正确的邮箱地址')])
 
+class ClientForm(UserForm):
+    type = IntegerField('注册信息',validators=[DataRequired(),range(0,2)]) #使用邮箱或者手机
+
 

@@ -16,8 +16,6 @@ class Order(Base):
     user = relationship('user')
     cid = Column(Integer, ForeignKey('Coupon.id'), nullable=False, server_default=FetchedValue())
     Coupon = relationship('Coupon')
-    cartid = Column(Integer, ForeignKey('Cart.id'), nullable=False, server_default=FetchedValue())
-    Cart = relationship('Cart')
     total_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     fair_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     pay_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
