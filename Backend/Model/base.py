@@ -54,3 +54,5 @@ class Base(db.Model):
         self.update_time = datetime.now()
         db.session.add(self)
         db.session.commit()
+
+
