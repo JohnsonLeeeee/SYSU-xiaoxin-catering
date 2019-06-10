@@ -6,7 +6,7 @@ from Backend.libs.MyBluePrint import MyBluePrint
 from Backend.libs.auth import auth
 from Backend.Model.base import db
 from Backend.Model.user import User
-from Backend.Form.User import UserForm,ClientForm
+from Backend.Form.User import UserForm
 
 api = MyBluePrint('user')
 

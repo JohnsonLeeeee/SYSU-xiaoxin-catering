@@ -10,5 +10,5 @@ class Comment(Base):
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
     user = relationship('user')
     rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())
-    restaurant = relationship('restaurant')
+    restaurant = relationship('Restaurant')
     content = Column(String(200), nullable=False, server_default=FetchedValue())

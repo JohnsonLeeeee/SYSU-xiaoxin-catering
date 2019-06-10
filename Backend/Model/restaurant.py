@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from .Address import Address
 from .base import Base
 
-class restaurant(Base):
+class Restaurant(Base):
     __tablename__ = 'restaurant'
 
     id = Column(Integer, primary_key=True)

@@ -11,6 +11,6 @@ class ShareHistory(Base):
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
     user = relationship('User')
     rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())
-    restaurant = relationship('restaurant')
+    restaurant = relationship('Restaurant')
     share_url = Column(String(200), nullable=False, server_default=FetchedValue())
     created_time = Column(DateTime, nullable=False, server_default=FetchedValue())

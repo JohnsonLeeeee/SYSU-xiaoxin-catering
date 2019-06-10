@@ -7,6 +7,7 @@ from .Web.index import route_index
 from .Web.food import route_food
 from .Model.base import db
 from .libs.email import mail
+from .libs.UrlManager import UrlManager
 
 login_manager = LoginManager()
 cache = Cache(config={'CACHE_TYPE': 'simple'})
@@ -45,6 +46,9 @@ def create_app(config=None):
     csrf.init_app(app)
 
     register_web_blueprint(app)
+
+    app.add_template_global(UrlManager.buildStaticUrl, 'buildStaticUrl')
+    app.add_template_global(UrlManager.buildUrl, 'buildUrl')
 
     if config is not None:
         if isinstance(config, dict):

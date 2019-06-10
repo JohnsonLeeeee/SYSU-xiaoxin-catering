@@ -1,7 +1,7 @@
 from sqlalchemy import Integer, Column, SmallInteger, FetchedValue, ForeignKey
 from sqlalchemy.orm import relationship
 from .base import Base
-from .Order import Order
+
 
 class Cart(Base):
     __tablename__ = 'Cart'

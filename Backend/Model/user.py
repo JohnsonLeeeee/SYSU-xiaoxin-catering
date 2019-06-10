@@ -14,8 +14,8 @@ class User(UserMixin, Base):
     __tablename__ = 'user'
     id = Column( BigInteger, primary_key=True)
     username =  Column( String(100), nullable=False, server_default= FetchedValue())
-    address = relationship('Address')
-    aid = Column(Integer, ForeignKey('address.id'),  server_default=FetchedValue()) #默认地址
+    # address = relationship('Address')
+    # aid = Column(Integer, ForeignKey('address.id'),  server_default=FetchedValue()) #默认地址
     phone_number =  Column( String(20),unique=True, server_default= FetchedValue())
     email =  Column( String(100), unique=True, server_default= FetchedValue())
     sex =  Column( Integer, nullable=False, server_default= FetchedValue())

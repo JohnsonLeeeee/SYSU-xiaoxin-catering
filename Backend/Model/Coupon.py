@@ -5,10 +5,10 @@ from sqlalchemy.orm import relationship
 from .base import Base, db
 
 class Coupon(Base):
-    __tablename__ = 'Coupon'
+    __tablename__ = 'coupon'
 
     id =  Column( Integer, primary_key=True)
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
-    user = relationship('user')
+    user = relationship('User')
     discount =  Column( Integer, nullable=False, server_default= FetchedValue())
     expiration_date = Column( DateTime, nullable=False, server_default= FetchedValue())
