@@ -7,7 +7,7 @@ from ..Model.Dish import Dish as Food
 from ..Model.FoodCategory import FoodCat
 from ..libs.UrlManager import UrlManager
 from ..Service.Food import FoodService
-from ..Model import FoodStockChangeLog
+from ..Model.FoodStockChangeLog import FoodStockChangeLog
 from decimal import Decimal
 from sqlalchemy import  or_
 route_food = Blueprint( 'food',__name__,url_prefix='/food' )
