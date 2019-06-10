@@ -5,6 +5,7 @@ from flask_cache import Cache
 from flask_wtf import CsrfProtect
 from .Web.index import route_index
 from .Web.food import route_food
+from .Web.upload import route_upload
 from .Model.base import db
 from .libs.email import mail
 from .libs.UrlManager import UrlManager
@@ -22,6 +23,7 @@ def register_web_blueprint(app):
     from .Web import web
     app.register_blueprint(route_index)
     app.register_blueprint(route_food)
+    app.register_blueprint(route_upload, url_prefix="/upload")
 
 def create_app(config=None):
     app = Flask(__name__, template_folder="template",static_folder="static")
@@ -42,8 +44,8 @@ def create_app(config=None):
     cache.init_app(app)
 
     #注册CSRF保护
-    csrf = CsrfProtect()
-    csrf.init_app(app)
+    # csrf = CsrfProtect()
+    # csrf.init_app(app)
 
     register_web_blueprint(app)
 

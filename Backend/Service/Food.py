@@ -3,6 +3,7 @@ from ..Model.base import db
 from ..Model.FoodStockChangeLog import FoodStockChangeLog
 from ..Model.Dish import Dish as  Food
 from ..libs.web_help import getCurrentDate
+
 class FoodService():
 
     @staticmethod

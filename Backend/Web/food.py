@@ -140,8 +140,6 @@ def set():
         resp['msg'] = "请输入标签，便于搜索~~"
         return jsonify(resp)
 
-
-
     food_info = Food.query.filter_by(id=id).first()
     before_stock = 0
     if food_info:
@@ -199,7 +197,8 @@ def catSet():
 
     resp = {'code': 200, 'msg': '操作成功~~', 'data': {}}
     req = request.values
-
+    # print(request)
+    # print(req)
     id = req['id'] if 'id' in req else 0
     name = req['name'] if 'name' in req else ''
     weight = int( req['weight'] ) if ( 'weight' in req  and  int( req['weight']) > 0 ) else 1

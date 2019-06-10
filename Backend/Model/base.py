@@ -1,5 +1,4 @@
-import datetime
-
+from datetime import datetime
 from sqlalchemy import Column, SmallInteger, Integer, FetchedValue
 from contextlib import contextmanager
 from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy, BaseQuery

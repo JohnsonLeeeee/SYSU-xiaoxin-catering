@@ -21,7 +21,6 @@ var food_cat_set_ops = {
                 common_ops.tip( "请输入符合规范的分类名称~~",name_target );
                 return false;
             }
-
             if( parseInt( weight ) < 1 ){
                 common_ops.tip( "请输入符合规范的权重，并且至少要大于1~~",weight_target );
                 return false;
@@ -43,6 +42,7 @@ var food_cat_set_ops = {
                 success:function( res ){
                     btn_target.removeClass("disabled");
                     var callback = null;
+                    console.log(res);
                     if( res.code == 200 ){
                         callback = function(){
                             window.location.href = common_ops.buildUrl("/food/cat");
@@ -51,8 +51,6 @@ var food_cat_set_ops = {
                     common_ops.alert( res.msg,callback );
                 }
             });
-
-
         });
     }
 };

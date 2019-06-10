@@ -7,7 +7,7 @@ class Dish(Base):
     __tablename__ = 'dish'
 
     id =  Column( Integer, primary_key=True)
-    rid = Column( Integer, ForeignKey('restaurant.id'), nullable=False, server_default= FetchedValue())
+    rid = Column( Integer, ForeignKey('restaurant.id'), nullable=True, server_default= FetchedValue())
     restaurant = relationship('Restaurant')
     name =  Column( String(100), nullable=False, server_default= FetchedValue())
     price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
