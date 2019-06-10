@@ -7,6 +7,7 @@ from ..Model.Dish import Dish as Food
 from ..Model.FoodCategory import FoodCat
 from ..libs.UrlManager import UrlManager
 from ..Service.Food import FoodService
+from ..Model import FoodStockChangeLog
 from decimal import Decimal
 from sqlalchemy import  or_
 route_food = Blueprint( 'food',__name__,url_prefix='/food' )
@@ -48,27 +49,27 @@ def index():
     resp_data['current'] = 'index'
     return ops_render( "food/index.html",resp_data )
 
-# @route_food.route( "/info" )
-# def info():
-#     resp_data = {}
-#     req = request.args
-#     id = int(req.get("id", 0))
-#     reback_url = UrlManager.buildUrl("/food/index")
-#
-#     if id < 1:
-#         return redirect( reback_url )
-#
-#     info = Food.query.filter_by( id =id ).first()
-#     if not info:
-#         return redirect( reback_url )
-#
-#     stock_change_list = FoodStockChangeLog.query.filter( FoodStockChangeLog.food_id == id )\
-#         .order_by( FoodStockChangeLog.id.desc() ).all()
-#
-#     resp_data['info'] = info
-#     resp_data['stock_change_list'] = stock_change_list
-#     resp_data['current'] = 'index'
-#     return ops_render( "food/info.html",resp_data )
+@route_food.route( "/info" )
+def info():
+    resp_data = {}
+    req = request.args
+    id = int(req.get("id", 0))
+    reback_url = UrlManager.buildUrl("/food/index")
+
+    if id < 1:
+        return redirect( reback_url )
+
+    info = Food.query.filter_by( id =id ).first()
+    if not info:
+        return redirect( reback_url )
+
+    stock_change_list = FoodStockChangeLog.query.filter( FoodStockChangeLog.food_id == id )\
+        .order_by( FoodStockChangeLog.id.desc() ).all()
+
+    resp_data['info'] = info
+    resp_data['stock_change_list'] = stock_change_list
+    resp_data['current'] = 'index'
+    return ops_render( "food/info.html",resp_data )
 
 
 @route_food.route( "/set" ,methods = [ 'GET','POST'] )
@@ -161,7 +162,7 @@ def set():
     model_food.updated_time = getCurrentDate()
 
     db.session.add(model_food)
-    ret = db.session.commit()
+    db.session.commit()
 
     FoodService.setStockChangeLog( model_food.id,int(stock) - int(before_stock),"后台修改" )
     return jsonify(resp)

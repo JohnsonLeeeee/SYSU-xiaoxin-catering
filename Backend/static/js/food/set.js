@@ -32,7 +32,7 @@ var food_set_ops = {
             $(".wrap_food_set .upload_pic_wrap").submit();
         });
 
-        $(".wrap_food_set select[name=cat_id]").select2({
+        $(".wrap_food_set select[name=cid]").select2({
             language: "zh-CN",
             width: '100%'
         });
@@ -53,8 +53,8 @@ var food_set_ops = {
                 return;
             }
 
-            var cat_id_target = $(".wrap_food_set select[name=cat_id]");
-            var cat_id = cat_id_target.val();
+            var cid_target = $(".wrap_food_set select[name=cid]");
+            var cid = cid_target.val();
 
             var name_target = $(".wrap_food_set input[name=name]");
             var name = name_target.val();
@@ -70,8 +70,8 @@ var food_set_ops = {
             var tags_target = $(".wrap_food_set input[name=tags]");
             var tags = $.trim(tags_target.val());
 
-            if (parseInt(cat_id) < 1) {
-                common_ops.tip("请选择分类~~", cat_id_target);
+            if (parseInt(cid) < 1) {
+                common_ops.tip("请选择分类~~", cid_target);
                 return;
             }
 
@@ -108,7 +108,7 @@ var food_set_ops = {
             btn_target.addClass("disabled");
 
             var data = {
-                cat_id: cat_id,
+                cid: cid,
                 name: name,
                 price: price,
                 main_image: $(".wrap_food_set .pic-each .del_image").attr("data"),
