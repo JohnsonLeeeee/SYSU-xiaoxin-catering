@@ -1,27 +1,27 @@
 ;
-var member_index_ops = {
+var comment_index_ops = {
     init:function(){
         this.eventBind();
     },
     eventBind:function(){
         var that = this;
-        $(".wrap_search .search").click(function(){
-            $(".wrap_search").submit();
+        $(".remove").click( function(){
+            that.ops( "remove",$(this).attr("data") )
         });
 
-        $(".remove").click( function(){
-            that.ops( "remove",$(this).attr("data") );
-        } );
-
         $(".recover").click( function(){
-            that.ops( "recover",$(this).attr("data") );
-        } );
+            that.ops( "recover",$(this).attr("data") )
+        });
+
+        $(".wrap_search .search").click( function(){
+            $(".wrap_search").submit();
+        });
     },
     ops:function( act,id ){
         var callback = {
             'ok':function(){
                 $.ajax({
-                    url:common_ops.buildUrl( "/member/ops" ),
+                    url:common_ops.buildUrl("/comment/ops"),
                     type:'POST',
                     data:{
                         act:act,
@@ -41,11 +41,10 @@ var member_index_ops = {
             },
             'cancel':null
         };
-        common_ops.confirm( ( act == "remove" ? "确定删除？":"确定恢复？" ), callback );
+        common_ops.confirm( ( act=="remove" )?"确定删除？":"确定恢复？",callback );
     }
-
 };
 
 $(document).ready( function(){
-    member_index_ops.init();
-} );
+    comment_index_ops.init();
+});

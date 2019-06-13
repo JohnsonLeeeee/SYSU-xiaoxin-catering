@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint,request,jsonify,redirect
-from ..libs.web_help import ops_render,getCurrentDate,iPagination,getDictFilterField
+from flask import Blueprint, request, jsonify, redirect
+from ..libs.web_help import ops_render, getCurrentDate, iPagination, getDictFilterField
 from ..Model.base import db
 from ..Config import settings
 from ..Model.Dish import Dish as Food
@@ -9,10 +9,11 @@ from ..libs.UrlManager import UrlManager
 from ..Service.Food import FoodService
 from ..Model.FoodStockChangeLog import FoodStockChangeLog
 from decimal import Decimal
-from sqlalchemy import  or_
-route_food = Blueprint( 'food',__name__,url_prefix='/food' )
+from sqlalchemy import or_
+route_food = Blueprint('food', __name__, url_prefix='/food')
 
-@route_food.route( "/index" )
+
+@route_food.route("/index")
 def index():
     resp_data = {}
     req = request.values
@@ -20,7 +21,7 @@ def index():
     query = Food.query
     if 'mix_kw' in req:
         rule = or_(Food.name.ilike("%{0}%".format(req['mix_kw'])), Food.tags.ilike("%{0}%".format(req['mix_kw'])))
-        query = query.filter( rule )
+        query = query.filter(rule)
 
     if 'status' in req and int( req['status'] ) > -1 :
         query = query.filter( Food.status == int( req['status'] ) )
