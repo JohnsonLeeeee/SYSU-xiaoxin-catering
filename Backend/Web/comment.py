@@ -25,9 +25,6 @@ def index():
     if 'status' in req and int(req['status']) > -1:
         query = query.filter(Comment.status == int(req['status']))
 
-    if 'rid' in req and int(req['rid']) > 0:
-        query = query.filter(Comment.rid == int(req['cid']))
-
     page_params = {
         'total': query.count(),
         'page_size': settings.PAGE_SIZE,

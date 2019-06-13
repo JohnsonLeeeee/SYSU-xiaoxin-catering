@@ -13,14 +13,6 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <select name="rid" class="form-control inline">
-                        <option value="0">请选择餐厅</option>
-                        {% for tmp_key in res_mapping %}
-                            <option value="{{ tmp_key }}" {% if tmp_key|string == search_con['rid']  %} selected {% endif %} >{{ res_mapping[tmp_key].name  }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="form-group">
                     <div class="input-group">
                         <input type="text" name="mix_kw" placeholder="请输入关键字" class="form-control" value="{{ search_con['mix_kw'] }}">
                         <input type="hidden" name="p" value="{{ search_con['p'] }}">
@@ -39,10 +31,8 @@
             <thead>
             <tr>
                 <th>评论id</th>
-                <th>餐厅</th>
                 <th>用户</th>
                 <th>内容</th>
-                <th>操作</th>
             </tr>
             </thead>
             <tbody>
@@ -50,31 +40,12 @@
                 {% for item in list %}
             <tr>
                 <td>{{ item.id }}</td>
-                <td>{{ res_mapping[item.rid].name  }}</td>
-                <td>{{ item.uid }}</td>
+                <td>{{ item.user.username }}</td>
                 <td>{{ item.content }}</td>
-                <td>
-                    <a href="{{ buildUrl('/food/info') }}?id={{ item.id  }}">
-                        <i class="fa fa-eye fa-lg"></i>
-                    </a>
-                     {%  if item.status == 1 %}
-                    <a class="m-l" href="{{ buildUrl('/food/set') }}?id={{ item.id  }}">
-                        <i class="fa fa-edit fa-lg"></i>
-                    </a>
-
-                    <a class="m-l remove" href="javascript:void(0);" data="{{ item.id  }}">
-                        <i class="fa fa-trash fa-lg"></i>
-                    </a>
-                    {% else %}
-                       <a class="m-l recover" href="javascript:void(0);" data="{{ item.id  }}">
-                        <i class="fa fa-rotate-left fa-lg"></i>
-                    </a>
-                    {% endif %}
-                </td>
             </tr>
              {% endfor %}
             {% else %}
-                <tr><td colspan="6">暂无数据~~</td></tr>
+                <tr><td colspan="3">暂无数据~~</td></tr>
             {% endif %}
             </tbody>
         </table>
@@ -84,5 +55,5 @@
 </div>
 {% endblock %}
 {% block js %}
-<script src="{{ buildStaticUrl('/js/food/index.js') }}"></script>
+<script src="{{ buildStaticUrl('/js/comment/index.js') }}"></script>
 {% endblock %}
