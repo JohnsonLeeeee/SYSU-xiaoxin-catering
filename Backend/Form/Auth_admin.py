@@ -32,7 +32,7 @@ class LoginForm(EmailForm):
 
 
 class RegisterForm(EmailForm):
-    nickname = StringField('昵称', validators=[
+    username = StringField('用戶名', validators=[
         DataRequired(), Length(2, 10, message='昵称至少需要两个字符，最多10个字符')])
 
     password = PasswordField('密码', validators=[
@@ -42,6 +42,6 @@ class RegisterForm(EmailForm):
         if User.query.filter_by(email=field.data).first():
             raise ValidationError('电子邮件已被注册')
 
-    def validate_nickname(self, field):
-        if User.query.filter_by(nickname=field.data).first():
-            raise ValidationError('昵称已存在')
+    def validate_username(self, field):
+        if User.query.filter_by(username=field.data).first():
+            raise ValidationError('用戶名已存在')

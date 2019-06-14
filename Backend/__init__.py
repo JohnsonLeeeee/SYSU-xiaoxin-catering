@@ -9,7 +9,9 @@ from .Web.comment import route_comment
 from .Web.finance import route_finance
 from .Web.upload import route_upload
 from .Web.Login import route_user
+from .Web.auth import web
 from .Model.base import db
+from .Model.user import User
 from .libs.email import mail
 from .libs.UrlManager import UrlManager
 
@@ -23,11 +25,11 @@ def register_plugin(app):
         db.create_all()
 
 def register_web_blueprint(app):
-    from .Web import web
     app.register_blueprint(route_index)
     app.register_blueprint(route_food)
     app.register_blueprint(route_comment)
     app.register_blueprint(route_finance)
+    app.register_blueprint(web,url_prefix = "/user2")
     app.register_blueprint(route_user,url_prefix = "/user" )
     app.register_blueprint(route_upload, url_prefix="/upload")
 
@@ -46,6 +48,10 @@ def create_app(config=None):
     login_manager.init_app(app)
     login_manager.login_view = 'web.login'
     login_manager.login_message = '请先登录或注册'
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(user_id)
 
     cache.init_app(app)
 

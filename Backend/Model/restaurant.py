@@ -6,7 +6,7 @@ from .base import Base
 class Restaurant(Base):
     __tablename__ = 'restaurant'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True,autoincrement=True)
     host = Column(String(10),server_default=FetchedValue())
     aid = Column(Integer, ForeignKey('address.id'), nullable=False, server_default=FetchedValue())
     address = relationship('Address')

@@ -9,7 +9,7 @@ from .base import Base
 class Order(Base):
     __tablename__ = 'order'
 
-    id =  Column( Integer, primary_key=True)
+    id =  Column( Integer, primary_key=True,autoincrement=True)
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
     user = relationship('User')
     cid = Column(Integer, ForeignKey('coupon.id'), nullable=False, server_default=FetchedValue())

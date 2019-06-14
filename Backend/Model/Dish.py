@@ -6,7 +6,7 @@ from .base import Base
 class Dish(Base):
     __tablename__ = 'dish'
 
-    id =  Column( Integer, primary_key=True)
+    id =  Column( Integer, primary_key=True,autoincrement=True)
     rid = Column( Integer, ForeignKey('restaurant.id'), nullable=True, server_default= FetchedValue())
     restaurant = relationship('Restaurant')
     name =  Column( String(100), nullable=False, server_default= FetchedValue())

@@ -6,7 +6,7 @@ from .base import Base, db
 class Address(Base):
     __tablename__ = 'address'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True,autoincrement=True)
     uid =  Column( Integer, ForeignKey('user.id'), nullable=False, server_default= FetchedValue())
     user = relationship('User')
     province_id =  Column( Integer, nullable=False, server_default= FetchedValue())
