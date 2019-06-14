@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint, request, jsonify, redirect
-from ..libs.web_help import ops_render, getCurrentDate, iPagination, getDictFilterField
-from ..Model.base import db
+from flask import Blueprint, request
+from ..libs.web_help import ops_render, iPagination
 from ..Config import settings
 from ..Model.Comment import Comment
-from ..libs.UrlManager import UrlManager
-from ..Service.Food import FoodService
-from ..Model.FoodStockChangeLog import FoodStockChangeLog
-from decimal import Decimal
 from sqlalchemy import or_
 route_comment = Blueprint('comment', __name__, url_prefix='/comment')
 

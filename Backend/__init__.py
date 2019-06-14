@@ -8,6 +8,7 @@ from .Web.food import route_food
 from .Web.comment import route_comment
 from .Web.finance import route_finance
 from .Web.upload import route_upload
+from .Web.Login import route_user
 from .Model.base import db
 from .libs.email import mail
 from .libs.UrlManager import UrlManager
@@ -27,6 +28,7 @@ def register_web_blueprint(app):
     app.register_blueprint(route_food)
     app.register_blueprint(route_comment)
     app.register_blueprint(route_finance)
+    app.register_blueprint(route_user,url_prefix = "/user" )
     app.register_blueprint(route_upload, url_prefix="/upload")
 
 def create_app(config=None):
