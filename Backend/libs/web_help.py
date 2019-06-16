@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from flask import g,render_template
-import datetime
+from flask import g,render_template,json
+import datetime,decimal
 '''
 自定义分页类
 '''
@@ -123,3 +123,10 @@ def getDictListFilterField( db_model,select_filed,key_field,id_list ):
 
         ret[ getattr( item,key_field ) ].append(item )
     return ret
+
+class MyJSONEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, decimal.Decimal):
+            # Convert decimal instances to strings.
+            return float(obj)
+        return super(MyJSONEncoder, self).default(obj)

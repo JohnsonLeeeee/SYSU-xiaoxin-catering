@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, FetchedValue, String, DateTime, Numeric, ForeignKey, SmallInteger
+from sqlalchemy import Column, Integer, FetchedValue, String, orm, Numeric, ForeignKey, SmallInteger
 from sqlalchemy.orm import relationship
 
 from .base import Base
@@ -17,4 +17,3 @@ class Dish(Base):
     FoodCat = relationship('FoodCat')
     cid = Column(Integer, ForeignKey('FoodCat.id'), nullable=True, server_default=FetchedValue())
     tags =  Column( String(200), nullable=False, server_default= FetchedValue())
-   

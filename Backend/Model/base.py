@@ -35,6 +35,9 @@ class Base(db.Model):
     def __init__(self):
         self.create_time = int(datetime.now().timestamp())
 
+    def __getitem__(self, item):
+        return getattr(self, item)
+
     @property
     def create_datetime(self):
         if self.create_time:
