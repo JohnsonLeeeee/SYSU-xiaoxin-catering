@@ -5,7 +5,7 @@ from .base import Base, db
 
 
 class Comment(Base):
-    __tablename__ = 'comment'
+    __tablename__ = 'Comment'
 
     id = Column(Integer, primary_key=True,autoincrement=True)
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
@@ -13,8 +13,3 @@ class Comment(Base):
     rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())
     restaurant = relationship('Restaurant')
     content = Column(String(200), nullable=False, server_default=FetchedValue())
-
-    # def __init__(self,uid,rid,content):
-    #     self.uid = uid
-    #     self.rid = rid
-    #     self.content = self.content

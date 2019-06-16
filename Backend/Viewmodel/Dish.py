@@ -5,6 +5,7 @@ class DishViewModel:
     @classmethod
     def dishlist(cls, dish):
         return dict(
+            id = dish.id,
             name=dish.name,
             image=dish.main_image,
             price=dish.price,
@@ -14,6 +15,7 @@ class DishViewModel:
     @classmethod
     def detail(cls,dish):
         return dict(
+            id = dish.id,
             name=dish.name,
             image=dish.main_image,
             price=dish.price,

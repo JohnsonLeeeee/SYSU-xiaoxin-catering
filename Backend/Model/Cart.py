@@ -1,6 +1,8 @@
 from sqlalchemy import Integer, Column, SmallInteger, FetchedValue, ForeignKey
 from sqlalchemy.orm import relationship
 from .base import Base
+from .Dish import Dish
+from .Order import Order
 
 
 class Cart(Base):

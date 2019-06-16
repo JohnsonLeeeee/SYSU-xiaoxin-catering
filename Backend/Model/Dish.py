@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 from .base import Base
 
 class Dish(Base):
-    __tablename__ = 'dish'
+    __tablename__ = 'Dish'
 
     id =  Column( Integer, primary_key=True,autoincrement=True)
     rid = Column( Integer, ForeignKey('restaurant.id'), nullable=True, server_default= FetchedValue())

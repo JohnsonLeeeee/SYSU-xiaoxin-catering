@@ -129,4 +129,6 @@ class MyJSONEncoder(json.JSONEncoder):
         if isinstance(obj, decimal.Decimal):
             # Convert decimal instances to strings.
             return float(obj)
+        if isinstance(obj, (datetime.date, datetime.datetime)):
+            return obj.isoformat()
         return super(MyJSONEncoder, self).default(obj)

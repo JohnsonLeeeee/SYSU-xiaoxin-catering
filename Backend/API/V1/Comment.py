@@ -24,7 +24,7 @@ def get_restaurant_comment(rid):
 def create_comment(rid):
     comment_info = CommentForm().validate_for_api()
     with db.auto_commit():
-        comment = Comment(rid = rid, uid=comment_info.uid.data,content=comment_info.content.data)
+        comment = Comment()
         comment.content = comment_info.content.data
         comment.uid = comment_info.uid.data
         comment.rid = rid

@@ -5,8 +5,7 @@ from sqlalchemy.orm import relationship
 from .base import Base, db
 
 class Coupon(Base):
-    __tablename__ = 'coupon'
-
+    __tablename__ = 'Coupon'
     id =  Column( Integer, primary_key=True,autoincrement=True)
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
     user = relationship('User')

@@ -22,6 +22,9 @@ cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 def register_plugin(app):
     from .Model.base import db
+    from .Model.Order import Order
+    from .Model.Dish import Dish
+    from .Model.Cart import Cart
     db.init_app(app)
     with app.app_context():
         db.create_all()

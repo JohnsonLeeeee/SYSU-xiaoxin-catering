@@ -7,7 +7,7 @@ from .restaurant import Restaurant
 from .base import Base
 
 class Order(Base):
-    __tablename__ = 'order'
+    __tablename__ = 'Order'
 
     id =  Column( Integer, primary_key=True,autoincrement=True)
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
@@ -20,7 +20,7 @@ class Order(Base):
     # pay_sn =  Column( String(128), nullable=False, server_default= FetchedValue())
     # prepay_id =  Column( String(128), nullable=False, server_default= FetchedValue())
     note =  Column( Text, nullable=False)
-    aid = Column(Integer, ForeignKey('address.id'), nullable=False, server_default=FetchedValue())
+    aid = Column(Integer, ForeignKey('address.id'), server_default=FetchedValue())
     address = relationship('Address')
     pay_time =  Column( DateTime, nullable=False, server_default= FetchedValue())
     rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())

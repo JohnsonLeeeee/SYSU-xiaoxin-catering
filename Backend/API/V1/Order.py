@@ -20,16 +20,26 @@ def get_user_order():
     return jsonify(order)
 
 
-@api.route('/', methods=['PUT','POST'])
+@api.route('/<int:rid>', methods=['PUT','POST'])
 @auth.login_required
-def create_order():
-    uid = g.user.uid
+def create_order(rid):
     orderinfo = OrderForm().validate_for_api()
     with db.auto_commit():
-        order = Order(uid=uid,cid=orderinfo.cid,total_price=orderinfo.total_price,fair_price=orderinfo.fair_price,
-                      note=orderinfo.note,rid=orderinfo.rid,aid=orderinfo.aid)
+        uid = orderinfo.uid.data
+        order = Order()
+        order.uid = uid
+        order.total_price = orderinfo.total_price.data
+        order.coupon_discount = orderinfo.coupon_discount.data
+        order.note=orderinfo.note.data
+        order.rid = rid
         db.session.add(order)
+
+    with db.auto_commit():
         for i in orderinfo.lists.data:
-            cart = Cart(uid = uid, did=i.did, quantity=i.quantity,orderid=order.id)
+            cart = Cart()
+            cart.uid = uid
+            cart.did = i.did
+            cart.orderid = order.id
             db.session.add(cart)
+
     return Success()
