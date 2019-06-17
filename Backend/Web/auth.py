@@ -40,7 +40,8 @@ def login():
         user = Adminstrator.query.filter_by(email=form.email.data).first()
         if user and user.check_pwd(form.password.data):
             login_user(user, remember=True)
-            g.current_user = user
+            if current_user not in g:
+                g.current_user = user
             next = request.args.get('next')
             if not next or not next.startswith('/'):
                 next = url_for('index.index')

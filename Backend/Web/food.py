@@ -1,5 +1,6 @@
 
 from flask import Blueprint, request, jsonify, redirect,g
+from flask_login import current_user
 from ..libs.web_help import ops_render, getCurrentDate, iPagination, getDictFilterField
 from ..Model.base import db
 from ..Config import settings
@@ -10,6 +11,7 @@ from ..Service.Food import FoodService
 from ..Model.FoodStockChangeLog import FoodStockChangeLog
 from decimal import Decimal
 from sqlalchemy import or_
+from ..Model.administrator import Adminstrator
 route_food = Blueprint('food', __name__, url_prefix='/food')
 
 
@@ -159,9 +161,10 @@ def set():
     model_food.stock = stock
     model_food.tags = tags
     model_food.updated_time = getCurrentDate()
+    model_food.rid = Adminstrator.query.filter_by(id = current_user.id).first().rid
 
-    db.session.add(model_food)
-    db.session.commit()
+    with db.auto_commit():
+        db.session.add(model_food)
 
     FoodService.setStockChangeLog( model_food.id,int(stock) - int(before_stock),"后台修改" )
     return jsonify(resp)
@@ -216,8 +219,9 @@ def catSet():
     model_food_cat.name = name
     model_food_cat.weight = weight
     model_food_cat.updated_time = getCurrentDate()
-    db.session.add(model_food_cat)
-    db.session.commit()
+    model_food_cat.rid = Adminstrator.query.filter_by(id = current_user.id).first().rid
+    with db.auto_commit():
+        db.session.add(model_food_cat)
     return jsonify( resp )
 
 @route_food.route("/cat-ops",methods = [ "POST" ])
