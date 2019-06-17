@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
-from flask import Blueprint, request, jsonify, redirect
+
+from flask import Blueprint, request, jsonify, redirect,g
 from ..libs.web_help import ops_render, getCurrentDate, iPagination, getDictFilterField
 from ..Model.base import db
 from ..Config import settings

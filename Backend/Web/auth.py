@@ -4,7 +4,8 @@ from flask_login import login_user, login_required, logout_user, current_user
 
 from ..Form.Auth_admin import RegisterForm, LoginForm, ResetPasswordForm, EmailForm, \
     ChangePasswordForm
-from ..Model.user import User
+from ..Model.administrator import Adminstrator
+from ..Model.restaurant import Restaurant
 from ..Model.base import db
 from ..libs.email import send_email
 
@@ -15,10 +16,12 @@ web = Blueprint( 'web',__name__ )
 def register():
     form = RegisterForm(request.form)
     if request.method == 'POST' and form.validate():
-        user = User()
+        user = Adminstrator()
         user.set_attrs(form.data)
-        db.session.add(user)
-        db.session.commit()
+        res = Restaurant.query.filter_by(id=form.restaurant.data).first()
+        user.restaurant = res
+        with db.auto_commit():
+            db.session.add(user)
         # token = user.generate_confirmation_token()
         # send_email(user.email, 'Confirm Your Account',
         #            'email/confirm', user=user, token=token)
@@ -34,7 +37,7 @@ def register():
 def login():
     form = LoginForm(request.form)
     if request.method == 'POST' and form.validate():
-        user = User.query.filter_by(email=form.email.data).first()
+        user = Adminstrator.query.filter_by(email=form.email.data).first()
         if user and user.check_pwd(form.password.data):
             login_user(user, remember=True)
             g.current_user = user
@@ -53,7 +56,7 @@ def forget_password_request():
         form = EmailForm(request.form)
         if form.validate():
             account_email = form.email.data
-            user = User.query.filter_by(email=account_email).first_or_404()
+            user = Adminstrator.query.filter_by(email=account_email).first_or_404()
             send_email(form.email.data, '重置你的密码',
                        'email/reset_password', user=user,
                        token=user.generate_token())
@@ -68,7 +71,7 @@ def forget_password(token):
         return redirect(url_for('web.index'))
     form = ResetPasswordForm(request.form)
     if request.method == 'POST' and form.validate():
-        result = User.reset_password(token, form.password1.data)
+        result = Adminstrator.reset_password(token, form.password1.data)
         if result:
             flash('你的密码已更新,请使用新密码登录')
             return redirect(url_for('web.login'))
@@ -103,10 +106,12 @@ def register_ajax():
     else:
         form = RegisterForm()
         form.validate()
-        user = User(form.nickname.data,
-                    form.email.data, form.password.data)
-        db.session.add(user)
-        db.session.commit()
+        user = Adminstrator()
+        user.set_attrs(form.data)
+        res = Restaurant.query.filter_by(id = form.restaurant.data).first()
+        user.restaurant = res
+        with db.auto_commit():
+            db.session.add(user)
         # token = user.generate_confirmation_token()
         # send_email(user.email, 'Confirm Your Account',
         #            'email/confirm', user=user, token=token)

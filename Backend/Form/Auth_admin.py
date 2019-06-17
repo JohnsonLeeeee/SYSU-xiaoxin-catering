@@ -1,8 +1,9 @@
-from wtforms import StringField, PasswordField, Form
+from wtforms import StringField, PasswordField, Form, IntegerField
 from wtforms.validators import Length, Email, \
     ValidationError, EqualTo
 from .Base import DataRequired
 from ..Model.user import User
+from ..Model.restaurant import Restaurant
 
 
 class EmailForm(Form):
@@ -38,6 +39,8 @@ class RegisterForm(EmailForm):
     password = PasswordField('密码', validators=[
         DataRequired(), Length(6, 20)])
 
+    restaurant = IntegerField('餐厅代码',validators=[DataRequired()])
+
     def validate_email(self, field):
         if User.query.filter_by(email=field.data).first():
             raise ValidationError('电子邮件已被注册')
@@ -45,3 +48,7 @@ class RegisterForm(EmailForm):
     def validate_username(self, field):
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('用戶名已存在')
+
+    def validate_restaurant(self, field):
+        if not Restaurant.query.filter_by(id=field.data).first():
+            raise ValidationError('餐厅不存在')

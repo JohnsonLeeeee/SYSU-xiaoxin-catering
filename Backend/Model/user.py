@@ -8,14 +8,11 @@ from sqlalchemy import String, Unicode, DateTime, Boolean
 from sqlalchemy import  Integer, Float
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-from .Address import Address
 
 class User(UserMixin, Base):
     __tablename__ = 'user'
     id = Column( Integer, primary_key=True,autoincrement=True)
     username =  Column( String(100), nullable=False, server_default= FetchedValue())
-    # address = relationship('Address')
-    # aid = Column(Integer, ForeignKey('address.id'),  server_default=FetchedValue()) #默认地址
     phone_number =  Column( String(20),unique=True, server_default= FetchedValue())
     email =  Column( String(100), unique=True, server_default= FetchedValue())
     sex =  Column( Integer, default = 1, server_default= FetchedValue())

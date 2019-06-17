@@ -13,12 +13,21 @@ from .API.V1 import create_blueprint_v1
 from .Web.auth import web
 from .Model.base import db
 from .Model.user import User
+from .Model.restaurant import Restaurant
 from .libs.email import mail
 from .libs.web_help import MyJSONEncoder
 from .libs.UrlManager import UrlManager
 
 login_manager = LoginManager()
 cache = Cache(config={'CACHE_TYPE': 'simple'})
+
+def create_restaurant(db):
+    res = Restaurant()
+    res.name = "GOGO新天地"
+    if Restaurant.query.filter_by(name = res.name).first():
+        return
+    with db.auto_commit():
+        db.session.add(res)
 
 def register_plugin(app):
     from .Model.base import db
@@ -28,6 +37,8 @@ def register_plugin(app):
     db.init_app(app)
     with app.app_context():
         db.create_all()
+        create_restaurant(db)
+
 
 def register_web_blueprint(app):
     app.register_blueprint(route_index)
@@ -47,7 +58,6 @@ def create_app(config=None):
     app.config.from_object('Backend.Config.secure')
 
     register_plugin(app)
-
     # 注册email模块
     mail.init_app(app)
 
@@ -75,4 +85,5 @@ def create_app(config=None):
             app.config.update(config)
         elif config.endswith('.py'):
             app.config.from_pyfile(config)
+
     return app

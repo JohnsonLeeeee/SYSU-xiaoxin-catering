@@ -7,5 +7,5 @@ class Adminstrator(User):
     __tablename__ = 'Adminstrator'
 
     rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())
-    restaurant = relationship('restaurant')
+    restaurant = relationship('Restaurant')
 

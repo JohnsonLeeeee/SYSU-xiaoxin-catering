@@ -50,7 +50,7 @@ class Base(db.Model):
 
     def set_attrs(self, attrs):
         for key, value in attrs.items():
-            if hasattr(self, key) and key != 'id':
+            if hasattr(self, key) and key != 'id' and key != 'rid':
                 setattr(self, key, value)
 
     def update(self):
