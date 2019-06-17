@@ -13,7 +13,6 @@ class Order(Base):
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
     user = relationship('User')
     total_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
-    fair_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     pay_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     # pay_sn =  Column( String(128), nullable=False, server_default= FetchedValue())
     # prepay_id =  Column( String(128), nullable=False, server_default= FetchedValue())

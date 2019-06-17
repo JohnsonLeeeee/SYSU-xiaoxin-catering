@@ -3,9 +3,7 @@ from flask import jsonify, g
 from Backend.libs.exception_api import  Success
 from Backend.libs.MyBluePrint import MyBluePrint
 from Backend.libs.auth import auth
-from Backend.Model.base import db
 from Backend.Model.FoodCategory import FoodCat
-from Backend.Form.Comment import CommentForm
 from Backend.Viewmodel.Comment import CommentViewModel
 
 api = MyBluePrint('category')
