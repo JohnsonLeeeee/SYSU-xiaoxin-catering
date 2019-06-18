@@ -21,10 +21,9 @@ class RestaurantService:
         return len(num)
 
     @staticmethod
-    @property
     def get_month_pay(restuarant_id):
         num = db.session.query(func.sum(Order.total_price)).filter(Order.rid == restuarant_id, Order.status == 1,
-                                                            func.month(Order.date_time) == date.month()).all()
+                                                            func.month(Order.pay_time) == date.month()).all()
         return len(num)
 
     @staticmethod

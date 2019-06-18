@@ -30,7 +30,7 @@ def index():
         }
     }
     data = resp_data['data']
-    data['finance']['month'] = RestaurantService.get_month_pay
+    data['finance']['month'] = RestaurantService.get_month_pay(1)
     data['coupon']['month_new'] = RestaurantService.get_month_coupon
     data['finance']['total'] = RestaurantService.get_today_pay
     data['order']['month'] = RestaurantService.get_month_order
