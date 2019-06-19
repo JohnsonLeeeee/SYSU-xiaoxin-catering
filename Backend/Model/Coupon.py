@@ -9,5 +9,7 @@ class Coupon(Base):
     id =  Column( Integer, primary_key=True,autoincrement=True)
     uid = Column(Integer, ForeignKey('user.id'), nullable=False, server_default=FetchedValue())
     user = relationship('User')
+    rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())
+    restaurant = relationship('Restaurant')
     discount =  Column( Integer, nullable=False, server_default= FetchedValue())
     expiration_date = Column( DateTime, nullable=False, server_default= FetchedValue())

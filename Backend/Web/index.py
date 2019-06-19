@@ -31,13 +31,11 @@ def index():
     }
     data = resp_data['data']
     data['finance']['month'] = RestaurantService.get_month_pay(1)
-    data['coupon']['month_new'] = RestaurantService.get_month_coupon
-    data['finance']['total'] = RestaurantService.get_today_pay
-    data['order']['month'] = RestaurantService.get_month_order
-    data['shared']['month'] = RestaurantService.get_month_share
-    data['finance']['today'] = RestaurantService.get_today_pay
-    data['coupon']['today_new'] = RestaurantService.get_today_coupon
-    data['order']['today'] = RestaurantService.get_today_order
-    data['shared']['today'] = RestaurantService.get_today_share
+    data['coupon']['month_new'] = RestaurantService.get_month_coupon(1)
+    data['finance']['total'] = RestaurantService.get_today_pay(1)
+    data['order']['month'] = RestaurantService.get_month_order(1)
+    data['finance']['today'] = RestaurantService.get_today_pay(1)
+    data['coupon']['today_new'] = RestaurantService.get_today_coupon(1)
+    data['order']['today'] = RestaurantService.get_today_order(1)
 
     return ops_render( "index/index.html",resp_data )

@@ -23,7 +23,7 @@ cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 def create_restaurant(db):
     res = Restaurant()
-    res.name = "GOGO新天地"
+    res.name = "GOGO"
     if Restaurant.query.filter_by(name = res.name).first():
         return
     with db.auto_commit():
