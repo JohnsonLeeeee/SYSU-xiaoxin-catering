@@ -1,5 +1,5 @@
 
-from flask import Flask
+from flask import Flask,url_for,redirect
 from flask_login import LoginManager
 from flask_cache import Cache
 from flask_wtf import CsrfProtect
@@ -45,7 +45,7 @@ def register_web_blueprint(app):
     app.register_blueprint(route_food)
     app.register_blueprint(route_comment)
     app.register_blueprint(route_finance)
-    app.register_blueprint(web,url_prefix = "/user2")
+    app.register_blueprint(web,url_prefix = "/")
     app.register_blueprint(route_user,url_prefix = "/user" )
     app.register_blueprint(route_upload, url_prefix="/upload")
     app.register_blueprint(create_blueprint_v1(),url_prefix="/v1")
@@ -67,7 +67,8 @@ def create_app(config=None):
 
     @login_manager.user_loader
     def load_user(user_id):
-        return User.query.get(user_id)
+        if User.query.get(user_id) is not None:
+            return User.query.get(user_id)
 
     cache.init_app(app)
 
@@ -85,5 +86,10 @@ def create_app(config=None):
             app.config.update(config)
         elif config.endswith('.py'):
             app.config.from_pyfile(config)
+
+    @app.route('/')  # 首页
+    def index():
+        login_url = url_for('web.login')
+        return redirect(login_url)  # 重定向为登录页面
 
     return app
