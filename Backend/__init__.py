@@ -67,7 +67,8 @@ def create_app(config=None):
 
     @login_manager.user_loader
     def load_user(user_id):
-        return User.query.get(user_id)
+        if User.query.get(user_id) is not None:
+            return User.query.get(user_id)
 
     cache.init_app(app)
 
