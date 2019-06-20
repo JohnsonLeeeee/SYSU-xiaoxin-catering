@@ -139,17 +139,6 @@
     background:orange;
 }
 
-.bottom-bar .mtn{
-    height:40px;
-    width:50px;
-    margin:20px 10px 0 0;
-    color:#fff;
-    line-height:40px;
-    text-align:center;
-    font-size:16px;
-    background:rgb(0, 110, 255);
-}
-
 swiper {
   height: 400rpx;
   width: 100%;
@@ -164,4 +153,11 @@ swiper-item image {
 
 .banner {
   display: flex;
+}
+
+.comment{
+  font-size: 14px;
+  background-color:#bbffbb; 
+  text-align: center;
+  margin-top: 20px;
 }

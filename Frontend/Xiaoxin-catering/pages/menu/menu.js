@@ -66,7 +66,7 @@ Page({
       price: 15,
       active: false,
       num: 1
-
+      
     }, {
       id: 4,
       title: 'dish 4',
@@ -127,12 +127,6 @@ Page({
       })
     }
   },
-  com: function(){
-    wx.redirectTo({
-      url: '../comment/comment'
-    }
-    )
-  },
   addOrder: function (event) {
     let that = this;
     let id = event.target.dataset.id;
@@ -181,6 +175,11 @@ Page({
     });
   },
   onLoad: function () {
-
+    
+  },
+  enterComments: function () {
+    wx.redirectTo({
+      url: '../review/review',
+    })
   }
 })

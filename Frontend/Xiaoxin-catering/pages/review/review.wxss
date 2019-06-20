@@ -1,0 +1,43 @@
+/* pages/review/review.wxss */
+.title {
+  font-size: 24px;
+}
+.user {
+  font-size: 20px;
+}
+.comment {
+  font-size: 16px;
+}
+.input {
+  height: 100px;
+  margin-top: 10px;
+  border: double #aee8ff 10px;
+  margin-right: 20px;
+}
+view {
+  margin: 20px;
+}
+.review {
+  
+  border: ridge #000000 1px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 10px
+}
+.submit {
+  margin-top: 10px;
+  margin-right: 20px;
+  background: #ffaa00;
+}
+.write {
+  margin: 0px;
+  box-shadow: 0 -5px 10px #ccc;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+}
+.ins {
+  font-size: 22px;
+  margin: 10px;
+}

@@ -8,7 +8,7 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-  <view class="nextstep">
+   <view class="nextstep">
     <button bindtap='gotomenu'> 进入菜单 </button>
   </view>
 </view>

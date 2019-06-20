@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/order/order",
     "pages/menu/menu",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/review",
+    "pages/review/review"
   ],
   "window": {
     "backgroundTextStyle": "light",

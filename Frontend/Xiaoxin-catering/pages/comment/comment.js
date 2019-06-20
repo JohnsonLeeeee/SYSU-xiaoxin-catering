@@ -1,5 +1,23 @@
 // pages/comment/comment.js
 Page({
+  data: {
+    array: [{
+      message: 'foo',
+    }, {
+      message: 'bar'
+    }]
+  },
+  // 下拉刷新
+  onPullDownRefresh: function () {
+    setTimeout(() => {
+      wx.showToast({
+        title: '成功加载数据',
+        icon: 'success',
+        duration: 500
+      });
+      wx.stopPullDownRefresh()
+    }, 500);
+  },
 
   /**
    * Page initial data

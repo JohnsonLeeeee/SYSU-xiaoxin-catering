@@ -1,0 +1,15 @@
+<!--pages/review/review.wxml-->
+<view class='title'>All Comments: </view>
+<view wx:for="{{reviews}}" class='review'>
+  <text class='user'>User: {{item.uname}}\n</text>
+  <text class='comment'>Comment: {{item.comment}}</text>
+</view>
+
+<view class='write'>
+  <text class='ins'>Your Comment:</text>
+  <input class='input'>
+  </input>
+  <button class='submit'>Submit</button>
+</view>
+  
+

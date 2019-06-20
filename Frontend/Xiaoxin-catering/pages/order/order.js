@@ -20,7 +20,7 @@ Page({
     let id = event.target.dataset.id;
     let index = event.target.dataset.index;
     let param = this.data.items[index];
-    if (param.num > 0) {
+    if(param.num > 0){
       param.num--; // 每点一次减少1
     } else {
       param.num = 0; // 最低为0
@@ -47,7 +47,7 @@ Page({
     });
   },
   // 点击对应菜单添加按钮
-  add: function (event) {
+  add: function(event) {
     let that = this;
     let id = event.target.dataset.id;
     let index = event.target.dataset.index;
@@ -64,8 +64,8 @@ Page({
     let num = 0;
     // 将已经确定总价格和数量求和
     this.data.items.forEach(item => {
-      money += item.price * item.num;
-      num += item.num;
+      money += item.price*item.num;
+      num += item.num; 
     });
     let orderCount = {
       num,
@@ -77,7 +77,7 @@ Page({
     });
   },
   // 点击结账按钮
-  pay: function () {
+  pay: function() {
     let that = this;
     let str = '选中' + that.data.orderCount.num + '件商品，共' + that.data.orderCount.money + '元，是否要支付？'
     wx.showModal({
@@ -85,7 +85,7 @@ Page({
       content: str,
       success: function (res) {
         // 至少选中一个商品才能支付
-        if (that.data.orderCount.num !== 0) {
+        if (that.data.orderCount.num !== 0){
           if (res.confirm) {
             // 打开扫码功能
             wx.scanCode({
@@ -109,7 +109,7 @@ Page({
       }
     })
   },
-  onLoad: function () {
+  onLoad: function() {
     let that = this;
     // 取出订单传过来的数据
     wx.getStorage({
@@ -122,7 +122,7 @@ Page({
         let money = 0;
         let num = res.data.length;
         res.data.forEach(item => {
-          money += (item.price * item.num); // 总价格求和
+          money += (item.price*item.num); // 总价格求和
         });
         let orderCount = {
           num,
