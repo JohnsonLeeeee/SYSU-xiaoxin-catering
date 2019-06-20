@@ -1,0 +1,15 @@
+<!--comment.wxml-->
+<view class="back">
+  <view class="sentence">
+    <text>请留下您宝贵的建议:</text>
+  </view>
+  <form action="">
+  <view class="word">
+    <input type="text" name="advice" value=""></input>
+  </view>
+  <button class="bar" bindtap="submit">提交
+  </button>
+  </form> 
+
+
+</view>

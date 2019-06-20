@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="indexcontainer">
+ <view class="background">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  </view>
+  <text class="userinfo-nickname">亲爱的 {{userInfo.nickName}}</text>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="nextstep">
+    <button bindtap='gotomenu'> 进入菜单 </button>
+  </view>
+</view>
+</view>
