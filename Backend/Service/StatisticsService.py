@@ -69,12 +69,10 @@ class StatDailyFood:
         for item in foodlist:
             list.append([item.id, item.name, item.price, 0, 0])
         cartlist = StatDailyFood.getcartlist(restaurant_id, date_from, date_to)
-        orderlist = []
         for cart in cartlist:
-            if cart.orderid not in orderlist:
-                orderlist.append(cart.orderid)
-                for item in list:
-                    if cart.did == item[0]:
-                        item[3] = item[3] + 1
-                        item[4] += cart.quantity * cart.Dish.price
+            for item in list:
+                if cart.did == item[0]:
+                    item[3] = item[3] + 1
+                    item[4] += cart.quantity * cart.Dish.price
+                    break
         return list
