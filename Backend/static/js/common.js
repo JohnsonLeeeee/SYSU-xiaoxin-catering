@@ -72,7 +72,7 @@ var common_ops = {
         var nav_name = "default";
 
 
-        if(  pathname.indexOf("/account") > -1  ){
+        if(  pathname.indexOf("/user") > -1  ){
             nav_name = "account";
         }
 
