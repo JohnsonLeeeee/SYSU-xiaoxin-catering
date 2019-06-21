@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Blueprint,request
 from ..libs.web_help import ops_render,getFormatDate,iPagination,getDictFilterField,selectFilterObj
-from ..Service.StatisticsService import StatDailySite, StatDailyFood, StatDailyShare
+from ..Service.StatisticsService import StatDailySite, StatDailyFood
 from ..Model.administrator import Adminstrator
 from ..Model.Order import Order
 from ..Config.settings import PAGE_DISPLAY, PAGE_SIZE
@@ -57,11 +57,10 @@ def food():
     page = int(req['p']) if ('p' in req and req['p']) else 1
     date_from = req['date_from'] if 'date_from' in req else default_date_from
     date_to = req['date_to'] if 'date_to' in req else default_date_to
-    query = StatDailyFood.query.filter(StatDailyFood.date >= date_from) \
-        .filter(StatDailyFood.date <= date_to)
+    query = StatDailyFood.getfooddailyinfo(1, date_from, date_to)
 
     page_params = {
-        'total': query.count(),
+        'total': len(query),
         'page_size': PAGE_SIZE,
         'page': page,
         'display': PAGE_DISPLAY,
@@ -71,21 +70,7 @@ def food():
     pages = iPagination(page_params)
     offset = (page - 1) * PAGE_SIZE
 
-    list = query.order_by(StatDailyFood.id.desc()).offset(offset).limit(PAGE_SIZE).all()
-    date_list = []
-    if list:
-        food_map = getDictFilterField(Food, Food.id, "id", selectFilterObj(list, "food_id"))
-        for item in list:
-            tmp_food_info = food_map[item.food_id] if item.food_id in food_map else {}
-            tmp_data = {
-                "date": item.date,
-                "total_count": item.total_count,
-                "total_pay_money": item.total_pay_money,
-                'food_info': tmp_food_info
-            }
-            date_list.append(tmp_data)
-
-    resp_data['list'] = date_list
+    resp_data['list'] = query
     resp_data['pages'] = pages
     resp_data['current'] = 'food'
     resp_data['search_con'] = {

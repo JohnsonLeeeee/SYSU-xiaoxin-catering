@@ -27,24 +27,26 @@
         <table class="table table-bordered m-t">
             <thead>
             <tr>
-                <th>日期</th>
+                <th>美食id</th>
                 <th>美餐名称</th>
-                <th>当日销售数量</th>
-                <th>当日销售总额</th>
+                <th>美食价格</th>
+                <th>美食订单数</th>
+                <th>美食营业额</th>
             </tr>
             </thead>
             <tbody>
             {% if list %}
                 {% for item in list %}
             <tr>
-                <td>{{ item.date }}</td>
-                <td>{{ item.food_info.name }}</td>
-                <td>{{ item.total_count }}</td>
-                <td>{{ item.total_pay_money }}</td>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+                <td>{{ item[4] }}</td>
             </tr>
             {% endfor %}
             {% else %}
-                <tr><td colspan="2">暂无数据~~</td></tr>
+                <tr><td colspan="5">暂无数据~~</td></tr>
             {% endif %}
             </tbody>
         </table>
