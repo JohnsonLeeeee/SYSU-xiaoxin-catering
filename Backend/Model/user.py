@@ -61,15 +61,18 @@ class User(UserMixin, Base):
             user.password = secret
             db.session.add(user)
 
-    # @staticmethod
-    # def register_by_phone(nickname, account, secret):
-    #     with db.auto_commit():
-    #         user = User()
-    #         user.username = nickname
-    #         user.phone_number = account
-    #         user.password = secret
-    #         db.session.add(user)
 
+    def confirm(self, token):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token.encode('utf-8'))
+        except:
+            return False
+        # if data.get('id') != self.id:
+        #     return False
+        self.confirmed = True
+        db.session.add(self)
+        return True
 
 
 

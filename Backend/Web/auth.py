@@ -26,10 +26,11 @@ def register():
         send_email(user.email, 'Confirm Your Account',
                    'email/confirm', user=user, token=token)
         login_user(user, False)
-        # flash('一封激活邮件已发送至您的邮箱，请快完成验证', 'confirm')
+        flash('一封激活邮件已发送至您的邮箱，请快完成验证', 'confirm')
         # 由于发送的是ajax请求，所以redirect是无效的
-        # return render_template('index.html')
-        return redirect(url_for('index.index'))
+        return render_template('auth/register.html', form=form)
+        # return render_template('index/index.html')
+        # return redirect(url_for('index.index'))
     return render_template('auth/register.html', form=form)
 
 
@@ -69,7 +70,7 @@ def forget_password_request():
 @web.route('/reset/password/<token>', methods=['GET', 'POST'])
 def forget_password(token):
     if not current_user.is_anonymous:
-        return redirect(url_for('web.index'))
+        return redirect(url_for('index.index'))
     form = ResetPasswordForm(request.form)
     if request.method == 'POST' and form.validate():
         result = Adminstrator.reset_password(token, form.password1.data)
@@ -79,6 +80,23 @@ def forget_password(token):
         else:
             return redirect(url_for('web.index'))
     return render_template('auth/forget_password.html')
+
+@web.route('/confirmed/<token>', methods=['GET', 'POST'])
+def confirm_user_email(token):
+    if not current_user.is_anonymous:
+        admin  = Adminstrator.query.filter_by(id = current_user.id).first()
+        admin.confirm(token)
+        flash('已经通过邮箱验证')
+        return redirect(url_for('index.index'))
+    form = request.form
+    if request.method == 'POST' and form.validate():
+        if 'Yes' in form:
+            flash('你已确认')
+            Adminstrator.confirm(token)
+            return redirect(url_for('index.index'))
+        else:
+            pass
+    return render_template('auth/confirmed.html')
 
 
 @web.route('/change/password', methods=['GET', 'POST'])

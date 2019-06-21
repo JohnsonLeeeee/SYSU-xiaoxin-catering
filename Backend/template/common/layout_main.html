@@ -59,11 +59,21 @@
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="javascript:void(0);"><i class="fa fa-bars"></i> </a>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
+                    {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                        <ul class="flash">
+                        {% for message in messages %}
+                          <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
                     <li>
 						<span class="m-r-sm text-muted welcome-message">
                             欢迎使用小欣餐饮管理后台
                         </span>
                     </li>
+
                     <li class="dropdown user_info">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
                             <img alt="image" class="img-circle" src="{{ buildStaticUrl('/images/common/avatar.png') }}"/>
