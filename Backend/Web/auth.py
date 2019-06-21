@@ -97,7 +97,7 @@ def change_password():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('web.index'))
+    return redirect(url_for('index.index'))
 
 
 @web.route('/register/ajax', methods=['GET', 'POST'])

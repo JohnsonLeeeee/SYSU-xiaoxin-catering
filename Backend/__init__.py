@@ -58,7 +58,7 @@ def register_web_blueprint(app):
     app.register_blueprint(route_comment)
     app.register_blueprint(route_finance)
     app.register_blueprint(route_stat)
-    app.register_blueprint(web,url_prefix = "/user2")
+    app.register_blueprint(web,url_prefix = "/web")
     app.register_blueprint(route_user,url_prefix = "/user" )
     app.register_blueprint(route_upload, url_prefix="/upload")
     app.register_blueprint(create_blueprint_v1(),url_prefix="/v1")
