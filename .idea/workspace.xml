@@ -4,12 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/Backend/app.py" line="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4e3d336-2300-4612-9c91-1b24ea951cce" name="Default Changelist" comment="跳转登录页面">
-      <change afterPath="$PROJECT_DIR$/Backend/template/email/confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/template/email/reset_password.html" afterDir="false" />
+    <list default="true" id="b4e3d336-2300-4612-9c91-1b24ea951cce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Web/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Web/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/template/common/layout_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/template/common/layout_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/template/email/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/template/email/reset_password.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,107 +35,79 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/Web/auth.py">
+        <entry file="file://$PROJECT_DIR$/Backend/template/auth/forget_password.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/template/auth/change_password.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/Config/secure.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/static/images/icon.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/template/email/confirm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="156">
+              <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="11" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/template/email/reset_password.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/Model/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/libs/email.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/template/common/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-156" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Backend/template/common/layout_main.html">
+        <entry file="file://$PROJECT_DIR$/Backend/template/email/reset_password.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+            <state relative-caret-position="182">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/__init__.py">
+        <entry file="file://$PROJECT_DIR$/Backend/static/images/common/avatar.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/static/images/common/logo.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/template/auth/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-              <folding>
-                <element signature="e#1#24#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="19" selection-start-column="12" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/Web/food.py">
+        <entry file="file://$PROJECT_DIR$/Backend/template/auth/forget_password_request.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="163" column="83" lean-forward="true" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="83" />
-              <folding>
-                <element signature="e#1#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/Web/index.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
-              <folding>
-                <element signature="e#25#52#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -150,6 +119,7 @@
       <list>
         <option value="Flask Main" />
         <option value="Python Script" />
+        <option value="XHTML File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -216,16 +186,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Backend/Web/Stat.py" />
-        <option value="$PROJECT_DIR$/Backend/template/auth/base.html" />
-        <option value="$PROJECT_DIR$/Backend/Model/FoodStockChangeLog.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Image.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Order_callback.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Share.py" />
-        <option value="$PROJECT_DIR$/Backend/Service/Restaurant.py" />
         <option value="$PROJECT_DIR$/Backend/template/user/reset_pwd.html" />
         <option value="$PROJECT_DIR$/Backend/Service/LoginService.py" />
-        <option value="$PROJECT_DIR$/Backend/template/common/base.html" />
         <option value="$PROJECT_DIR$/Backend/libs/auth.py" />
         <option value="$PROJECT_DIR$/Backend/Model/Address.py" />
         <option value="$PROJECT_DIR$/Backend/API/V1/Dish.py" />
@@ -244,7 +206,6 @@
         <option value="$PROJECT_DIR$/Backend/api文档.md" />
         <option value="$PROJECT_DIR$/Backend/Viewmodel/Category.py" />
         <option value="$PROJECT_DIR$/Backend/Model/FoodCategory.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/user.py" />
         <option value="$PROJECT_DIR$/Backend/Model/administrator.py" />
         <option value="$PROJECT_DIR$/Backend/Form/Auth_admin.py" />
         <option value="$PROJECT_DIR$/Backend/Model/restaurant.py" />
@@ -262,11 +223,20 @@
         <option value="$PROJECT_DIR$/Backend/app.py" />
         <option value="$PROJECT_DIR$/Backend/Web/index.py" />
         <option value="$PROJECT_DIR$/Backend/__init__.py" />
-        <option value="$PROJECT_DIR$/Backend/Web/auth.py" />
-        <option value="$PROJECT_DIR$/Backend/template/email/reset_password.html" />
         <option value="$PROJECT_DIR$/Backend/template/email/confirm.py" />
+        <option value="$PROJECT_DIR$/Backend/template/auth/confirm.xhtml" />
         <option value="$PROJECT_DIR$/Backend/template/email/confirm.html" />
+        <option value="$PROJECT_DIR$/Backend/template/common/base.html" />
+        <option value="$PROJECT_DIR$/Backend/template/index/index.html" />
+        <option value="$PROJECT_DIR$/Backend/Web/auth.py" />
         <option value="$PROJECT_DIR$/Backend/template/common/layout_main.html" />
+        <option value="$PROJECT_DIR$/Backend/Model/user.py" />
+        <option value="$PROJECT_DIR$/Backend/template/auth/forget_password_request.html" />
+        <option value="$PROJECT_DIR$/Backend/template/auth/forget_password.html" />
+        <option value="$PROJECT_DIR$/Backend/template/auth/confirm_email.html" />
+        <option value="$PROJECT_DIR$/Backend/template/auth/change_password.html" />
+        <option value="$PROJECT_DIR$/Backend/Config/secure.py" />
+        <option value="$PROJECT_DIR$/Backend/template/email/reset_password.html" />
       </list>
     </option>
   </component>
@@ -311,6 +281,12 @@
               <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
               <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -324,13 +300,6 @@
               <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
@@ -367,7 +336,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend/template" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend/static/images/common" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -376,19 +345,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\template" />
-      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\3rd\ui" />
-      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\images" />
-      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\js" />
-      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\3rd" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\images" />
       <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\3rd\ui" />
       <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\template\common" />
       <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\template\comment" />
       <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\bootstrap" />
-      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\template\index" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\images\common" />
+      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\template\auth" />
+      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\template" />
+      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\3rd\ui" />
+      <recent name="C:\Users\yyhyplxyz\SYSU-xiaoxin-catering\Backend\static\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -492,7 +461,7 @@
       <workItem from="1560733421545" duration="9564000" />
       <workItem from="1560744843068" duration="1899000" />
       <workItem from="1560874189683" duration="4171000" />
-      <workItem from="1561127568392" duration="1965000" />
+      <workItem from="1561127568392" duration="8156000" />
     </task>
     <task id="LOCAL-00001" summary="架构">
       <created>1558933982135</created>
@@ -676,11 +645,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561128863583</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="跳转仪表盘">
+      <created>1561129565420</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1561129565420</updated>
+    </task>
+    <task id="LOCAL-00028" summary="邮件发送">
+      <created>1561135674854</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1561135674854</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140459000" />
+    <option name="totallyTimeSpent" value="146650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -700,7 +683,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.5757238" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.48886415" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5256125" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -709,7 +692,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.41759464" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.39198217" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.39532295" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.52115816" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32962137" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -743,132 +726,14 @@
     <MESSAGE value="fix bugs" />
     <MESSAGE value="跳转登录页面" />
     <MESSAGE value="fix bugs about login" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs about login" />
+    <MESSAGE value="跳转仪表盘" />
+    <MESSAGE value="邮件发送" />
+    <option name="LAST_COMMIT_MESSAGE" value="邮件发送" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SYSU_xiaoxin_catering$Flask__Backend_app_py_.coverage" NAME="Flask (Backend/app.py) Coverage Results" MODIFIED="1561129537353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SYSU_xiaoxin_catering$Flask__Backend_app_py_.coverage" NAME="Flask (Backend/app.py) Coverage Results" MODIFIED="1561135645512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Backend/template/500.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/libs/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="59" column="40" lean-forward="true" selection-start-line="55" selection-end-line="59" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/API/V1/errors.py" />
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-457">
-          <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/API/V1/Category.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/libs/exception_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1014">
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/API/V1/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/Order_callback.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/restaurant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/flask/_compat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/flask_httpauth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/wtforms/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="211" selection-start-line="211" selection-end-line="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/wtforms/fields/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="815" selection-start-line="815" selection-end-line="815" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Form/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Form/User.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Form/Base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/API/V1/Order.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#1#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Form/Comment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -924,13 +789,6 @@
     <entry file="file://$PROJECT_DIR$/Backend/Model/Image.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="910">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Model/Order.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
@@ -945,13 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8710">
           <caret line="352" selection-start-line="352" selection-end-line="352" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/flask_login/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9230">
-          <caret line="367" selection-start-line="367" selection-end-line="367" />
         </state>
       </provider>
     </entry>
@@ -972,9 +823,6 @@
     <entry file="file://$PROJECT_DIR$/../Desktop/Robustness.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/template/stat/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -991,9 +839,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Web/Login.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1036,34 +881,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
-          <folding>
-            <element signature="e#25#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#1#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/common/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Backend/template/email/confirm.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/libs/email.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="214">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -1071,47 +894,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/user.py">
+    <entry file="file://$PROJECT_DIR$/Backend/libs/web_help.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/flask_login/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="166">
+          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Config/settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/auth/confirm.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Web/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Form/Auth_admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#1#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/email/reset_password.html">
+    <entry file="file://$PROJECT_DIR$/Backend/libs/auth.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/common/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" />
+        <state relative-caret-position="278">
+          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <folding>
+            <element signature="n#link#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/email/confirm.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/email/confirm.html">
+    <entry file="file://$PROJECT_DIR$/Backend/template/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        <state relative-caret-position="-910">
+          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/common/layout_main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Web/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="30" />
+          <folding>
+            <element signature="e#25#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/auth/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/administrator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Web/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+        <state relative-caret-position="328">
+          <caret line="72" column="47" lean-forward="true" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/common/layout_main.html">
+    <entry file="file://$PROJECT_DIR$/Backend/Model/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        <state relative-caret-position="404">
+          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/auth/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/auth/forget_password_request.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/auth/confirm_email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/auth/forget_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/auth/change_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/avatar.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/mini_qrcode.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/qrcode.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Config/secure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/static/images/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/email/confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/template/email/reset_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
