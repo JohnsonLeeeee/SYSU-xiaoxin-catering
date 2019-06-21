@@ -31,6 +31,7 @@
             <thead>
             <tr>
                 <th>日期</th>
+                <th>订单数量</th>
                 <th>营收金额</th>
             </tr>
             </thead>
@@ -38,12 +39,13 @@
             {% if list %}
                 {% for item in list %}
             <tr>
-                <td>{{ item.date }}</td>
-                <td>{{ item.total_pay_money }}</td>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
             </tr>
                 {% endfor %}
             {% else %}
-                <tr><td colspan="2">暂无数据~~</td></tr>
+                <tr><td colspan="3">暂无数据~~</td></tr>
             {% endif %}
             </tbody>
         </table>

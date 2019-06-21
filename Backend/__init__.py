@@ -1,5 +1,5 @@
 
-from flask import Flask,url_for,redirect
+from flask import Flask
 from flask_login import LoginManager
 from flask_cache import Cache
 from flask_wtf import CsrfProtect
@@ -9,25 +9,37 @@ from .Web.comment import route_comment
 from .Web.finance import route_finance
 from .Web.upload import route_upload
 from .Web.Login import route_user
+from .Web.Stat import route_stat
 from .API.V1 import create_blueprint_v1
 from .Web.auth import web
 from .Model.base import db
 from .Model.user import User
 from .Model.restaurant import Restaurant
+from .Model.Order import Order
 from .libs.email import mail
 from .libs.web_help import MyJSONEncoder
 from .libs.UrlManager import UrlManager
+import datetime
 
 login_manager = LoginManager()
 cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 def create_restaurant(db):
+    order1 = Order()
+    order1.pay_time = datetime.datetime.now()
+    order1.total_price = 100
+    order2 = Order()
+    order2.pay_time = datetime.datetime.now() + datetime.timedelta(days=-3)
+    order2.total_price = 200
     res = Restaurant()
     res.name = "GOGO"
     if Restaurant.query.filter_by(name = res.name).first():
         return
     with db.auto_commit():
         db.session.add(res)
+
+    db.session.add(order1)
+    db.session.add(order2)
 
 def register_plugin(app):
     from .Model.base import db
@@ -45,7 +57,8 @@ def register_web_blueprint(app):
     app.register_blueprint(route_food)
     app.register_blueprint(route_comment)
     app.register_blueprint(route_finance)
-    app.register_blueprint(web,url_prefix = "/")
+    app.register_blueprint(route_stat)
+    app.register_blueprint(web,url_prefix = "/user2")
     app.register_blueprint(route_user,url_prefix = "/user" )
     app.register_blueprint(route_upload, url_prefix="/upload")
     app.register_blueprint(create_blueprint_v1(),url_prefix="/v1")
@@ -67,8 +80,7 @@ def create_app(config=None):
 
     @login_manager.user_loader
     def load_user(user_id):
-        if User.query.get(user_id) is not None:
-            return User.query.get(user_id)
+        return User.query.get(user_id)
 
     cache.init_app(app)
 
@@ -86,10 +98,5 @@ def create_app(config=None):
             app.config.update(config)
         elif config.endswith('.py'):
             app.config.from_pyfile(config)
-
-    @app.route('/')  # 首页
-    def index():
-        login_url = url_for('web.login')
-        return redirect(login_url)  # 重定向为登录页面
 
     return app
