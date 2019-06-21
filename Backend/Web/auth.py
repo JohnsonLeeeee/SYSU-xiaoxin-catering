@@ -22,9 +22,9 @@ def register():
         user.restaurant = res
         with db.auto_commit():
             db.session.add(user)
-        # token = user.generate_confirmation_token()
-        # send_email(user.email, 'Confirm Your Account',
-        #            'email/confirm', user=user, token=token)
+        token = user.generate_token()
+        send_email(user.email, 'Confirm Your Account',
+                   'email/confirm', user=user, token=token)
         login_user(user, False)
         # flash('一封激活邮件已发送至您的邮箱，请快完成验证', 'confirm')
         # 由于发送的是ajax请求，所以redirect是无效的
