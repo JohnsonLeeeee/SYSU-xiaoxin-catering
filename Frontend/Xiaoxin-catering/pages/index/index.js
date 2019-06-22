@@ -7,7 +7,9 @@ Page({
     motto: '欢迎来到小欣厨房',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    //判断小程序的API，回调，参数，组件等是否在当前版本可用。
+
   },
   //事件处理函数
   bindViewTap: function () {
@@ -15,7 +17,22 @@ Page({
       url: '../logs/logs'
     })
   },
+  
+  bindGetUserInfo(res) {
+    console.log(res);
+    if (res.detail.userInfo) {
+      console.log("点击了同意授权");
+    } else {
+      console.log("点击了拒绝授权");
+    }
+  },
+
   onLoad: function () {
+    setTimeout(function () {
+      wx.redirectTo({
+        url: '../menu/menu',
+      })
+    }, 3000);
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -43,6 +60,7 @@ Page({
       })
     }
   },
+
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -51,9 +69,4 @@ Page({
       hasUserInfo: true
     })
   },
-  gotomenu: function () {
-    wx.redirectTo({
-      url: '../menu/menu',
-    })
-  }
 })
