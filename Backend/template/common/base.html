@@ -50,8 +50,8 @@
 </body>
 
 {% block scripts %}
-    <script src="{{ url_for('static', filename='3rd/jquery-3.2.1.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='3rd/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='3rd/ui/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='3rd/ui/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/base.js') }}"></script>
     <script>
         $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};

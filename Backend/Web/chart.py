@@ -46,9 +46,7 @@ def finance():
 
     list = StatDailySite.getdailyincome(1, date_from, date_to)
 
-    # list = [[datetime.datetime.strptime("2019-6-17", "%Y-%m-%d"), 2100], [datetime.datetime.strptime("2019-6-18", "%Y-%m-%d"), 2200],
-    #        [datetime.datetime.strptime("2019-6-19", "%Y-%m-%d"), 2000], [datetime.datetime.strptime("2019-6-20", "%Y-%m-%d"), 1900],
-    #        [datetime.datetime.strptime("2019-6-21", "%Y-%m-%d"), 2500], [datetime.datetime.strptime("2019-6-22", "%Y-%m-%d"), 2400]]
+    # list = [["2019-6-17", 2100], ["2019-6-18", 2200], ["2019-6-19", 2000], ["2019-6-20", 1900], ["2019-6-21", 2500], ["2019-6-22", 2400]]
 
     resp = {'code': 200, 'msg': '操作成功~~', 'data': {}}
     data = {
