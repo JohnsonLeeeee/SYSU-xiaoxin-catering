@@ -10,6 +10,7 @@ from .Web.finance import route_finance
 from .Web.upload import route_upload
 from .Web.Login import route_user
 from .Web.Stat import route_stat
+from .Web.chart import route_chart
 from .API.V1 import create_blueprint_v1
 from .Web.auth import web
 from .Model.base import db
@@ -58,6 +59,7 @@ def register_web_blueprint(app):
     app.register_blueprint(route_comment)
     app.register_blueprint(route_finance)
     app.register_blueprint(route_stat)
+    app.register_blueprint(route_chart)
     app.register_blueprint(web,url_prefix = "/web")
     app.register_blueprint(route_user,url_prefix = "/user" )
     app.register_blueprint(route_upload, url_prefix="/upload")
