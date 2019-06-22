@@ -14,6 +14,7 @@ requests = "==2.18.4"
 flask-login = "*"
 flask-cache = "*"
 flask-mail = "*"
+python-dateutil = "*"
 
 [dev-packages]
 

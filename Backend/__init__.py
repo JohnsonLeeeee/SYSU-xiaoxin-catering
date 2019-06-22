@@ -18,7 +18,7 @@ from .Model.user import User
 from .Model.restaurant import Restaurant
 from .Model.Order import Order
 from .libs.email import mail
-from .libs.web_help import MyJSONEncoder
+from .libs.web_help import MyJSONEncoder, dispatch_coupon
 from .libs.UrlManager import UrlManager
 import datetime
 
@@ -34,13 +34,17 @@ def create_restaurant(db):
     order2.total_price = 200
     res = Restaurant()
     res.name = "GOGO"
+    coupon = dispatch_coupon(1,1)
+    with db.auto_commit():
+        # db.session.add(order1)
+        # db.session.add(order2)
+        db.session.add(coupon)
+
     if Restaurant.query.filter_by(name = res.name).first():
         return
+
     with db.auto_commit():
         db.session.add(res)
-
-    db.session.add(order1)
-    db.session.add(order2)
 
 def register_plugin(app):
     from .Model.base import db

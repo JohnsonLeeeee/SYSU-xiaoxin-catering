@@ -12,6 +12,6 @@ api = MyBluePrint('category')
 @auth.login_required
 def get_restaurant_category(rid):
     category = FoodCat.query.filter_by(rid=rid).all()
-    list = [CategoryViewModel(i) for i in category]
+    list = [CategoryViewModel.category(i) for i in category]
     return jsonify(category = list, number = len(list))
 

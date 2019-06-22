@@ -12,15 +12,6 @@ from datetime import datetime
 
 api = MyBluePrint('order')
 
-@api.route('/', methods=['GET'])
-@auth.login_required
-def get_user_order():
-    uid = g.user.uid
-    order = Order.query.filter_by(uid=uid).all()
-    #要显示具体菜单
-    return jsonify(order)
-
-
 @api.route('/<int:rid>', methods=['PUT','POST'])
 @auth.login_required
 def create_order(rid):
@@ -46,5 +37,5 @@ def create_order(rid):
             cart.quantity = i['quantity']
             cart.orderid = order.id
             db.session.add(cart)
-
     return Success()
+

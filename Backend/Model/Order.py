@@ -14,8 +14,6 @@ class Order(Base):
     user = relationship('User')
     total_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     pay_price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
-    # pay_sn =  Column( String(128), nullable=False, server_default= FetchedValue())
-    # prepay_id =  Column( String(128), nullable=False, server_default= FetchedValue())
     note =  Column( Text, nullable=False)
     pay_time =  Column( DateTime, nullable=False, server_default= FetchedValue())
     rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())

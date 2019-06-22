@@ -4,7 +4,6 @@ from datetime import date
 import datetime
 from Backend.Model.Order import Order
 from Backend.Model.Comment import Comment
-from Backend.Model.Share import ShareHistory
 from ..Model.base import db
 
 class RestaurantService:

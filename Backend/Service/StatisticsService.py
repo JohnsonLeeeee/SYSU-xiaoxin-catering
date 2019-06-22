@@ -4,7 +4,6 @@ import datetime
 from Backend.Model.Order import Order
 from Backend.Model.Dish import Dish
 from Backend.Model.Cart import Cart
-from Backend.Model.Share import ShareHistory
 from ..Model.base import db
 
 

@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from flask import g,render_template,json
 import datetime,decimal
+from ..Model.Coupon import Coupon
+import random
+from dateutil.relativedelta import relativedelta
 '''
 自定义分页类
 '''
@@ -132,3 +135,12 @@ class MyJSONEncoder(json.JSONEncoder):
         if isinstance(obj, (datetime.date, datetime.datetime)):
             return obj.isoformat()
         return super(MyJSONEncoder, self).default(obj)
+
+
+def dispatch_coupon(uid,rid):
+    coupon = Coupon()
+    coupon.uid = uid
+    coupon.rid = rid
+    coupon.discount = random.randint(1,5)
+    coupon.expiration_date = datetime.datetime.now() + relativedelta(months=1)
+    return coupon
