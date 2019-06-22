@@ -15,3 +15,5 @@ def get_user_coupon(rid,uid):
     coupons = Coupon.query.filter_by(uid=uid,rid=rid).all()
     coupons = [CouponViewModel.coupon(i) for i in coupons]
     return jsonify(coupons = coupons,number = len(coupons))
+
+

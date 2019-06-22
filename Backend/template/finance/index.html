@@ -25,7 +25,7 @@
                 <th>总价格</th>
                 <th>优惠价格</th>
                 <th>实际价格</th>
-                <th>配送地点</th>
+{#                <th>配送地点</th>#}
                 <th>支付时间</th>
             </tr>
             </thead>
@@ -36,9 +36,9 @@
                 <td>{{ item.id }}</td>
                 <td>{{ item.user.username }}</td>
                 <td>{{ item.total_price }}</td>
-                <td>{{ item.fair_price }}</td>
+                <td>{{ item.total_price - item.pay_price }}</td>
                 <td>{{ item.pay_price }}</td>
-                <td>{{ item.address.address }}</td>
+{#                <td>{{ item.address.address }}</td>#}
                 <td>{{ item.pay_time }}</td>
             </tr>
              {% endfor %}

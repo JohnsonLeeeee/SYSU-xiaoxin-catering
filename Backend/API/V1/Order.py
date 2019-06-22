@@ -8,6 +8,7 @@ from Backend.Model.base import db
 from Backend.Model.Cart import Cart
 from Backend.Model.Order import Order
 from Backend.Form.Order import OrderForm
+from datetime import datetime
 
 api = MyBluePrint('order')
 
@@ -30,6 +31,9 @@ def create_order(rid):
         order.uid = uid
         order.total_price = orderinfo.total_price.data
         order.coupon_discount = orderinfo.coupon_discount.data
+        pay_price = orderinfo.total_price.data - orderinfo.coupon_discount.data
+        order.pay_price = pay_price
+        order.pay_time = datetime.now()
         order.note=orderinfo.note.data
         order.rid = rid
         db.session.add(order)
@@ -38,7 +42,8 @@ def create_order(rid):
         for i in orderinfo.lists.data:
             cart = Cart()
             cart.uid = uid
-            cart.did = i.did
+            cart.did = i['did']
+            cart.quantity = i['quantity']
             cart.orderid = order.id
             db.session.add(cart)
 

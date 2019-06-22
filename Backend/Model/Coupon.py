@@ -1,4 +1,3 @@
-from flask import current_app
 from sqlalchemy import Column, Integer, FetchedValue, String, DateTime, Numeric, ForeignKey, Text, BigInteger
 from sqlalchemy.orm import relationship
 

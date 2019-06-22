@@ -1,4 +1,6 @@
 from ..Model.FoodCategory import FoodCat
+def buildimageurl(name):
+    return "static/upload/"+name
 
 class DishViewModel:
 
@@ -7,7 +9,7 @@ class DishViewModel:
         return dict(
             id = dish.id,
             name=dish.name,
-            image=dish.main_image,
+            image=buildimageurl(dish.main_image),
             price=dish.price,
             category=FoodCat.query.filter_by(id=dish.cid).first().name
         )
@@ -17,7 +19,7 @@ class DishViewModel:
         return dict(
             id = dish.id,
             name=dish.name,
-            image=dish.main_image,
+            image=buildimageurl(dish.main_image),
             price=dish.price,
             category=FoodCat.query.filter_by(id=dish.cid).first().name,
             summary = dish.summary
