@@ -4,6 +4,7 @@ from ..libs.web_help import ops_render, getCurrentDate, iPagination, getDictFilt
 from ..Model.base import db
 from ..Config import settings
 from ..Model.Order import Order
+from ..Model.user import User
 from ..libs.UrlManager import UrlManager
 from ..Service.Food import FoodService
 from ..Model.FoodStockChangeLog import FoodStockChangeLog
@@ -18,6 +19,9 @@ def index():
     req = request.values
     page = int(req['p']) if ('p' in req and req['p']) else 1
     query = Order.query
+    if 'mix_kw' in req:
+        rule = or_(User.username.ilike("%{0}%".format(req['mix_kw'])))
+        query = query.filter(rule)
 
     if 'status' in req and int(req['status']) > -1:
         query = query.filter(Order.status == int(req['status']))
