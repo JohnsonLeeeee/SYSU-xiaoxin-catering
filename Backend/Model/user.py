@@ -9,8 +9,7 @@ class User(UserMixin, Base):
     id = Column( Integer, primary_key=True,autoincrement=True)
     openid = Column(String(100), nullable=True, server_default=FetchedValue()) #微信識別標識
     username =  Column( String(100), nullable=False, server_default= FetchedValue())
-    phone_number =  Column( String(20),unique=True, server_default= FetchedValue())
-    email =  Column( String(100), unique=True, server_default= FetchedValue())
+    email = Column(String(100), unique=True, server_default=FetchedValue())
     sex =  Column( Integer, default = 1, server_default= FetchedValue())
     avatar =  Column( String(64), server_default= FetchedValue())
 

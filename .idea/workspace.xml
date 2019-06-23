@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b4e3d336-2300-4612-9c91-1b24ea951cce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/template/email/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/template/email/reset_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Model/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Model/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/database.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/database.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,79 +36,101 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/template/auth/forget_password.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
+        <entry file="file://$PROJECT_DIR$/Backend/database.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="208">
+                <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/template/auth/change_password.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
+        <entry file="file://$PROJECT_DIR$/详细设计说明书_引言.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="338">
+                <caret line="13" selection-start-line="13" selection-end-line="13" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/Config/secure.py">
+        <entry file="file://$PROJECT_DIR$/Backend/libs/auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/static/images/icon.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/template/email/confirm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="884">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+              <folding>
+                <element signature="e#1#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Backend/template/email/reset_password.html">
+        <entry file="file://$PROJECT_DIR$/Backend/Model/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="130">
+              <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+              <folding>
+                <element signature="e#1#34#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/static/images/common/avatar.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/static/images/common/logo.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/template/auth/login.html">
+        <entry file="file://$PROJECT_DIR$/Backend/Model/administrator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="12" selection-end-column="19" />
+            <state relative-caret-position="298">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/template/auth/forget_password_request.html">
+        <entry file="file://$PROJECT_DIR$/Backend/Web/Login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="-312" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/Web/auth.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/Config/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/api文档.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="104">
+                <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -118,15 +141,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="Python Script" />
         <option value="XHTML File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getCurrentDate</find>
       <find>cat-set</find>
       <find>/upload/ueditor</find>
       <find>stock_change_list</find>
@@ -156,6 +178,7 @@
       <find>commit</find>
       <find>current_user</find>
       <find>current_user.id</find>
+      <find>register</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -181,48 +204,21 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Backend/template/user/reset_pwd.html" />
-        <option value="$PROJECT_DIR$/Backend/Service/LoginService.py" />
-        <option value="$PROJECT_DIR$/Backend/libs/auth.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Address.py" />
-        <option value="$PROJECT_DIR$/Backend/API/V1/Dish.py" />
-        <option value="$PROJECT_DIR$/Backend/Form/Comment.py" />
-        <option value="$PROJECT_DIR$/Backend/Viewmodel/Comment.py" />
-        <option value="$PROJECT_DIR$/Backend/Viewmodel/Dish.py" />
-        <option value="$PROJECT_DIR$/Backend/API/V1/Order.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Cart.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Dish.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Comment.py" />
-        <option value="$PROJECT_DIR$/Backend/API/V1/Comment.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Coupon.py" />
-        <option value="$PROJECT_DIR$/Backend/Viewmodel/Coupon.py" />
-        <option value="$PROJECT_DIR$/Backend/libs/web_help.py" />
-        <option value="$PROJECT_DIR$/Backend/API/V1/Coupon.py" />
-        <option value="$PROJECT_DIR$/Backend/api文档.md" />
-        <option value="$PROJECT_DIR$/Backend/Viewmodel/Category.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/FoodCategory.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/administrator.py" />
-        <option value="$PROJECT_DIR$/Backend/Form/Auth_admin.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/restaurant.py" />
         <option value="$PROJECT_DIR$/Backend/template/auth/register.html" />
-        <option value="$PROJECT_DIR$/Backend/Model/base.py" />
         <option value="$PROJECT_DIR$/Backend/Web/Login.py" />
         <option value="$PROJECT_DIR$/Backend/Web/food.py" />
-        <option value="$PROJECT_DIR$/Backend/API/V1/Category.py" />
         <option value="$PROJECT_DIR$/Backend/API/V1/errors.py" />
         <option value="$PROJECT_DIR$/Backend/template/auth/login.html" />
-        <option value="$PROJECT_DIR$/Backend/API/V1/__init__.py" />
         <option value="$PROJECT_DIR$/Backend/Form/Order.py" />
         <option value="$PROJECT_DIR$/Backend/Form/Cart.py" />
-        <option value="$PROJECT_DIR$/Backend/Model/Order.py" />
         <option value="$PROJECT_DIR$/Backend/app.py" />
         <option value="$PROJECT_DIR$/Backend/Web/index.py" />
-        <option value="$PROJECT_DIR$/Backend/__init__.py" />
         <option value="$PROJECT_DIR$/Backend/template/email/confirm.py" />
         <option value="$PROJECT_DIR$/Backend/template/auth/confirm.xhtml" />
         <option value="$PROJECT_DIR$/Backend/template/email/confirm.html" />
@@ -230,21 +226,49 @@
         <option value="$PROJECT_DIR$/Backend/template/index/index.html" />
         <option value="$PROJECT_DIR$/Backend/Web/auth.py" />
         <option value="$PROJECT_DIR$/Backend/template/common/layout_main.html" />
-        <option value="$PROJECT_DIR$/Backend/Model/user.py" />
         <option value="$PROJECT_DIR$/Backend/template/auth/forget_password_request.html" />
         <option value="$PROJECT_DIR$/Backend/template/auth/forget_password.html" />
         <option value="$PROJECT_DIR$/Backend/template/auth/confirm_email.html" />
         <option value="$PROJECT_DIR$/Backend/template/auth/change_password.html" />
         <option value="$PROJECT_DIR$/Backend/Config/secure.py" />
         <option value="$PROJECT_DIR$/Backend/template/email/reset_password.html" />
+        <option value="$PROJECT_DIR$/Backend/Viewmodel/Dish.py" />
+        <option value="$PROJECT_DIR$/Backend/template/finance/index.html" />
+        <option value="$PROJECT_DIR$/Backend/template/user/edit.html" />
+        <option value="$PROJECT_DIR$/Backend/Model/Coupon.py" />
+        <option value="$PROJECT_DIR$/Backend/template/food/cat.html" />
+        <option value="$PROJECT_DIR$/Backend/template/coupon/index.html" />
+        <option value="$PROJECT_DIR$/Backend/Pipfile" />
+        <option value="$PROJECT_DIR$/Backend/libs/web_help.py" />
+        <option value="$PROJECT_DIR$/Backend/__init__.py" />
+        <option value="$PROJECT_DIR$/Backend/API/V1/Coupon.py" />
+        <option value="$PROJECT_DIR$/Backend/API/V1/Category.py" />
+        <option value="$PROJECT_DIR$/Backend/Viewmodel/Cart.py" />
+        <option value="$PROJECT_DIR$/Backend/Viewmodel/Order.py" />
+        <option value="$PROJECT_DIR$/Backend/API/V1/Order.py" />
+        <option value="$PROJECT_DIR$/Backend/Viewmodel/restaurant.py" />
+        <option value="$PROJECT_DIR$/Backend/Viewmodel/User.py" />
+        <option value="$PROJECT_DIR$/Backend/API/V1/__init__.py" />
+        <option value="$PROJECT_DIR$/Backend/Service/Restaurant.py" />
+        <option value="$PROJECT_DIR$/Backend/Service/StatisticsService.py" />
+        <option value="$PROJECT_DIR$/Backend/Viewmodel/Restaurant.py" />
+        <option value="$PROJECT_DIR$/Backend/API/V1/Restaurant.py" />
+        <option value="$PROJECT_DIR$/Backend/Model/base.py" />
+        <option value="$PROJECT_DIR$/Backend/Model/Order.py" />
+        <option value="$PROJECT_DIR$/Backend/Config/settings.py" />
+        <option value="$PROJECT_DIR$/Backend/api文档.md" />
+        <option value="$PROJECT_DIR$/Backend/libs/auth.py" />
+        <option value="$PROJECT_DIR$/Backend/Model/administrator.py" />
+        <option value="$PROJECT_DIR$/Backend/database.md" />
+        <option value="$PROJECT_DIR$/Backend/Model/user.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="19" />
+    <option name="x" value="-6" />
+    <option name="y" value="-15" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -252,6 +276,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,6 +312,12 @@
               <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
               <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -299,14 +330,7 @@
               <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
               <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="Viewmodel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
@@ -319,17 +343,10 @@
               <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SYSU-xiaoxin-catering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SYSU-xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="Xiaoxin-catering" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,7 +478,9 @@
       <workItem from="1560733421545" duration="9564000" />
       <workItem from="1560744843068" duration="1899000" />
       <workItem from="1560874189683" duration="4171000" />
-      <workItem from="1561127568392" duration="8156000" />
+      <workItem from="1561127568392" duration="16528000" />
+      <workItem from="1561214038328" duration="6957000" />
+      <workItem from="1561257180171" duration="2708000" />
     </task>
     <task id="LOCAL-00001" summary="架构">
       <created>1558933982135</created>
@@ -659,11 +678,46 @@
       <option name="project" value="LOCAL" />
       <updated>1561135674854</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="邮件发送">
+      <created>1561135736701</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1561135736701</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix bugs">
+      <created>1561172848068</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1561172848068</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix bugs">
+      <created>1561213764204</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1561213764204</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fix bugs">
+      <created>1561220196458</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1561220196459</updated>
+    </task>
+    <task id="LOCAL-00033" summary="修改用戶數據庫">
+      <created>1561260785720</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1561260785720</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146650000" />
+    <option name="totallyTimeSpent" value="164687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -678,21 +732,21 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22707888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23187633" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.48886415" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.62473345" weight="0.4599109" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5256125" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32962137" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.41759464" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.39198217" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.52115816" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49840087" weight="0.2494432" />
+      <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49946696" weight="0.32962137" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.48454157" side_tool="true" visible="true" weight="0.55790645" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.5154584" visible="true" weight="0.55790645" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32962137" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -723,17 +777,203 @@
     <MESSAGE value="add api about comment and dish" />
     <MESSAGE value="add api" />
     <MESSAGE value="fix administrator" />
-    <MESSAGE value="fix bugs" />
     <MESSAGE value="跳转登录页面" />
     <MESSAGE value="fix bugs about login" />
     <MESSAGE value="跳转仪表盘" />
     <MESSAGE value="邮件发送" />
-    <option name="LAST_COMMIT_MESSAGE" value="邮件发送" />
+    <MESSAGE value="fix bugs" />
+    <MESSAGE value="修改用戶數據庫" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改用戶數據庫" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SYSU_xiaoxin_catering$Flask__Backend_app_py_.coverage" NAME="Flask (Backend/app.py) Coverage Results" MODIFIED="1561135645512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SYSU_xiaoxin_catering$Flask__Backend_app_py_.coverage" NAME="Flask (Backend/app.py) Coverage Results" MODIFIED="1561219885716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Backend/Viewmodel/Comment.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Viewmodel/Coupon.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Viewmodel/User.py" />
+    <entry file="file://$PROJECT_DIR$/Backend/Form/Address.py" />
+    <entry file="file://$PROJECT_DIR$/Backend/Model/Share.py" />
+    <entry file="file://$PROJECT_DIR$/Backend/Form/User.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Form/Base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-468">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Viewmodel/Dish.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/API/V1/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Service/StatisticsService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Viewmodel/Restaurant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Service/Restaurant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/API/V1/Order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-364">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/API/V1/Dish.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/API/V1/Restaurant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据库设计说明书_外部设计.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据库设计说明书_结构设计.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据库设计说明书_运用设计.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/Cart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/Comment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/Order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/FoodStockChangeLog.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/FoodCategory.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/Dish.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/Coupon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Form/Comment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -743,114 +983,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Form/Cart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Form/Order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="208">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/Share.py">
+    <entry file="file://$PROJECT_DIR$/Backend/Form/Cart.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="9" column="23" selection-start-line="8" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="52">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/Coupon.py">
+    <entry file="file://$PROJECT_DIR$/Backend/Form/Auth_admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/FoodCategory.py">
+    <entry file="file://$PROJECT_DIR$/Backend/Form/Auth_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        <state>
           <folding>
-            <element signature="e#16#74#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/Image.py">
+    <entry file="file://$PROJECT_DIR$/Backend/Config/secure.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/Order.py">
+    <entry file="file://$PROJECT_DIR$/Backend/Model/restaurant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        <state relative-caret-position="208">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#91#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/flask_login/login_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8710">
-          <caret line="352" selection-start-line="352" selection-end-line="352" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Backend/Web/comment.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/flask/app.py">
+    <entry file="file://$PROJECT_DIR$/Backend/Web/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46150">
-          <caret line="1802" column="41" selection-start-line="1802" selection-start-column="41" selection-end-line="1802" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/flask/templating.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3328">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Desktop/Robustness.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/stat/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state relative-caret-position="130">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state>
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/Login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="e#24#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/api文档.md">
+    <entry file="file://$PROJECT_DIR$/软件需求说明书_引言.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -858,224 +1055,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/chart.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/comment.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/Stat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="66" column="18" lean-forward="true" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+    <entry file="file://$PROJECT_DIR$/软件需求说明书_运行环境规定.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="442">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/food.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="163" column="83" lean-forward="true" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="83" />
-          <folding>
-            <element signature="e#1#58#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/软件需求说明书.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/email/confirm.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/libs/email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/详细设计说明书_程序系统结构.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="52">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/libs/web_help.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../.virtualenvs/Backend-xriRMn6_/Lib/site-packages/flask_login/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+    <entry file="file://$PROJECT_DIR$/详细设计说明书.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="130">
+            <caret line="5" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Config/settings.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/confirm.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="234">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Form/Auth_admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+    <entry file="file://$PROJECT_DIR$/详细设计说明书_引言.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="338">
+            <caret line="13" selection-start-line="13" selection-end-line="13" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-          <folding>
-            <element signature="e#1#24#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/Backend/api文档.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="104">
+            <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/libs/auth.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/common/base.html">
+    <entry file="file://$PROJECT_DIR$/Backend/Web/Login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-          <folding>
-            <element signature="n#link#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-910">
-          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/common/layout_main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Web/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="30" />
-          <folding>
-            <element signature="e#25#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-702">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/administrator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-312" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Web/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="72" column="47" lean-forward="true" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
+        <state relative-caret-position="255">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Model/user.py">
+    <entry file="file://$PROJECT_DIR$/Backend/libs/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+        <state relative-caret-position="884">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding>
+            <element signature="e#1#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Model/administrator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="12" selection-end-column="19" />
+    <entry file="file://$PROJECT_DIR$/Backend/database.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="208">
+            <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/forget_password_request.html">
+    <entry file="file://$PROJECT_DIR$/Backend/Model/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/confirm_email.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/forget_password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/auth/change_password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/avatar.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/mini_qrcode.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/qrcode.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/static/images/common/logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Config/secure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/static/images/icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/email/confirm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/template/email/reset_password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="130">
+          <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+          <folding>
+            <element signature="e#1#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
