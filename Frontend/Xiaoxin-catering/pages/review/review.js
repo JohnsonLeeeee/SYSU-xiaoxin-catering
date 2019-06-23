@@ -7,13 +7,13 @@ Page({
   data: {
     reviews: [{
       uname: 'USER1',
-      comment:'A nice canteen!'
+      comment: 'A nice canteen!'
     }, {
-        uname: 'USER2',
-        comment: 'It\'s quite far from home...and yet I appreciate the cook here!'
+      uname: 'USER2',
+      comment: 'It\'s quite far from home...yet I appreciate the cook here!'
     }, {
       uname: 'USER3',
-      comment:'I like this one'
+      comment: 'I like this one'
     }]
   },
 

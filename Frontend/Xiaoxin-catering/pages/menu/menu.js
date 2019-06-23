@@ -66,7 +66,7 @@ Page({
       price: 15,
       active: false,
       num: 1
-      
+
     }, {
       id: 4,
       title: 'dish 4',
@@ -175,7 +175,7 @@ Page({
     });
   },
   onLoad: function () {
-    
+
   },
   enterComments: function () {
     wx.redirectTo({

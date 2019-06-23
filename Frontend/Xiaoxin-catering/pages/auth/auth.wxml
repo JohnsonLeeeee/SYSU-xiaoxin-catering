@@ -1,0 +1,10 @@
+<!--index.wxml-->
+
+<view class="indexcontainer">
+ <view class="background">
+  <text class="userinfo-nickname" bindtap="gotomenu">亲爱的 {{userInfo.nickName}}</text>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+</view>
