@@ -19,19 +19,5 @@ class Order(Base):
     rid = Column(Integer, ForeignKey('restaurant.id'), nullable=False, server_default=FetchedValue())
     restaurant = relationship('Restaurant')
 
-    @property
-    def pay_status(self):
-        tmp_status = self.status
-        if self.status == 1:
-            tmp_status = self.express_status
-            if self.express_status == 1 and self.comment_status == 0:
-                tmp_status = -5
-            if self.express_status == 1 and self.comment_status == 1:
-                tmp_status = 1
-        return tmp_status
-
-    @property
-    def status_desc(self):
-        return current_app.config['PAY_STATUS_DISPLAY_MAPPING'][str(self.pay_status)]
 
 

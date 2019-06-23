@@ -35,13 +35,6 @@ class Base(db.Model):
     def __getitem__(self, item):
         return getattr(self, item)
 
-    # @property
-    # def create_datetime(self):
-    #     if self.create_time:
-    #         return datetime.fromtimestamp(self.create_time)
-    #     else:
-    #         return None
-
     def delete(self):
         self.status = 0
 
