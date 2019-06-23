@@ -4,7 +4,7 @@
     "pages/logs/logs",
     "pages/order/order",
     "pages/menu/menu",
-    "pages/comment/comment",
+    "pages/auth/auth",
     "pages/review",
     "pages/review/review"
   ],
