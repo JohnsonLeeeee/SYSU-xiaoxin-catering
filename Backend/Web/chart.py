@@ -3,7 +3,7 @@ from ..Model.base import db
 from flask import Blueprint, jsonify
 from ..libs.web_help import ops_render
 from ..libs.web_help import getFormatDate
-from ..Service.StatisticsService import StatDailySite
+from ..Service.Statistics import StatDailySite
 import datetime
 route_chart = Blueprint( 'chart_page',__name__, url_prefix="/chart")
 
