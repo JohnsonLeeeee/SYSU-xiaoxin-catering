@@ -1,8 +1,10 @@
+from flask import current_app
 from flask_login import UserMixin
 
 from .base import db, Base
 from sqlalchemy import Column, FetchedValue
 from sqlalchemy import String,Integer
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
 class User(UserMixin, Base):
     __tablename__ = 'user'
@@ -14,9 +16,9 @@ class User(UserMixin, Base):
     avatar =  Column( String(64), server_default= FetchedValue())
 
 
-    # def generate_token(self, expiration=600):
-    #     s = Serializer(current_app.config['SECRET_KEY'], expiration)
-    #     return s.dumps({'id': self.id}).decode('utf-8')
+    def generate_token(self, expiration=600):
+        s = Serializer(current_app.config['SECRET_KEY'], expiration)
+        return s.dumps({'id': self.id}).decode('utf-8')
 
     # @staticmethod
     # def register_by_email(nickname, account, secret):

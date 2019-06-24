@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Blueprint,request
 from ..libs.web_help import ops_render,getFormatDate,iPagination,getDictFilterField,selectFilterObj
-from ..Service.StatisticsService import StatDailySite, StatDailyFood
+from ..Service.Statistics import StatDailySite, StatDailyFood
 from ..Model.administrator import Adminstrator
 from ..Model.Order import Order
 from ..Config.settings import PAGE_DISPLAY, PAGE_SIZE

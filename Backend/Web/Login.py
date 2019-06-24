@@ -3,7 +3,7 @@ from flask import Blueprint,request,jsonify,make_response,g,redirect
 from ..Model.administrator import Adminstrator
 from ..libs.web_help import ( ops_render )
 from ..libs.UrlManager import ( UrlManager )
-from ..Service.LoginService import LoginService
+from ..Service.Login import LoginService
 from ..Model.base import db
 from ..Config.settings import AUTH_COOKIE_NAME
 import json
