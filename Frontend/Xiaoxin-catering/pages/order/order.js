@@ -111,6 +111,21 @@ Page({
   },
   onLoad: function () {
     let that = this;
+    requestcatdata: function(category) {
+      wx.request({
+        url: 'v1/order/<:rid>',
+        method: 'POST',
+        header: {
+          'type': category
+        },
+        success(res) {
+          console.log(res.data);
+          this.setdata({
+            items: res
+          });
+        }
+      })
+    };
     // 取出订单传过来的数据
     wx.getStorage({
       key: 'orders',
