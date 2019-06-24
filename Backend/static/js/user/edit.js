@@ -11,26 +11,27 @@ var user_edit_ops = {
                 return;
             }
 
-            var nickname_target = $(".user_edit_wrap input[name=nickname]");
-            var nickname = nickname_target.val();
+            var username_target = $(".user_edit_wrap input[name=username]");
+            var username = username_target.val();
 
             var email_target = $(".user_edit_wrap input[name=email]");
             var email = email_target.val();
-
-            if( !nickname || nickname.length < 2 ){
-                common_ops.tip( "请输入符合规范的姓名~~",nickname_target );
+            console.log(username.length);
+            console.log(!username);
+            if( !username || username.length < 2 ){
+                common_ops.tip( "请输入符合规范的姓名~~",username_target );
                 return false;
             }
 
             if( !email || email.length < 2 ){
-                common_ops.tip( "请输入符合规范的邮箱~~",nickname_target );
+                common_ops.tip( "请输入符合规范的邮箱~~",username_target );
                 return false;
             }
 
             btn_target.addClass("disabled");
 
             var data = {
-                nickname: nickname,
+                username: username,
                 email: email
             };
 
