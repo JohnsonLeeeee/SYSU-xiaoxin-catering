@@ -51,12 +51,12 @@ class RestaurantService:
     @staticmethod
     def get_today_share(restuarant_id):
         num = db.session.query(func.count(ShareHistory.id)).filter(ShareHistory.rid == restuarant_id, ShareHistory.status == 1,
-                                                             func.date(ShareHistory.created_time) == date.today()).all()
+                                                             func.date(ShareHistory.create_time) == date.today()).all()
         return len(num)
 
     @staticmethod
     def get_month_share(restuarant_id):
         num = db.session.query(func.count(ShareHistory.id)).filter(ShareHistory.rid == restuarant_id,
                                                                    ShareHistory.status == 1,
-                                                                   func.month(ShareHistory.created_time) == date.month()).all()
+                                                                   func.month(ShareHistory.create_time) == date.month()).all()
         return len(num)

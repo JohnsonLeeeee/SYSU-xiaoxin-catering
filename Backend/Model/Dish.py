@@ -8,7 +8,7 @@ class Dish(Base):
 
     id =  Column( Integer, primary_key=True,autoincrement=True)
     rid = Column( Integer, ForeignKey('restaurant.id'), nullable=True, server_default= FetchedValue())
-    restaurant = relationship('Restaurant')
+    restaurant = relationship('Restnumaurant')
     name =  Column( String(100), nullable=False, server_default= FetchedValue())
     price =  Column( Numeric(10, 2), nullable=False, server_default= FetchedValue())
     main_image =  Column( String(100), nullable=False, server_default= FetchedValue())

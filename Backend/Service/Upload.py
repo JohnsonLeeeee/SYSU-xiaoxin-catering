@@ -41,7 +41,7 @@ class UploadService():
 
 		model_image = Image()
 		model_image.file_key = file_dir + "/" + file_name
-		model_image.created_time = getCurrentDate()
+		model_image.create_time = getCurrentDate()
 		db.session.add( model_image)
 		db.session.commit()
 
