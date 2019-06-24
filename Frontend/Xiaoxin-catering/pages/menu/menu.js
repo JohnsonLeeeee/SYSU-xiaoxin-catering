@@ -175,7 +175,21 @@ Page({
     });
   },
   onLoad: function () {
-
+    requestcatdata: function(category){
+      wx.request({
+        url:'v1/order/<:rid>',
+        method:'GET',
+        header:{
+          'type': category
+        },
+        success(res){
+          console.log(res.data);
+          this.setdata({
+            items: res
+          });
+        }
+      })
+    }
   },
   enterComments: function () {
     wx.redirectTo({
