@@ -83,5 +83,10 @@ Page({
       }
     }) 
   },
+  jump:function(){
+    wx.redirectTo({
+      url: '../auth/auth',
+    })
+  }
 
 })
