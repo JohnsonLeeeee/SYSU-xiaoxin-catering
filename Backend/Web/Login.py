@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 from flask import Blueprint,request,jsonify,make_response,g,redirect
-from ..Model.user import User
 from flask_login import current_user
+
+import json
+
 from ..Model.administrator import Adminstrator
 from ..libs.web_help import ( ops_render )
 from ..libs.UrlManager import ( UrlManager )
 from ..Service.Login import LoginService
 from ..Model.base import db
 from ..Config.settings import AUTH_COOKIE_NAME
-import json
 
 route_user = Blueprint( 'user',__name__ )
 

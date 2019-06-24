@@ -30,7 +30,7 @@ class Base(db.Model):
     __abstract__ = True
     create_time = Column(DateTime(timezone=True), server_default=func.now() )
     status = Column(SmallInteger, default=1)
-    update_time =  Column( 'update_time', Integer)
+    update_time =  Column(DateTime(timezone=True), server_default=func.now() )
 
     def __getitem__(self, item):
         return getattr(self, item)
