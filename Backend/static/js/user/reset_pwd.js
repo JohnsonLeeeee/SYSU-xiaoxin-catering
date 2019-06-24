@@ -13,6 +13,7 @@ var mod_pwd_ops = {
 
             var old_password = $("#old_password").val();
             var new_password = $("#new_password").val();
+            var repeat_password = $("#repeat_password").val();
 
 
             if( !old_password ){
@@ -24,12 +25,20 @@ var mod_pwd_ops = {
                 common_ops.alert( "请输入不少于6位的新密码~~" );
                 return false;
             }
+            console.log(new_password)
+            console.log(old_password)
+            console.log(typeof(old_password) )
+             if( repeat_password != new_password ){
+                common_ops.alert( "两次输入的新密码要一致~~" );
+                return false;
+            }
 
             btn_target.addClass("disabled");
 
             var data = {
                 old_password: old_password,
-                new_password: new_password
+                new_password: new_password,
+                repeat_password:repeat_password
             };
 
             $.ajax({
