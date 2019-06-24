@@ -151,7 +151,7 @@ def set():
     else:
         model_food = Food()
         model_food.status = 1
-        model_food.created_time = getCurrentDate()
+        model_food.create_time = getCurrentDate()
 
     model_food.cid = cid
     model_food.name = name
@@ -215,7 +215,7 @@ def catSet():
         model_food_cat = food_cat_info
     else:
         model_food_cat = FoodCat()
-        model_food_cat.created_time = getCurrentDate()
+        model_food_cat.create_time = getCurrentDate()
     model_food_cat.name = name
     model_food_cat.weight = weight
     model_food_cat.updated_time = getCurrentDate()
