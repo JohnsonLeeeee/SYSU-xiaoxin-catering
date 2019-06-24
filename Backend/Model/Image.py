@@ -1,9 +1,9 @@
-from ..Model.base import db
+from ..Model.base import Base
+from sqlalchemy import Column, DateTime, Integer, String
+from sqlalchemy.schema import FetchedValue
 
-
-class Image(db.Model):
+class Image(Base):
     __tablename__ = 'image'
 
-    id = db.Column(db.Integer, primary_key=True,autoincrement=True)
-    file_key = db.Column(db.String(60), nullable=False, server_default=db.FetchedValue())
-    created_time = db.Column(db.DateTime, nullable=False, server_default=db.FetchedValue())
+    id = Column(Integer, primary_key=True,autoincrement=True)
+    file_key = Column(String(60), nullable=False, server_default=FetchedValue())

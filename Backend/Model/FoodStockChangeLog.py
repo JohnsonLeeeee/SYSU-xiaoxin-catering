@@ -10,4 +10,3 @@ class FoodStockChangeLog(Base):
     unit = Column(Integer, nullable=False, server_default=FetchedValue())
     total_stock = Column(Integer, nullable=False, server_default=FetchedValue())
     note = Column(String(100), nullable=False, server_default=FetchedValue())
-    created_time = Column(DateTime, nullable=False, server_default=FetchedValue())
