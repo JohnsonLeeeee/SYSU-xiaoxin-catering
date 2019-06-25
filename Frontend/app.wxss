@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import "/icon/icon.wxss";
 .container {
   margin:0;
   padding:0;

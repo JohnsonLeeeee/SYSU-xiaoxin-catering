@@ -1,9 +1,12 @@
 <!--menu.wxml-->
 <view class="head">
-  <block wx:for="{{iconSize}}">
+  <!-- <block wx:for="{{iconSize}}">
     <icon type="success" size="{{item}}"/>
-  </block>
-  <text class="word">广州大学城gogo新天地店</text>
+  </block> -->
+  <text class="iconfont icon-location"></text>
+  <text class="name">GoGo新天地店 </text>
+  <br/>
+  <text class="address">距离您1.5Km</text>
 </view>
 <view class="container">
   <view class="aside">
@@ -25,8 +28,9 @@
       <view class="item" wx:for="{{items}}" wx:key="{{item.id}}">
         <image src="image/item-m.jpg"></image>
         <text class="title">{{item.title}}</text>
-        <text class="price">price: ￥{{item.price}} </text>
-        <text class="{{item.active ? 'btn active' : 'btn'}}" bindtap='addOrder' data-id="{{item.id}}" data-index="{{index}}">Add to cart</text>
+        <text class="summary">{{item.summary}}</text>
+        <text class="price">￥{{item.price}} </text>
+        <text class="{{item.active ? 'btn active' : 'btn'}}" bindtap='addOrder' data-id="{{item.id}}" data-index="{{index}}">购买</text>
       </view>
     </view>
   </view>

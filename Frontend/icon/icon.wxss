@@ -1,0 +1,21 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1261304_fmtpy2icto6.eot?t=1561482480065'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1261304_fmtpy2icto6.eot?t=1561482480065#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAM8AAsAAAAABugAAALuAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBcIFvATYCJAMICwYABCAFhG0HMhsXBsiusCnDvUgjdsOAhJmVyNoL/vhOiOBpf/zP2d0nMOk3qFGRCMluTaUpFJdw57X7ykLOkhhkPpyftbvdSqrk11On6q7owE4NIAMYzCm3RNIstEDt9lXawRnWMrdP3DttLMH5zrtc5pj8qQswDqRA98A2J1IggXkq4p1Id5CnCTQa5Udl1568MqCtwKRAXL3Eo4B2IaooSqFeqG1YWcQbNerT03QAr6Pvx39g1JPUZGg5cD6dBUm/RCVqd6qcCUhky7mhrCNjGVCII43efdSS7DI1jVZW3SRwrMbg19j/KpAe9o9HELVQ3wyGeekzyTz5owomUOjPXsCVSbuQV/S7Ozc2TjLmhj5UfsDdb2A9e3tvHX2XmYHzsKP7rb7th/Djd5MfIk+fdvt3hBedWH6bdrnJtQ/17zc696Fye4G7h6/vZuC7dwPzb0P6pg7+dNa1csdcT7ow1LsuJ51ylzS5h6I0FFroQdfNDi+/+Ef3f+5zshz5K4Mu9va7v+zkmRrrnJJiapqSCmFqqqrqzh0hZ51gbdVF79ZijdZ0ZofQUu39aS35op3LegBIAlCdj+fkv/wbHz+tmjcaxf2ubyrg55bmb1G4uhjmB+rvxRf8U9nAtmIrYEvFlDUWk73U7lXdSAkqEOz0aaqx5wXcob4gU5DUGUFWb5pc6Muo0WQNteptRaMlmeubdMHURGnAomEOod0uklZfkbV7IBf6R9To9Rm12iOj0bEw27HJbFxqTL2NKIJYSLdDASOTcsxBdOPGEsRrFlM4r4jYFQgrBQkYHBBULmQiKcJLzFG28EII4SCHZRKYwZ2HxGIZlGOZEDEkgE+IPCYwkGt6UQAjkwBdO2EIhUBYEK0dJMCQkeKC7oRu5fMlEJ5mYhTcQWgJV0AwJcHgULAAQQPImVrpIMKjXKLUgicEQXAgDiYjAWVwbkRMWRlI3jxMCGEQAfgT0nIxAoVO3FBtwPZ6yd/tgUYwpSB2Vn/2UgUlDQoGAAAA') format('woff2'),
+  url('//at.alicdn.com/t/font_1261304_fmtpy2icto6.woff?t=1561482480065') format('woff'),
+  url('//at.alicdn.com/t/font_1261304_fmtpy2icto6.ttf?t=1561482480065') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1261304_fmtpy2icto6.svg?t=1561482480065#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location:before {
+  content: "\e61f";
+  color: #DEB749;
+}
