@@ -14,7 +14,8 @@ Page({
     }, {
       uname: 'USER3',
       comment: 'I like this one'
-    }]
+    }],
+    tempcomment: ''
   },
 
   /**
@@ -49,7 +50,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    //getcomments();
   },
 
   /**
@@ -71,5 +72,37 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  submit: function (event) {
+    str = event.target.dataset.text;
+    this.setdata({
+      tempcomment: str
+    });
+    //sendcomments(str);
+  },
+  getcomments: function () {
+    wx.request({
+      url: '/v1/comment/<:rid>',
+      method: 'GET',
+      success(res) {
+        console.log(res.data);
+        this.setdata({
+          reviews: res
+        });
+      }
+    })
+  },
+  sendcomments: function (str) {
+    wx.request({
+      url: '/v1/comment/<:rid>',
+      method: 'POST',
+      header: {
+        uid: 1,
+        content: str
+      },
+      success(res) {
+        console.log(res.data);
+      }
+    })
   }
 })
