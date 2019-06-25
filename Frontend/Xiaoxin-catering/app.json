@@ -5,7 +5,6 @@
     "pages/order/order",
     "pages/menu/menu",
     "pages/auth/auth",
-    "pages/review",
     "pages/review/review"
   ],
   "window": {
