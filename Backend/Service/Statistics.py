@@ -1,5 +1,5 @@
 from .Restaurant import RestaurantService
-from sqlalchemy import func
+from sqlalchemy import func, extract
 import datetime
 from Backend.Model.Order import Order
 from Backend.Model.Dish import Dish
@@ -23,13 +23,13 @@ class StatDailySite:
     @staticmethod
     def getdailyincome(restaurant_id, date_from, date_to):
         # 获取每日营收
-        orderlist = db.session.query(Order).filter(Order.rid == restaurant_id, Order.status==1,
-                                                    func.date(Order.pay_time) >= datetime.datetime.strptime(date_from, "%Y-%m-%d"),
+        orderlist = db.session.query(Order).filter(Order.rid == restaurant_id,
+                                                    func.date(Order.pay_time) >= datetime.datetime.strptime(date_from, "%Y-%m-%d") + datetime.timedelta(days=-1),
                                                     func.date(Order.pay_time) <= datetime.datetime.strptime(date_to, "%Y-%m-%d")).all()
         list = StatDailySite.getEveryDay(date_from, date_to)
         for order in orderlist:
             for item in list:
-                if order.pay_time == item[0]:
+                if order.pay_time.strftime("%Y-%m-%d") == item[0]:
                     item[1] = item[1] + 1
                     item[2] += order.pay_price
 
@@ -57,7 +57,7 @@ class StatDailyFood:
     @staticmethod
     def getcartlist(restaurant_id, date_from, date_to):
         return db.session.query(Cart).filter(StatDailyFood.getorderrid(Cart.orderid) == restaurant_id, StatDailyFood.getorderstatus(Cart.orderid) == 1,
-                                             func.date(StatDailyFood.getorderpaytime(Cart.orderid)) >= datetime.datetime.strptime(date_from, "%Y-%m-%d"),
+                                             func.date(StatDailyFood.getorderpaytime(Cart.orderid)) >= datetime.datetime.strptime(date_from, "%Y-%m-%d") + datetime.timedelta(days=-1),
                                              func.date(StatDailyFood.getorderpaytime(Cart.orderid)) <= datetime.datetime.strptime(date_to, "%Y-%m-%d")).all()
 
     @staticmethod

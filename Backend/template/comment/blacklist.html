@@ -1,0 +1,35 @@
+{% extends "common/layout_main.html" %}
+{% block content %}
+{% include "common/tab_comment.html" %}
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered m-t">
+            <thead>
+            <tr>
+                <th>用户</th>
+                <th>评论id</th>
+                <th>内容</th>
+            </tr>
+            </thead>
+            <tbody>
+             {% if list %}
+                {% for item in list %}
+            <tr>
+                <td>{{ item.user.username }}</td>
+                <td>{{ item.id }}</td>
+                <td>{{ item.content }}</td>
+            </tr>
+             {% endfor %}
+            {% else %}
+                <tr><td colspan="3">暂无数据~~</td></tr>
+            {% endif %}
+            </tbody>
+        </table>
+        <!--分页代码已被封装到统一模板文件中-->
+        {% include 'common/pagenation.html' %}
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{{ buildStaticUrl('/js/comment/index.js') }}"></script>
+{% endblock %}

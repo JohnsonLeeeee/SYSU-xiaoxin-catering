@@ -27,18 +27,28 @@ cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 def create_restaurant(db):
     order1 = Order()
-    order1.pay_time = datetime.datetime.now()
-    order1.total_price = 100
+    order1.pay_time = datetime.datetime.now() + datetime.timedelta(days=-1)
+    order1.total_price = 10
+    order1.uid = 1
+    order1.pay_price = 10
+    order1.rid = 1
+    order1.note = "null"
+
     order2 = Order()
-    order2.pay_time = datetime.datetime.now() + datetime.timedelta(days=-3)
-    order2.total_price = 200
+    order2.pay_time = datetime.datetime.now()
+    order2.total_price = 80
+    order2.uid = 1
+    order2.pay_price = 70
+    order2.rid = 1
+    order2.note = "null"
+
     res = Restaurant()
     res.name = "GOGO"
     coupon = dispatch_coupon(1,1)
     with db.auto_commit():
+        db.session.add(coupon)
         # db.session.add(order1)
         # db.session.add(order2)
-        db.session.add(coupon)
 
     if Restaurant.query.filter_by(name = res.name).first():
         return
