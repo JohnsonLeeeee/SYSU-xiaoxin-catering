@@ -8,6 +8,7 @@ from Backend.Model.base import db
 from Backend.Model.Cart import Cart
 from Backend.Model.Order import Order
 from Backend.Form.Order import OrderForm
+from Backend.Viewmodel.Order import OrderViewModel
 from datetime import datetime
 
 api = MyBluePrint('order')
@@ -39,3 +40,9 @@ def create_order(rid):
             db.session.add(cart)
     return Success()
 
+@api.route('/<int:rid>/<int:uid>', methods=['GET'])
+@auth.login_required
+def history_order(rid,uid):
+    orders = Order.query.filter_by(rid=rid,uid=uid).all()
+    list = [OrderViewModel.order(i) for i in orders]
+    return jsonify(orders = list, number = len(list))
