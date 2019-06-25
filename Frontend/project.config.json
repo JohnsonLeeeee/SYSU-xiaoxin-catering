@@ -13,8 +13,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wx3c6020f3baebf7b7",
-	"projectname": "miniprogram-test-1",
+	"appid": "touristappid",
+	"projectname": "try",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
