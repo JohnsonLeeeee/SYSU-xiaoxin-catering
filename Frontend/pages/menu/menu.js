@@ -128,6 +128,21 @@ Page({
         duration: 2000
       })
     }
+  }, 
+  mard: function () {
+    wx.redirectTo({
+      url: '../menu/menu'
+    })
+  }, 
+  ord: function () {
+    wx.redirectTo({
+      url: '../history/history'
+    })
+  },
+  rard: function () {
+    wx.navigateTo({
+      url: '../review/review'
+    })
   },
   addOrder: function (event) {
     let that = this;
@@ -204,11 +219,6 @@ Page({
           items: res
         });
       }
-    })
-  },
-  enterComments: function () {
-    wx.redirectTo({
-      url: '../review/review',
     })
   }
 })

@@ -23,7 +23,7 @@ Page({
       wx.redirectTo({
         url: '../menu/menu',
       })
-    }, 5000);
+    }, 3000);
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

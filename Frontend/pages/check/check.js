@@ -79,7 +79,7 @@ Page({
   // 点击结账按钮
   pay: function () {
     let that = this;
-    let str = '确认提交订单？'
+    let str = '选中' + that.data.orderCount.num + '件商品，共' + that.data.orderCount.money + '元，是否要支付？'
     wx.showModal({
       title: '提示',
       content: str,
@@ -87,11 +87,17 @@ Page({
         // 至少选中一个商品才能支付
         if (that.data.orderCount.num !== 0) {
           if (res.confirm) {
-            // 跳转确认界面
+            // 支付成功
+            wx.showModal({
+              title: '提示',
+              content: '支付成功！',
+            })
             //sendorder();
-            wx.redirectTo({
-              url:'../check/check'
-            });
+            setTimeout(function () {
+              wx.redirectTo({
+                url: '../history/history',
+              })
+            }, 3000);
           } else if (res.cancel) {
             console.log('用户点击取消')
           }

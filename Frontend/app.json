@@ -5,12 +5,14 @@
     "pages/order/order",
     "pages/menu/menu",
     "pages/auth/auth",
-    "pages/review/review"
+    "pages/review/review",
+    "pages/check/check",
+    "pages/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Wechat",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
