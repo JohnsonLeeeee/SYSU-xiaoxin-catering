@@ -1,5 +1,10 @@
 /**app.wxss**/
 @import "/icon/icon.wxss";
+@import "/icon/cart.wxss";
+@import "/icon/me.wxss";
+@import "/icon/history.wxss";
+@import "/icon/comment.wxss";
+@import "/icon/menu.wxss";
 .container {
   margin:0;
   padding:0;

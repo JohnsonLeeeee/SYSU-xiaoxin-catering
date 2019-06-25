@@ -101,7 +101,6 @@
   font-weight:bolder;
 }
 .item-content .box .item .price{
-  color:red;
   font-size:18px;
   margin-bottom:5px;
 }
@@ -122,7 +121,7 @@
   text-align:center;
   color:#fff;
   font-weight:bolder;
-  background:orange;
+  background:#DEB749;
   border-radius:5px;
 }
 
@@ -149,7 +148,6 @@
     margin-right:10px;
     font-size:18px;
     font-weight:bolder;
-    color:red;
 }
 .bottom-bar .btn{
     height:40px;
@@ -159,6 +157,6 @@
     line-height:40px;
     text-align:center;
     font-size:16px;
-    background:orange;
+    background:#DEB749;
 }
 

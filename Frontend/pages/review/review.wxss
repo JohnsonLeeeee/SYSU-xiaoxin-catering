@@ -27,7 +27,7 @@ view {
 .submit {
   margin-top: 10px;
   margin-right: 20px;
-  background: #ffaa00;
+  background: #DEB749;
 }
 .write {
   margin: 0px;

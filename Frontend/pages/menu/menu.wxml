@@ -36,16 +36,20 @@
   </view>
   <view class="{{bottomFlag ? 'bottom-bar' : 'bottom-bar'}}">
     <view class="btm">
-        <text bindtap='mard'>菜单</text>
+     <text class="iconfont icon-menu"></text>
+        <text bindtap='mard'>  菜单</text>
     </view>
     <view class="bto">
-        <text bindtap='ord'>历史订单</text>
+     <text class="iconfont icon-history"></text>
+        <text bindtap='ord'>  订单</text>
     </view>
     <view class="btn">
-        <text bindtap='card'>购物车</text>
+        <text class="iconfont icon-cart"></text>
+        <text bindtap='card'>  购物车</text>
     </view>
     <view class="btr">
-        <text bindtap='rard'>评价</text>
+     <text class="iconfont icon-comment"></text>
+        <text bindtap='rard'>  评价</text>
     </view>
   </view>
 </view>

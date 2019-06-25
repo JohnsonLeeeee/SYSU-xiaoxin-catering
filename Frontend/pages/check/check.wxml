@@ -19,7 +19,7 @@
       <view class="item" wx:for="{{items}}" wx:key="{{item.id}}">
         <image src="image/item-m.jpg"></image>
         <text class="title">{{item.title}}</text>
-        <text class="price">price: ￥ {{item.price}} </text>
+        <text class="price">￥ {{item.price}} </text>
         <view class="opera">
           <text class="btn" bindtap="del" data-id="{{item.id}}" data-index="{{index}}">-</text>  
         </view>
