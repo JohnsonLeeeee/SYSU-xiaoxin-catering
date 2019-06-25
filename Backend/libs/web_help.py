@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import g,render_template,json
 import datetime,decimal
+from decimal import Decimal
 from ..Model.Coupon import Coupon
 import random
 from dateutil.relativedelta import relativedelta
@@ -136,6 +137,18 @@ class MyJSONEncoder(json.JSONEncoder):
             return obj.isoformat()
         return super(MyJSONEncoder, self).default(obj)
 
+
+class fakefloat(float):
+    def __init__(self, value):
+        self._value = value
+    def __repr__(self):
+        return str(self._value)
+
+def defaultencode(o):
+    if isinstance(o, Decimal):
+        # Subclass float with custom repr?
+        return fakefloat(o)
+    raise TypeError(repr(o) + " is not JSON serializable")
 
 def dispatch_coupon(uid,rid):
     coupon = Coupon()
