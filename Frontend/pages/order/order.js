@@ -88,13 +88,10 @@ Page({
         if (that.data.orderCount.num !== 0) {
           if (res.confirm) {
             // 打开扫码功能
+            //sendorder();
             wx.scanCode({
               onlyFromCamera: true,
-              success: (res) => {
-                wx.redirectTo({
-                  url: '../pay/pay'
-                });
-              }
+              //...扫码成功之后的操作
             });
           } else if (res.cancel) {
             console.log('用户点击取消')
@@ -111,21 +108,6 @@ Page({
   },
   onLoad: function () {
     let that = this;
-    requestcatdata: function(category) {
-      wx.request({
-        url: 'v1/order/<:rid>',
-        method: 'POST',
-        header: {
-          'type': category
-        },
-        success(res) {
-          console.log(res.data);
-          this.setdata({
-            items: res
-          });
-        }
-      })
-    };
     // 取出订单传过来的数据
     wx.getStorage({
       key: 'orders',
@@ -147,6 +129,24 @@ Page({
         that.setData({
           orderCount
         });
+      }
+    })
+  },
+  sendorder: function (category) {
+    wx.request({
+      url: '/v1/comment/<:rid>',
+      method: 'POST',
+      header: {
+        uid: 1,
+        total_price: this.data.orderCount.money,
+        note: 'Please hurry',
+        rid: 1,
+        coupon_discount: 2,
+        lists: this.data.items
+
+      },
+      success(res) {
+        console.log(res.data);
       }
     })
   }

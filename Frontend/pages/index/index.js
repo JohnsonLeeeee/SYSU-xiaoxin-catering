@@ -17,7 +17,7 @@ Page({
               //用户已经授权过
               
               wx.switchTab({
-                url: 'pages/auth/auth'
+                url: '../auth/auth'
               })
             }
           });
@@ -50,7 +50,7 @@ Page({
       });
       //授权成功后，跳转进入小程序首页
       wx.switchTab({
-        url: 'pages/auth/auth'
+        url: '../auth/auth'
       })
     } else {
       //用户按了拒绝按钮
