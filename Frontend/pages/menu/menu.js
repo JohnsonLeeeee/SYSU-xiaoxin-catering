@@ -14,8 +14,9 @@ Page({
     autoplay: true, //是否自动切换
     interval: 3000, //自动切换时间间隔,3s
     duration: 1000, //  滑动动画时长1s
-
-
+    iconSize:[20],
+    iconColor:['red'],
+    iconType:['success'],
     tabIndex: 0,
     // 统计商品数量和价格
     orderCount: {

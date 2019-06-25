@@ -1,4 +1,10 @@
 <!--menu.wxml-->
+<view class="head">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+  </block>
+  <text class="word">广州大学城gogo新天地店</text>
+</view>
 <view class="container">
   <view class="aside">
     <view class="{{tabIndex === index ? 'menu active' : 'menu'}}" wx:for="{{menus}}" wx:key="{{item.id}}" data-index="{{index}}" bindtap='tabMenu'>{{item.menu}}
