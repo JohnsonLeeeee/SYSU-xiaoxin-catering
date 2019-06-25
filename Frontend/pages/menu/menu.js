@@ -109,6 +109,7 @@ Page({
     this.setData({
       tabIndex: index
     });
+    //requestmenudata(index);//获取对应类别菜单
   },
   // 点击去购物车结账
   card: function () {
@@ -174,22 +175,35 @@ Page({
       data: subOrders
     });
   },
-  onLoad: function () {
-    requestcatdata: function(category){
-      wx.request({
-        url:'v1/order/<:rid>',
-        method:'GET',
-        header:{
-          'type': category
-        },
-        success(res){
-          console.log(res.data);
-          this.setdata({
-            items: res
-          });
-        }
-      })
-    }
+  onLoad: function () {//第一次进入读取种类
+    //requestcatedata();
+  }, 
+  requestcatedata: function () {
+    wx.request({
+      url: '/v1/category/<:rid>',
+      method: 'GET',
+      success(res) {
+        console.log(res.data);
+        this.setdata({
+          menus: res.data
+        });
+      }
+    })
+  },
+  requestmenudata: function (category) {
+    wx.request({
+      url: 'v1/order/<:rid>',
+      method: 'GET',
+      header: {
+        'type': category
+      },
+      success(res) {
+        console.log(res.data);
+        this.setdata({
+          items: res
+        });
+      }
+    })
   },
   enterComments: function () {
     wx.redirectTo({

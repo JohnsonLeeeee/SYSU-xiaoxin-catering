@@ -7,7 +7,7 @@
 
 <view class='write'>
   <text class='ins'>Your Comment:</text>
-  <input class='input'>
+  <input class='input' id='inputtext'>
   </input>
-  <button class='submit'>Submit</button>
+  <button class='submit' bindtap='submit'>Submit</button>
 </view>
