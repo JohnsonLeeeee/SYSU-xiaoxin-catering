@@ -11,8 +11,8 @@ route_chart = Blueprint( 'chart_page',__name__, url_prefix="/chart")
 @route_chart.route("/dashboard")
 def dashboard():
     now = datetime.datetime.now()
-    date_before_30days = now + datetime.timedelta(days=-30)
-    date_from = getFormatDate(date=date_before_30days, format="%Y-%m-%d")
+    date_before_7days = now + datetime.timedelta(days=-7)
+    date_from = getFormatDate(date=date_before_7days, format="%Y-%m-%d")
     date_to = getFormatDate(date=now, format="%Y-%m-%d")
 
     list = StatDailySite.getdailyincome(1, date_from, date_to)
@@ -40,8 +40,8 @@ def dashboard():
 @route_chart.route("/finance")
 def finance():
     now = datetime.datetime.now()
-    date_before_30days = now + datetime.timedelta(days=-30)
-    date_from = getFormatDate(date=date_before_30days, format="%Y-%m-%d")
+    date_before_7days = now + datetime.timedelta(days=-7)
+    date_from = getFormatDate(date=date_before_7days, format="%Y-%m-%d")
     date_to = getFormatDate(date=now, format="%Y-%m-%d")
 
     list = StatDailySite.getdailyincome(1, date_from, date_to)
