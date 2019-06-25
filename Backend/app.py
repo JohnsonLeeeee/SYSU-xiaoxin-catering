@@ -1,4 +1,4 @@
-from .libs.UrlManager import UrlManager
+from Backend.libs.UrlManager import UrlManager
 from Backend import create_app
 
 
