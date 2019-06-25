@@ -39,4 +39,31 @@ def index():
     resp_data['current'] = 'index'
     return ops_render("comment/index.html", resp_data)
 
+@route_comment.route("/blacklist")
+def blacklist():
+    resp_data = {}
+    req = request.values
+    page = int(req['p']) if ('p' in req and req['p']) else 1
+    query = Comment.query
+
+    query = query.filter(Comment.status == -9999)
+
+    page_params = {
+        'total': query.count(),
+        'page_size': settings.PAGE_SIZE,
+        'page': page,
+        'display': settings.PAGE_DISPLAY,
+        'url': request.full_path.replace("&p={}".format(page), "")
+    }
+
+    pages = iPagination(page_params)
+    offset = (page - 1) * settings.PAGE_SIZE
+    list = query.order_by(Comment.id.desc()).offset(offset).limit(settings.PAGE_SIZE).all()
+
+    resp_data['list'] = list
+    resp_data['pages'] = pages
+    resp_data['search_con'] = req
+    resp_data['status_mapping'] = settings.STATUS_MAPPING
+    resp_data['current'] = 'blacklist'
+    return ops_render("comment/blacklist.html", resp_data)
 

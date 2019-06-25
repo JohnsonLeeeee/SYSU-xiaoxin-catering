@@ -1,0 +1,14 @@
+<div class="row  border-bottom">
+    <div class="col-lg-12">
+        <div class="tab_title">
+            <ul class="nav nav-pills">
+                <li {% if current == "index" %} class="current" {% endif %}>
+                    <a href="{{ buildUrl('/comment/index') }}">评论统计</a>
+                </li>
+                <li {% if current == "blacklist" %} class="current" {% endif %}>
+                    <a href="{{ buildUrl('/comment/blacklist') }}">黑名单</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
