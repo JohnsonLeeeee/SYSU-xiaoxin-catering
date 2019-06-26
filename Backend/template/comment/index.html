@@ -34,6 +34,7 @@
                 <th>评论id</th>
                 <th>用户</th>
                 <th>内容</th>
+                <th>操作</th>
             </tr>
             </thead>
             <tbody>
@@ -43,6 +44,11 @@
                 <td>{{ item.id }}</td>
                 <td>{{ item.user.username }}</td>
                 <td>{{ item.content }}</td>
+                <td>
+                    <a class="m-l addblack" href="javascript:void(0);" data="{{ item.id  }}">
+                        加入黑名单
+                    </a>
+                </td>
             </tr>
              {% endfor %}
             {% else %}
