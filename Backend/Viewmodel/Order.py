@@ -11,6 +11,7 @@ class ItemViewModel:
         out = dict(
             name = Dish.query.filter_by(id = item.did).first().name,
             price = Dish.query.filter_by(id = item.did).first().price,
+            image = Dish.query.filter_by(id = item.did).first().main_image,
             quantity = item.quantity
         )
         return out
