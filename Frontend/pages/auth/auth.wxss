@@ -53,7 +53,7 @@
   height:1200rpx;
   width: 800rpx;
   margin-top: 30rpx;
-  background: url('https://gitee.com/Johnsonleeeee/image/raw/master/test15.jpg') no-repeat center ;
+  background: url('http://ww1.sinaimg.cn/large/006tNc79ly1g4eo8ccejcg309r09rke1.gif') no-repeat center ;
 }
 
 

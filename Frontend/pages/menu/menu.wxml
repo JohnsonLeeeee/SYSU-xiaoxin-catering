@@ -7,6 +7,10 @@
   <text class="name">GoGo新天地店 \n </text>
   <br/>
   <text class="address"> 距离您1.5Km</text>
+  <view class="ziti">
+    <view class="btn {{currentSelectType == 'ziti' ? 'active' : ''}}" bindtap='selectziti' data-id='ziti'>自提</view>
+    <view class="btn {{currentSelectType == 'tangshi' ? 'active' : ''}}" bindtap='selecttangshi' data-id='tangshi'>堂食</view>
+  </view>
 </view>
 <view class="container">
   <view class="aside">

@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    currentSelectType: 'ziti',
     imgUrls: [
       'https://gitee.com/Johnsonleeeee/image/raw/master/test2.jpg',
       'https://gitee.com/Johnsonleeeee/image/raw/master/test3.jpg',
@@ -219,6 +220,18 @@ Page({
           items: res
         });
       }
+    })
+  },
+
+  // 更新data 切换选中状态
+  selectziti: function (e) {
+    this.setData({
+      currentSelectType: e.currentTarget.dataset.id
+    })
+  },
+  selecttangshi: function (e) {
+    this.setData({
+      currentSelectType: e.currentTarget.dataset.id
     })
   }
 })
