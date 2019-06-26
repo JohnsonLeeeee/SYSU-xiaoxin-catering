@@ -1,17 +1,5 @@
-html,
-body {
-  height: 100%;
-}
-.box {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .mainbox {
-  height: 650px;
+  height: 550px;
   background-color: rgb(240, 240, 240);
   border-radius: 20px;
 }

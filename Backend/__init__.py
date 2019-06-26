@@ -15,6 +15,8 @@ from .API.V1 import create_blueprint_v1
 from .Web.auth import web
 from .Model.base import db
 from .Model.user import User
+from .Model.Comment import Comment
+from .Model.Cart import Cart
 from .Model.restaurant import Restaurant
 from .Model.Order import Order
 from .libs.email import mail
@@ -42,6 +44,17 @@ def create_restaurant(db):
     order2.rid = 1
     order2.note = "null"
 
+    comment1 = Comment()
+    comment1.uid = 1
+    comment1.rid = 1
+    comment1.content = "cxknmsl"
+
+    cart1 = Cart()
+    cart1.uid = 1
+    cart1.did = 1
+    cart1.quantity = 2
+    cart1.orderid = 1
+
     res = Restaurant()
     res.name = "GOGO"
     coupon = dispatch_coupon(1,1)
@@ -49,6 +62,8 @@ def create_restaurant(db):
         db.session.add(coupon)
         # db.session.add(order1)
         # db.session.add(order2)
+        # db.session.add(comment1)
+        db.session.add(cart1)
 
     if Restaurant.query.filter_by(name = res.name).first():
         return
