@@ -45,4 +45,7 @@ def create_order(rid):
 def history_order(rid,uid):
     orders = Order.query.filter_by(rid=rid,uid=uid).all()
     list = [OrderViewModel.order(i) for i in orders]
-    return jsonify(orders = list, number = len(list))
+    order_total_prices = [OrderViewModel.total_price(i) for i in orders]
+    order_pay_prices = [OrderViewModel.pay_price(i) for i in orders]
+    order_times = [OrderViewModel.create_time(i) for i in orders]
+    return jsonify(orders = list, create_time=order_times, tota_prices= order_total_prices,pay_prices=order_pay_prices, number = len(list))
