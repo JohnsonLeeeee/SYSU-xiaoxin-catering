@@ -1,0 +1,24 @@
+<!--pages/review/review.wxml-->
+<view class='title'>所有评价: </view>
+<view wx:for="{{reviews}}" class='review'>
+  <view class='usrbox'>
+    <image class='icon' src='{{item.image}}'></image>
+    <text class='user'>用户: {{item.uname}}</text>
+    <view class="comment1-description">
+      <view class="star-pos" style="display:flex;flex-direction:row;">
+        <view class="stars  {{item.flag>=1? 'on': ''}}"></view>
+        <view class="stars  {{item.flag>=2? 'on': ''}}"></view>
+        <view class="stars  {{item.flag>=3? 'on': ''}}"></view>
+        <view class="stars  {{item.flag>=4? 'on': ''}}"></view>
+        <view class="stars  {{item.flag>=5? 'on': ''}}"></view>
+      </view>
+    </view>
+  </view>
+  
+  <text class='comment'>评价: {{item.comment}}</text>
+</view>
+
+<view class='write'>
+  
+  <button class='submit' bindtap='gotowrite'>写评价</button>
+</view>

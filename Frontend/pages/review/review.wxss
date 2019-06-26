@@ -1,0 +1,83 @@
+/* pages/review/review.wxss */
+.title {
+  font-size: 24px;
+}
+.user {
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+.comment {
+  font-size: 16px;
+}
+.icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.usrbox {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+.input {
+  height: 100px;
+  margin-top: 10px;
+  border: double #aee8ff 10px;
+  margin-right: 20px;
+}
+view {
+  margin: 20px;
+}
+.review {
+  
+  border: ridge #000000 1px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 10px
+}
+.submit {
+  margin-top: 10px;
+  margin-right: 20px;
+  background: #DEB749;
+}
+.write {
+  margin: 0px;
+  background: #ffffff;
+  box-shadow: 0 -5px 10px #ccc;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+}
+.ins {
+  font-size: 22px;
+  margin: 10px;
+}
+.stars{
+    background:url("https://gitee.com/zhuyz3/images/raw/master/star-dark.jpg");
+    margin: 5px;
+    width: 20rpx;
+    height: 20rpx;
+    background-size: 20rpx 20rpx;
+    transition: 600ms;
+}
+.on{
+    background:url("https://gitee.com/zhuyz3/images/raw/master/star.jpg");
+    margin: 5px;
+    width: 20rpx;
+    height: 20rpx;
+    background-size: 20rpx 20rpx;
+    transition: 1s;
+    transform: scale(1,1)
+}
+.comment1-description{
+  padding:0px;
+  display:flex;
+  flex-direction:row;
+  height: 22px;
+  margin: 0px;
+  float: right;
+}

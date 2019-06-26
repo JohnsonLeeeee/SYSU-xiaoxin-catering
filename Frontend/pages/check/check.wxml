@@ -1,0 +1,44 @@
+<view class="location">
+  <text class="head">广州大学城gogo新天地店\n</text>
+  <text class="body">广东省广州市番禺区中环东路</text>
+</view>
+<view class="takeaway"> 
+<view class="takeaway_icon">
+ <text class="iconfont icon_tableware"></text> 
+ </view>
+ <text class="le">立即自提</text>
+  <text class="ri">预计等待30分钟</text>
+</view>
+<view class="phone">
+<view class="phone_icon">
+<text class="iconfont icon_phone"></text> 
+</view>
+  <text class="number">18583369079</text>
+</view>
+<view class="pay">
+  <text class="lef">支付方式</text>
+  <text class="rig">微信支付</text>
+</view>
+<view class="container">
+  <view class="item-content">
+    <view class="box">
+      <view class="item" wx:for="{{items}}" wx:key="{{item.id}}">
+        <image src="image/item-m.jpg"></image>
+        <text class="title">{{item.title}}</text>
+        <text class="price">￥ {{item.price}} </text>
+        <view class="opera">
+          <text class="btn" bindtap="del" data-id="{{item.id}}" data-index="{{index}}">-</text>  
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom-bar">
+    <view class="count">
+        Amount: <text class="num">{{orderCount.num}} </text>     
+        Total: ￥<text class="num">{{orderCount.money}} </text> 
+    </view>
+    <view class="btn">
+        <text bindtap='pay'>支付</text>
+    </view>
+  </view>
