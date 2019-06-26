@@ -16,7 +16,7 @@ nodejs+postman
 ## 测试流程
 
  - 在Postman中建立一个test-collection并在其中添加相应的request
-
+(https://raw.githubusercontent.com/JohnsonLeeeee/SYSU-xiaoxin-catering/master/1.PNG)
  - 在Tests中，编写测试代码,因为测试路径只有简单的不带参数的查询命令，一次只需测试返回的response code值是否为200以及响应时间是否在200ms以内即可
 
  - 测试结果
