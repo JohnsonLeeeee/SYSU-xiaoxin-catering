@@ -1,0 +1,42 @@
+/* pages/review/write/writecomment.wxss */
+.comment1-description{
+  padding:30rpx 0;
+  display:flex;
+  flex-direction:row;
+}
+.stars{
+    background:url("https://gitee.com/zhuyz3/images/raw/master/star-dark.jpg");
+    width: 50rpx;
+    height: 50rpx;
+    background-size: 50rpx 50rpx;
+    margin-left: 30rpx;
+    transition: 600ms;
+}
+.on{
+    background:url("https://gitee.com/zhuyz3/images/raw/master/star.jpg");
+    width: 50rpx;
+    height: 50rpx;
+    background-size: 50rpx 50rpx;
+    transition: 1s;
+    transform: scale(1,1)
+}
+.weui-cells_after-title{
+  width: 92%;
+  margin:0 auto;
+  border:1px solid #ddd;
+}
+
+.btnSf{
+  width: 92%;
+  margin:30rpx auto;
+  
+}
+.btnSf button{
+    background: #57B6BA;
+    color: #fff;
+}
+
+.btnSf button:active{
+  background: #5BC2C6;
+  color: #fff;
+}
