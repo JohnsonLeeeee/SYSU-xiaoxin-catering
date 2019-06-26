@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/menu/menu",
+    "pages/auth/auth",
+    "pages/review/review",
+    "pages/check/check",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Wechat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

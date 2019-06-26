@@ -33,6 +33,9 @@ def index():
             },
         }
     }
+
+
+
     data = resp_data['data']
     rid =  Adminstrator.query.filter_by(id = current_user.id).first().rid
     data['finance']['month'] = RestaurantService.get_month_pay(rid)

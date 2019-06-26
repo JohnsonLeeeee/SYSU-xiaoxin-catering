@@ -13,8 +13,8 @@ route_stat = Blueprint( 'stat',__name__, url_prefix="/stat" )
 @route_stat.route( "/index" )
 def index():
     now = datetime.datetime.now()
-    date_before_30days = now + datetime.timedelta(days=-30)
-    default_date_from = getFormatDate(date=date_before_30days, format="%Y-%m-%d")
+    date_before_7days = now + datetime.timedelta(days=-7)
+    default_date_from = getFormatDate(date=date_before_7days, format="%Y-%m-%d")
     default_date_to = getFormatDate(date=now, format="%Y-%m-%d")
 
     resp_data = {}
@@ -48,8 +48,8 @@ def index():
 @route_stat.route( "/food" )
 def food():
     now = datetime.datetime.now()
-    date_before_30days = now + datetime.timedelta(days=-30)
-    default_date_from = getFormatDate(date=date_before_30days, format="%Y-%m-%d")
+    date_before_7days = now + datetime.timedelta(days=-7)
+    default_date_from = getFormatDate(date=date_before_7days, format="%Y-%m-%d")
     default_date_to = getFormatDate(date=now, format="%Y-%m-%d")
 
     resp_data = {}

@@ -9,9 +9,9 @@
                             <h5>营收概况</h5>
                         </div>
                         <div class="ibox-content">
-                             <h1 class="no-margins">{{ data.finance.total }}</h1>
-                            <small>今日：{{ data.finance.today }}</small>
-                            <small>近30日：{{ data.finance.month }}</small>
+                             <h1 class="no-margins">今日：{{ data.finance.total }} 元</h1>
+{#                            <small>今日：{{ data.finance.today }} 元</small>#}
+                            <small>近30日：{{ data.finance.month }} 元</small>
 
                         </div>
                     </div>
@@ -23,8 +23,8 @@
                             <h5>订单</h5>
                         </div>
                         <div class="ibox-content">
-                            <h1 class="no-margins">{{ data.order.today }}</h1>
-                            <small>近30日：{{ data.order.today }}</small>
+                            <h1 class="no-margins">今日：{{ data.order.today }} 次</h1>
+                            <small>近30日：{{ data.order.today }} 次</small>
                         </div>
                     </div>
                 </div>
@@ -35,19 +35,16 @@
                             <h5>评论</h5>
                         </div>
                         <div class="ibox-content">
-                            <h1 class="no-margins">{{ data.coupon.total }}</h1>
-                            <small>今日评价：{{ data.coupon.today_new }} 条</small>
+                            <h1 class="no-margins">今日：{{ data.coupon.total }} 条</h1>
+{#                            <small>今日评价：{{ data.coupon.today_new }} 条</small>#}
                             <small>近30日评价：{{ data.coupon.month_new }} 条</small>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12" id="member_order" style="height: 400px;border: 1px solid #e6e6e6;padding-top: 20px;">
-                    使用highchart画图
-                </div>
+                <div id="member_order" style="height: 400px; margin: 0 auto"></div>
                 <div class="col-lg-12" id="finance" style="height: 400px;border: 1px solid #e6e6e6;padding-top: 20px;">
-                    使用highchart画图
                 </div>
             </div>
         </div>
