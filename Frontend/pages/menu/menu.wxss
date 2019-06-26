@@ -209,3 +209,43 @@ swiper-item image {
   font-style: bold;
   color: rgb(3, 3, 3);
 }
+
+.ziti {
+  position: relative;
+  bottom: 30px;
+  left: 280px;
+  right: 20px;
+  height: 20px;
+  width: 80px;
+  margin-bottom: -17px; 
+  display: flex; 
+  background: #dfdfdf;
+  border-radius: 5px;
+}
+
+.ziti .btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+}
+
+.ziti .btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.ziti .btn {
+  background: #dfdfdf;
+  /* padding: 5px 10px; */
+  width: 40px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.ziti .btn.active {
+  /* border: 2rpx solid #007bff; */
+  background: #FEAB00;
+  border-radius: 5px;
+}

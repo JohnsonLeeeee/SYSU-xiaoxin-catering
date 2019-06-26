@@ -7,7 +7,7 @@
     <text class="user-motto">{{motto}}</text>
   </view>
   <view class="loc">
-    <image url='https://gitee.com/Johnsonleeeee/image/raw/master/location.jpeg'></image>
+    <image url='http://ww1.sinaimg.cn/large/006tNc79ly1g4eo8ccejcg309r09rke1.gif'></image>
     <text> </text>
   </view>
 </view>
