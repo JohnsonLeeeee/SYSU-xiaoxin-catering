@@ -3,13 +3,17 @@
   <text class="body">广东省广州市番禺区中环东路</text>
 </view>
 <view class="takeaway"> 
+<view class="takeaway_icon">
  <text class="iconfont icon_tableware"></text> 
-  <text class="le">立即自提</text>
+ </view>
+ <text class="le">立即自提</text>
   <text class="ri">预计等待30分钟</text>
 </view>
 <view class="phone">
+<view class="phone_icon">
+<text class="iconfont icon_phone"></text> 
+</view>
   <text class="number">18583369079</text>
-  <text class="iconfont icon_phone"></text> 
 </view>
 <view class="pay">
   <text class="lef">支付方式</text>
