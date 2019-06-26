@@ -78,7 +78,7 @@ def forget_password(token):
             flash('你的密码已更新,请使用新密码登录')
             return redirect(url_for('web.login'))
         else:
-            return redirect(url_for('web.index'))
+            return redirect(url_for('index.index'))
     return render_template('auth/forget_password.html')
 
 @web.route('/confirmed/<token>', methods=['GET', 'POST'])
