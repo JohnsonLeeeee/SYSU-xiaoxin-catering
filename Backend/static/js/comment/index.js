@@ -5,17 +5,11 @@ var comment_index_ops = {
     },
     eventBind:function(){
         var that = this;
-        $(".wrap_search .search").click(function(){
-            $(".wrap_search").submit();
-        });
 
-        $(".remove").click( function(){
-            that.ops( "remove",$(this).attr("data") );
+        $(".addblack").click( function(){
+            that.ops( "addblack",$(this).attr("data") );
         } );
 
-        $(".recover").click( function(){
-            that.ops( "recover",$(this).attr("data") );
-        } );
     },
     ops:function( act,id ){
         var callback = {
@@ -41,7 +35,7 @@ var comment_index_ops = {
             },
             'cancel':null
         };
-        common_ops.confirm( ( act == "remove" ? "确定删除？":"确定恢复？" ), callback );
+        common_ops.confirm( "确定加入黑名单？", callback );
     }
 
 };
