@@ -1,0 +1,70 @@
+.title {
+  font-size: 24px;
+}
+.name {
+  font-size: 20px;
+}
+.itemtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.price {
+  margin: 5px;
+  font-size: 16px;
+  float: right;
+  text-align: right
+}
+.num {
+  font-size: 16px;
+  float: right;
+  margin-bottom: 5px;
+}
+
+view {
+  margin: 20px;
+}
+.orders {
+  
+  border: double #000000 1px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 10px;
+}
+.list {
+  height: 64px;
+  border: ridge #000000 1px;
+  margin: 0px;
+}
+.state {
+  
+  font-size: 15px;
+}
+.another {
+  font-size: 16px;
+  padding-top: 0px;
+  float: right;
+  height: 32px;
+}
+.img {
+  height: 98%;
+  width: 60px;
+  float: left;
+  margin-right: 20px;
+}
+.submit {
+  margin-top: 10px;
+  margin-right: 20px;
+  background: #DEB749;
+}
+.write {
+  margin: 0px;
+  box-shadow: 0 -5px 10px #ccc;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+}
+.ins {
+  font-size: 22px;
+  margin: 10px;
+}
