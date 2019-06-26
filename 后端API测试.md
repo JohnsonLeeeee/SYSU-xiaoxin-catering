@@ -25,3 +25,5 @@ nodejs+postman
  
 ![3](https://raw.githubusercontent.com/JohnsonLeeeee/SYSU-xiaoxin-catering/master/3.PNG)
  - 选择迭代次数为500，进行压力测试，结果如下
+
+![4](https://raw.githubusercontent.com/JohnsonLeeeee/SYSU-xiaoxin-catering/master/4.PNG)
