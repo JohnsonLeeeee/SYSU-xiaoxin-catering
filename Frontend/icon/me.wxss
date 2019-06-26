@@ -17,6 +17,6 @@
 
 .icon-me:before {
   content: "\e663";
-  color: #DEB749;
+  color: #FEAB00;
 }
 

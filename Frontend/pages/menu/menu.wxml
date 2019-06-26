@@ -4,9 +4,9 @@
     <icon type="success" size="{{item}}"/>
   </block> -->
   <text class="iconfont icon-location"></text>
-  <text class="name">GoGo新天地店 </text>
+  <text class="name">GoGo新天地店 \n </text>
   <br/>
-  <text class="address">距离您1.5Km</text>
+  <text class="address"> 距离您1.5Km</text>
 </view>
 <view class="container">
   <view class="aside">

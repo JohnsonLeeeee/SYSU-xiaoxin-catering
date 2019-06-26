@@ -17,6 +17,6 @@
 
 .icon-history:before {
   content: "\e6bb";
-  color: #DEB749;
+  color: #FEAB00;
 }
 

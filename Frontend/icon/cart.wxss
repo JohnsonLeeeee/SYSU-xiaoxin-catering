@@ -17,6 +17,6 @@
 
 .icon-cart:before {
   content: "\e600";
-  color: #DEB749;
+  color: #FEAB00;
 }
 

@@ -17,5 +17,5 @@
 
 .icon-location:before {
   content: "\e61f";
-  color: #DEB749;
+  color: #FEAB00;
 }

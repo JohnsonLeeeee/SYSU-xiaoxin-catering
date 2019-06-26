@@ -43,7 +43,7 @@
 
 .aside .menu.active{
   background:#fff;
-  border-left: 5px solid #DEB749;
+  border-left: 5px solid #FEAB00;
 }
 
 .item-content{
@@ -105,7 +105,7 @@
   padding:5px 10px;
   font-size:14px;
   color:#fff;
-  background:#DEB749;
+  background:#FEAB00;
   border-radius:20px;
 }
 

@@ -34,7 +34,7 @@
 }
 
 .phone{
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .number{
@@ -80,7 +80,7 @@
   width:0;
 }
 .item-content .box .item{
-  height:80px;
+  height:60px;
   padding:10px 0 10px 10px;
   margin-bottom:10px;
   background:#fff;
@@ -88,7 +88,7 @@
 .item-content .box .item image{
   display:block;
   float:left;
-  height:80px;
+  height:60px;
   width:90px;
   margin-right:10px;
 }
@@ -105,7 +105,7 @@
   margin-bottom:5px;
 }
 .item-content .box .item .opera{
-  margin-top:-15px;
+  margin-top:-25px;
   padding-right:10px;
   text-align:right;
 }
@@ -121,7 +121,7 @@
   text-align:center;
   color:#fff;
   font-weight:bolder;
-  background:#DEB749;
+  background:#FEAB00;
   border-radius:5px;
 }
 
@@ -157,6 +157,6 @@
     line-height:40px;
     text-align:center;
     font-size:16px;
-    background:#DEB749;
+    background:#FEAB00;
 }
 

@@ -5,6 +5,8 @@
 @import "/icon/history.wxss";
 @import "/icon/comment.wxss";
 @import "/icon/menu.wxss";
+@import "/icon/mobile.wxss";
+@import "/icon/tableware.wxss";
 .container {
   margin:0;
   padding:0;

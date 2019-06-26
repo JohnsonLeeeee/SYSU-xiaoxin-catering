@@ -16,9 +16,9 @@
     </view>
   </view>
   <view class="bottom-bar">
-    
+    <text class="total_price">合计：</text>
     <view class="btn">
-        <text bindtap='pay'>确认提交</text>
+        <text class="pay" bindtap='pay'>付款</text>
     </view>
   </view>
 </view>

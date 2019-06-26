@@ -17,6 +17,6 @@
 
 .icon-comment:before {
   content: "\e603";
-  color: #DEB749;
+  color: #FEAB00;
 }
 
