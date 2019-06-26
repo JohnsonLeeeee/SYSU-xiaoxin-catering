@@ -25,15 +25,12 @@ Page({
       }
     })
   },
-  /*
   bindGetUserInfo: function (e) {
     if (e.detail.userInfo) {
       //用户按了允许授权按钮
       var that = this;
       //插入登录的用户的相关信息到数据库
-      
       wx.request({
-        
         url: app.globalData.urlPath + 'user/add',
         data: {
           openid: getApp().globalData.openid,
@@ -86,7 +83,6 @@ Page({
       }
     }) 
   },
-  */
   jump:function(){
     wx.redirectTo({
       url: '../auth/auth',

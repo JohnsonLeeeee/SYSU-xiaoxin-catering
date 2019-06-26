@@ -136,7 +136,7 @@ Page({
     })
   }, 
   ord: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../history/history'
     })
   },
@@ -145,14 +145,6 @@ Page({
       url: '../review/review'
     })
   },
-  
-  tapTo: function(e){
-    console.log(e)
-    wx.navigateTo({
-      url: '../food/' + e.currentTarget.dataset.id,
-    })
-  },
-
   addOrder: function (event) {
     let that = this;
     let id = event.target.dataset.id;
@@ -200,7 +192,6 @@ Page({
       data: subOrders
     });
   },
-
   onLoad: function () {//第一次进入读取种类
     //requestcatedata();
   }, 

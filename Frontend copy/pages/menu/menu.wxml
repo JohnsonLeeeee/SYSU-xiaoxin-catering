@@ -30,12 +30,10 @@
   <view class="item-content">
     <view class="{{orderCount.num === 0 ? 'box' : 'box active'}}">
       <view class="item" wx:for="{{items}}" wx:key="{{item.id}}">
-        <image src="image/item-m.jpg" data-id ="{{item.id}}" bindtap='tapTo'></image>
-        <view class="bind" bindtap='tapTo'>
-          <text class="title" bindtap='tapTo'>{{item.title}}</text>
-          <text class="summary" bindtap='tapTo'>{{item.summary}}</text>
-          <text class="price" bindtap='tapTo'>￥{{item.price}} </text>
-        </view>
+        <image src="image/item-m.jpg"></image>
+        <text class="title">{{item.title}}</text>
+        <text class="summary">{{item.summary}}</text>
+        <text class="price">￥{{item.price}} </text>
         <text class="{{item.active ? 'btn active' : 'btn'}}" bindtap='addOrder' data-id="{{item.id}}" data-index="{{index}}">购买</text>
       </view>
     </view>

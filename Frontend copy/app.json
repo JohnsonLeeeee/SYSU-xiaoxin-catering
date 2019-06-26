@@ -7,13 +7,7 @@
     "pages/auth/auth",
     "pages/review/review",
     "pages/check/check",
-    "pages/history/history",
-    "pages/food/1",
-    "pages/food/2",
-    "pages/food/3",
-    "pages/food/4",
-    "pages/food/5",
-    "pages/food/6"
+    "pages/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",
