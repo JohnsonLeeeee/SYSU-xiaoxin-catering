@@ -1,7 +1,9 @@
 <!--pages/review/write/writecomment.wxml-->
 <!--星星评价-->
 <view class="container">
+<view class='title'>GoGo新天地</view>
   <view class="comment1-description">
+        <text class="icon-dianzan"></text>
     <view class="star-pos" style="display:flex;flex-direction:row;">
       <view class="stars  {{flag>=1? 'on': ''}}" bindtap="changeColor1"></view>
       <view class="stars  {{flag>=2? 'on': ''}}" bindtap="changeColor2"></view>
@@ -10,6 +12,7 @@
       <view class="stars  {{flag>=5? 'on': ''}}" bindtap="changeColor5"></view>
     </view>
   </view>
+  <view class="line"></view>
 <!--文本域  -->
   <view class="weui-cells_after-title">
     <view class="weui-cell">

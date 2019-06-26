@@ -1,8 +1,16 @@
 /* pages/review/write/writecomment.wxss */
+.title {
+  font-size: 24px;
+  position:absolute; 
+  top:30rpx; left:5px; width:200px; height:100%;
+  margin-bottom: 20px;
+}
+
 .comment1-description{
   padding:30rpx 0;
   display:flex;
   flex-direction:row;
+  margin-top: 30px;
 }
 .stars{
     background:url("https://gitee.com/zhuyz3/images/raw/master/star-dark.jpg");
@@ -23,7 +31,6 @@
 .weui-cells_after-title{
   width: 92%;
   margin:0 auto;
-  border:1px solid #ddd;
 }
 
 .btnSf{
@@ -32,11 +39,21 @@
   
 }
 .btnSf button{
-    background: #57B6BA;
+    background: #FEAB00;
     color: #fff;
 }
 
 .btnSf button:active{
-  background: #5BC2C6;
+  background: #FEAB00;
   color: #fff;
+}
+
+.line{
+width: 700rpx;
+margin: 10rpx, 10prx,10rpx,10rpx;
+height: 2rpx;
+display:flex;
+flex-direction:row;
+border: 5px, outset, #D8D8D8;
+background-color: #D8D8D8;
 }

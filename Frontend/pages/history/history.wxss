@@ -1,5 +1,7 @@
 .title {
   font-size: 24px;
+  position:absolute; 
+  top:0; left:0; width:200px; height:100%;
 }
 .name {
   font-size: 20px;
@@ -25,40 +27,46 @@ view {
 }
 .orders {
   
-  border: double #000000 1px;
+  /* border: double #000000 1px; */
   margin-bottom: 0px;
   margin-top: 0px;
   padding: 10px;
 }
 .list {
-  height: 64px;
-  border: ridge #000000 1px;
+  height: 80px;
+  /* border: ridge #000000 1px; */
   margin: 0px;
+  
 }
 .state {
-  
+  margin-top: -200px;
   font-size: 15px;
 }
 .another {
-  font-size: 16px;
+  font-size: 15px;
   padding-top: 0px;
   float: right;
   height: 32px;
+  background: #FEAB00;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 .img {
   height: 98%;
   width: 60px;
   float: left;
   margin-right: 20px;
+  border-radius: 50%;
 }
 .submit {
   margin-top: 10px;
   margin-right: 20px;
-  background: #DEB749;
+  background: #FEAB00;
 }
+
 .write {
   margin: 0px;
-  box-shadow: 0 -5px 10px #ccc;
+  box-shadow: 0 -5px 10px #FEAB00;
   bottom: 0;
   position: fixed;
   width: 100%;
@@ -69,5 +77,36 @@ view {
   margin: 10px;
 }
 .contact {
-  background: #ffbb00
+  background: #FEAB00
+}
+
+.line{
+width: 600rpx;
+margin: 10rpx, 10prx,0rpx,10rpx;
+height: 2rpx;
+display:flex;
+flex-direction:row;
+border: 5px, outset, #D8D8D8;
+background-color: #D8D8D8;
+}
+
+.head{
+  width: 100%;
+  height: 13px;
+}
+
+.head_1{
+  color: #D8D8D8;
+
+}
+.head_2{
+  color: #D8D8D8;
+}
+
+.number{
+  color: grey;
+  font-size: 15px;
+  margin-left:100px; 
+  height:100%;
+  margin-top: -100px;
 }

@@ -1,27 +1,36 @@
 /* pages/review/review.wxss */
 .title {
   font-size: 24px;
+  position:absolute; top:0; left:0; width:200px; height:100%;
 }
 .user {
   height: 100%;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
+  color: blue;
+  margin-top: 0;
+  padding-top: 0;
 }
 .comment {
   font-size: 16px;
+  padding-left: 30px;
 }
 .icon {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   margin-right: 10px;
+  border-radius:50%;
 }
 .usrbox {
   display: flex;
   align-items: center;
   padding: 0px;
-  margin: 0px;
+  margin: 5px;
   width: 100%;
+  /* border: hidden; */
 }
+
+
 .input {
   height: 100px;
   margin-top: 10px;
@@ -32,17 +41,19 @@ view {
   margin: 20px;
 }
 .review {
-  
-  border: ridge #000000 1px;
-  margin-bottom: 0px;
+  /* border: hidden; */
+  margin-bottom: 5px;
   margin-top: 0px;
-  padding: 10px
+  padding: 5px;
+  border: black,solid,5px;
 }
+
 .submit {
   margin-top: 10px;
   margin-right: 20px;
-  background: #DEB749;
+  background: #FEAB00;
 }
+
 .write {
   margin: 0px;
   background: #ffffff;
@@ -74,10 +85,39 @@ view {
     transform: scale(1,1)
 }
 .comment1-description{
-  padding:0px;
+  padding:-270px;
   display:flex;
   flex-direction:row;
   height: 22px;
   margin: 0px;
   float: right;
+}
+
+.usrbox .score{
+  text-align: left;
+  font-size: 8pt;
+  color: grey;
+  margin-top: 40px;
+  padding-left: -2800px;
+  padding-right: -200px;
+}
+.head{
+ height:100%;
+}
+.number{
+  color: grey;
+  font-size: 15px;
+  margin-left:100px; 
+  height:100%;
+  margin-top: -200px;
+}
+
+.line{
+width: 600rpx;
+margin: 10rpx, 10prx,0rpx,10rpx;
+height: 2rpx;
+display:flex;
+flex-direction:row;
+border: 5px, outset, #D8D8D8;
+background-color: #D8D8D8;
 }
