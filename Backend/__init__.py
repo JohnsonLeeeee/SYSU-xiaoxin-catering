@@ -45,13 +45,13 @@ def create_restaurant(db):
     order2.note = "null"
 
     comment1 = Comment()
-    comment1.uid = 1
+    comment1.uid = 2
     comment1.rid = 1
     comment1.content = "cxknmsl"
 
     cart1 = Cart()
     cart1.uid = 1
-    cart1.did = 1
+    cart1.did = 2
     cart1.quantity = 2
     cart1.orderid = 1
 
@@ -63,7 +63,7 @@ def create_restaurant(db):
         # db.session.add(order1)
         # db.session.add(order2)
         # db.session.add(comment1)
-        db.session.add(cart1)
+        # db.session.add(cart1)
 
     if Restaurant.query.filter_by(name = res.name).first():
         return
