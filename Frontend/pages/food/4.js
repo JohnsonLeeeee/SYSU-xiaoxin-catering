@@ -4,11 +4,11 @@ Page({
 
     items: [{
       id: 4,
-      title: 'dish 4',
+      title: '柠檬百香果',
       price: 18,
       active: false,
       num: 1,
-      imgUrl: 'https://gitee.com/Johnsonleeeee/image/raw/master/test9.jpg'
+      imgUrl: 'image/item4.jpg'
     }]
   },
 

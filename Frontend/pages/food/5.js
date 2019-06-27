@@ -3,11 +3,11 @@ Page({
   data: {
       items: [{
       id: 5,
-      title: 'dish 5',
+      title: '满杯红柚',
       price: 19,
       active: false,
       num: 1,
-      imgUrl: 'https://gitee.com/Johnsonleeeee/image/raw/master/test10.jpg'
+        imgUrl: 'image/item5.jpg'
     }]
   },
 

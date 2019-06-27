@@ -4,11 +4,11 @@ Page({
     
     items: [{
       id: 1,
-      title: 'dish 1',
+      title: '茶香排骨',
       price: 11,
       active: false,
       num: 1,
-      imgUrl:'https://gitee.com/Johnsonleeeee/image/raw/master/test6.jpg'
+      imgUrl:'image/item1.jpg'
     }]
   }
   })
