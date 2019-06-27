@@ -18,7 +18,7 @@
       </view>
     </view>
   </view>
-  <text class="iconfont icon-pen"></text>
+  <!-- <text class="iconfont icon-pen"></text> -->
   <text class='comment'>评价: {{item.comment}}</text>
   <view class='line'></view>
 </view>
