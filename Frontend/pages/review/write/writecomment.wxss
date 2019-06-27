@@ -3,14 +3,14 @@
   font-size: 24px;
   position:absolute; 
   top:30rpx; left:5px; width:200px; height:100%;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 .comment1-description{
   padding:30rpx 0;
   display:flex;
   flex-direction:row;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 .stars{
     background:url("https://gitee.com/zhuyz3/images/raw/master/star-dark.jpg");
@@ -19,6 +19,7 @@
     background-size: 50rpx 50rpx;
     margin-left: 30rpx;
     transition: 600ms;
+    margin-bottom: 40px;
 }
 .on{
     background:url("https://gitee.com/zhuyz3/images/raw/master/star.jpg");
@@ -30,14 +31,15 @@
 }
 .weui-cells_after-title{
   width: 92%;
-  margin:0 auto;
+  margin:0, 40px, auto, auto;
+
 }
 
 .btnSf{
   width: 92%;
-  margin:30rpx auto;
-  
+  margin:60rpx auto;
 }
+
 .btnSf button{
     background: #FEAB00;
     color: #fff;
