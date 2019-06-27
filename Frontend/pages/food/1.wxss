@@ -1,7 +1,7 @@
 
 .container {
   padding:0rpx 0;
-  background-color: rgb(253, 249, 249);
+  background-color: white;
   min-height: 100%;
   padding-bottom: 100rpx;
 }
@@ -98,16 +98,17 @@ swiper-item image {
   padding: 0 35rpx;
   font-size: 25rpx;
   line-height: 1.4;
-  color: #CC0000;
+  color: #FEAB00;
   margin-bottom: 28rpx;
 }
 .goods-info .goods-price{
    box-sizing:border-box;
-   color:#e64340;
+   color:#000;
    font-size: 28rpx;
    font-weight: bold;
    width: 30%;
    float:left;
+
 }
 
 .goods-des-info{
@@ -132,4 +133,21 @@ swiper-item image {
 }
 .des-imgs image{
   width: 100%;
+}
+
+
+.but {
+  margin-top: 10px;
+  margin-right: 20px;
+  background: #FEAB00;
+}
+
+.write {
+  margin: 0px;
+  background: #ffffff;
+  box-shadow: 0 -5px 10px #ccc;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
 }
