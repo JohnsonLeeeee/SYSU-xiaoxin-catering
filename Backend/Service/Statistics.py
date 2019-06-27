@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
-from sqlalchemy import func
 import datetime
+from sqlalchemy import func
 
 from Backend.Model.Order import Order
 from Backend.Model.Dish import Dish
@@ -10,6 +10,7 @@ from ..Model.base import db
 
 class StatDailySite:
 
+    # get a list of date str that is between begin_date and end_date
     @staticmethod
     def getEveryDay(begin_date, end_date):
         date_list = []
@@ -21,9 +22,9 @@ class StatDailySite:
             begin_date += datetime.timedelta(days=1)
         return date_list
 
+    # get a list of income info in the restaurant with restaurant_id that is between date_from and date_to
     @staticmethod
     def getdailyincome(restaurant_id, date_from, date_to):
-        # 获取每日营收
         orderlist = db.session.query(Order).filter(Order.rid == restaurant_id,
                                                     func.date(Order.pay_time) >= datetime.datetime.strptime(date_from, "%Y-%m-%d") + datetime.timedelta(days=-1),
                                                     func.date(Order.pay_time) <= datetime.datetime.strptime(date_to, "%Y-%m-%d")).all()
@@ -38,17 +39,19 @@ class StatDailySite:
 
 class StatDailyFood:
 
+    # get a list of all dishes
     @staticmethod
     def getfoodlist():
         return db.session.query(Dish).all()
 
+    # get a list of all carts
     @staticmethod
     def getcartlist():
         return db.session.query(Cart).all()
 
+    # get a list of food sell info in the restaurant with restaurant_id that is between date_from and date_to
     @staticmethod
     def getfooddailyinfo(restaurant_id, date_from, date_to):
-        # 获取食品营收等信息
         foodlist = StatDailyFood.getfoodlist()
         list = []
         for item in foodlist:
