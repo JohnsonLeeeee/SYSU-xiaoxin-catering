@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 from datetime import datetime
 from sqlalchemy import Column
 from sqlalchemy import SmallInteger
@@ -6,11 +5,10 @@ from sqlalchemy import DateTime
 from sqlalchemy import func
 from contextlib import contextmanager
 from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy
-from flask_sqlalchemy import SQLAlchemy as BaseQuery
+from flask_sqlalchemy import BaseQuery
 from flask import current_app
 
 __all__ = ['db', 'Base']
-
 
 class SQLAlchemy(_SQLAlchemy):
     @contextmanager
@@ -24,7 +22,6 @@ class SQLAlchemy(_SQLAlchemy):
             if throw:
                 raise e
 
-
 class Query(BaseQuery):
     def filter_by(self, **kwargs):
         if 'status' not in kwargs.keys():
@@ -33,7 +30,6 @@ class Query(BaseQuery):
 
 
 db = SQLAlchemy(query_class=Query)
-
 
 class Base(db.Model):
     __abstract__ = True
