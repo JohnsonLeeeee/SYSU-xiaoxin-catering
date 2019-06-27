@@ -9,3 +9,19 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.mainbox {
+  height: 650px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 20px;
+}
+
+.logo-pic {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body {
+  background-image: url('/static/images/bg.jpeg');
+  background-repeat: repeat;
+}

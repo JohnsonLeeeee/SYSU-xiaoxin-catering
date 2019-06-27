@@ -1,13 +1,34 @@
 <!--pages/review/review.wxml-->
-<view class='title'>All Comments: </view>
+<view class="head">
+<view class='title'>网友点评</view>
+<text class="number">(10)</text>
+</view>
 <view wx:for="{{reviews}}" class='review'>
-  <text class='user'>User: {{item.uname}}\n</text>
-  <text class='comment'>Comment: {{item.comment}}</text>
+  <view class='usrbox'>
+    
+      <image class='icon' src='{{item.image}}'></image>
+      <text class='user'>{{item.uname}}</text>
+   
+    <view class='rightbox'>
+      <text class="score"> 打分：</text>
+      <view class="comment1-description">
+        <view class="star-pos" style="display:flex;flex-direction:row;">
+          <view class="stars  {{item.flag>=1? 'on': ''}}"></view>
+          <view class="stars  {{item.flag>=2? 'on': ''}}"></view>
+          <view class="stars  {{item.flag>=3? 'on': ''}}"></view>
+          <view class="stars  {{item.flag>=4? 'on': ''}}"></view>
+          <view class="stars  {{item.flag>=5? 'on': ''}}"></view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+  <text class="iconfont icon-pen"></text>
+  <text class='comment'>评价: {{item.comment}}</text>
+  <view class='line'></view>
 </view>
 
 <view class='write'>
-  <text class='ins'>Your Comment:</text>
-  <input class='input' id='inputtext'>
-  </input>
-  <button class='submit' bindtap='submit'>Submit</button>
+  
+  <button class='submit' bindtap='gotowrite'>写评价</button>
 </view>

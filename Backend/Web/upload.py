@@ -1,30 +1,32 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint,request,jsonify
+import re
+import os
+import json
+from flask import Blueprint
+from flask import request
+from flask import jsonify
 
-import re,json
 from ..Service.Upload import UploadService
 from ..libs.UrlManager import UrlManager
-from  ..Model.Image import Image
-import os
+from ..Model.Image import Image
 
 route_upload = Blueprint('upload_page', __name__)
 
 
-@route_upload.route("/ueditor",methods = [ "GET","POST" ])
+@route_upload.route("/ueditor", methods=["GET", "POST"])
 def ueditor():
-
 	req = request.values
 	action = req['action'] if 'action' in req else ''
 
 	if action == "config":
-		root_path = os.getcwd().replace('\\','/')+"/Backend"
-		config_path = "{0}/static/plugins/ueditor/upload_config.json".format( root_path )
-		with open( config_path,encoding="utf-8" ) as fp:
+		root_path = os.getcwd().replace('\\', '/')+"/Backend"
+		config_path = "{0}/static/plugins/ueditor/upload_config.json".format(root_path)
+		with open(config_path, encoding="utf-8") as fp:
 			try:
-				config_data =  json.loads( re.sub( r'\/\*.*\*/' ,'',fp.read() ) )
+				config_data = json.loads(re.sub(r'\/\*.*\*/', '', fp.read()))
 			except:
 				config_data = {}
-		return  jsonify( config_data )
+		return jsonify(config_data)
 
 	if action == "uploadimage":
 		return uploadImage()
@@ -34,57 +36,60 @@ def ueditor():
 
 	return "upload"
 
-@route_upload.route("/pic",methods = [ "GET","POST" ])
+
+@route_upload.route("/pic", methods=["GET", "POST"])
 def uploadPic():
 	file_target = request.files
 	upfile = file_target['pic'] if 'pic' in file_target else None
 	callback_target = 'window.parent.upload'
 	if upfile is None:
-		return "<script type='text/javascript'>{0}.error('{1}')</script>".format( callback_target,"上传失败" )
+		return "<script type='text/javascript'>{0}.error('{1}')</script>".format(callback_target, "上传失败" )
 
 	ret = UploadService.uploadByFile(upfile)
 	if ret['code'] != 200:
 		return "<script type='text/javascript'>{0}.error('{1}')</script>".format(callback_target, "上传失败：" + ret['msg'])
 
-	return "<script type='text/javascript'>{0}.success('{1}')</script>".format(callback_target,ret['data']['file_key'] )
+	return "<script type='text/javascript'>{0}.success('{1}')</script>".format(callback_target, ret['data']['file_key'] )
+
 
 def uploadImage():
-	resp = { 'state':'SUCCESS','url':'','title':'','original':'' }
+	resp = {'state': 'SUCCESS', 'url': '', 'title': '', 'original': ''}
 	file_target = request.files
 	upfile = file_target['upfile'] if 'upfile' in file_target else None
 	if upfile is None:
 		resp['state'] = "上传失败"
 		return jsonify(resp)
 
-	ret = UploadService.uploadByFile( upfile )
+	ret = UploadService.uploadByFile(upfile)
 	if ret['code'] != 200:
 		resp['state'] = "上传失败：" + ret['msg']
 		return jsonify(resp)
 
-	resp['url'] = UrlManager.buildImageUrl( ret['data']['file_key'] )
-	return jsonify( resp )
+	resp['url'] = UrlManager.buildImageUrl( ret['data']['file_key'])
+	return jsonify(resp)
+
 
 def listImage():
-	resp = { 'state':'SUCCESS','list':[],'start':0 ,'total':0 }
+	resp = {'state': 'SUCCESS', 'list': [], 'start': 0, 'total': 0}
 
 	req = request.values
 
-	start = int( req['start']) if 'start' in req else 0
-	page_size = int( req['size']) if 'size' in req else 20
+	start = int(req['start']) if 'start' in req else 0
+	page_size = int(req['size']) if 'size' in req else 20
 
 	query = Image.query
 	if start > 0:
-		query = query.filter( Image.id < start )
+		query = query.filter(Image.id < start)
 
-	list = query.order_by( Image.id.desc() ).limit( page_size ).all()
+	list = query.order_by(Image.id.desc()).limit(page_size).all()
 	images = []
 
 	if list:
 		for item in list:
-			images.append( { 'url': UrlManager.buildImageUrl( item.file_key ) } )
+			images.append({'url': UrlManager.buildImageUrl( item.file_key)})
 			start = item.id
 	resp['list'] = images
 	resp['start'] = start
-	resp['total'] = len( images )
-	return jsonify( resp )
+	resp['total'] = len(images)
+	return jsonify(resp)
 

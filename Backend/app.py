@@ -1,6 +1,6 @@
-from Backend.libs.UrlManager import UrlManager
+# -*- coding: utf-8 -*-
 from Backend import create_app
-
+from Backend.libs.UrlManager import UrlManager
 
 if __name__ == '__main__':
     app = create_app()

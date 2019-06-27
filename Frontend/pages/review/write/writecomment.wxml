@@ -1,0 +1,29 @@
+<!--pages/review/write/writecomment.wxml-->
+<!--星星评价-->
+<view class="container">
+<view class='title'>GoGo新天地</view>
+  <view class="comment1-description">
+        <text class="icon-dianzan"></text>
+    <view class="star-pos" style="display:flex;flex-direction:row;">
+      <view class="stars  {{flag>=1? 'on': ''}}" bindtap="changeColor1"></view>
+      <view class="stars  {{flag>=2? 'on': ''}}" bindtap="changeColor2"></view>
+      <view class="stars  {{flag>=3? 'on': ''}}" bindtap="changeColor3"></view>
+      <view class="stars  {{flag>=4? 'on': ''}}" bindtap="changeColor4"></view>
+      <view class="stars  {{flag>=5? 'on': ''}}" bindtap="changeColor5"></view>
+    </view>
+  </view>
+  <view class="line"></view>
+<!--文本域  -->
+  <view class="weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" bindinput="bindTextAreaChange" placeholder="我要提出建议..." style="height: 8em" value="{{info}}" maxlength="{{noteMaxLen}}" focus />
+        <view class="weui-textarea-counter">{{noteNowLen}}/{{noteMaxLen}}</view>
+      </view>
+    </view>
+  </view>
+<!--发布按钮  -->
+  <view class="btnSf">
+    <button bindtap="bindSubmit">发布</button>
+  </view>
+</view>

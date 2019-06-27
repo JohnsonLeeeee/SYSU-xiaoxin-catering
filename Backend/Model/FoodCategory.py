@@ -1,8 +1,11 @@
-# coding: utf-8
-from sqlalchemy import Column, ForeignKey, Integer, String
+# -*- coding:utf-8 -*-
+from sqlalchemy import Column
+from sqlalchemy import ForeignKey
+from sqlalchemy import Integer
+from sqlalchemy import String
 from sqlalchemy.schema import FetchedValue
 from sqlalchemy.orm import relationship
-from ..Model.restaurant import Restaurant
+
 from ..Model.base import Base
 
 

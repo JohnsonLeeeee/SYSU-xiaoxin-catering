@@ -1,16 +1,29 @@
-from flask import render_template, redirect, Blueprint, g
-from flask import request, flash, url_for
-from flask_login import login_user, login_required, logout_user, current_user
+# -*- coding:utf-8 -*-
+from flask import render_template
+from flask import redirect
+from flask import Blueprint
+from flask import g
+from flask import request
+from flask import flash
+from flask import url_for
+from flask_login import login_user
+from flask_login import login_required
+from flask_login import logout_user
+from flask_login import current_user
 
-from ..Form.Auth_admin import RegisterForm, LoginForm, ResetPasswordForm, EmailForm, \
-    ChangePasswordForm
+from ..Form.Auth_admin import RegisterForm
+from ..Form.Auth_admin import LoginForm
+from ..Form.Auth_admin import ResetPasswordForm
+from ..Form.Auth_admin import EmailForm
+from ..Form.Auth_admin import ChangePasswordForm
 from ..Model.administrator import Adminstrator
 from ..Model.restaurant import Restaurant
 from ..Model.base import db
 from ..libs.email import send_email
 
 
-web = Blueprint( 'web',__name__ )
+web = Blueprint('web', __name__)
+
 
 @web.route('/register', methods=['GET', 'POST'])
 def register():
@@ -78,8 +91,9 @@ def forget_password(token):
             flash('你的密码已更新,请使用新密码登录')
             return redirect(url_for('web.login'))
         else:
-            return redirect(url_for('web.index'))
+            return redirect(url_for('index.index'))
     return render_template('auth/forget_password.html')
+
 
 @web.route('/confirmed/<token>', methods=['GET', 'POST'])
 def confirm_user_email(token):

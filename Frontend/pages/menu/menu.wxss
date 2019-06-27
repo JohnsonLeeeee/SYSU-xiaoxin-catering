@@ -5,6 +5,9 @@
   height:80%;
   background:#fff;
 }
+.head{
+  border-bottom: 10px;
+}
 
 .head .name{
   font-size:15px;
@@ -103,14 +106,21 @@
   float:right;
   margin:-10px 10px 0 0;
   padding:5px 10px;
-  font-size:14px;
+  font-size:16px;
   color:#fff;
   background:#FEAB00;
   border-radius:20px;
 }
 
 .item-content .box .item .btn.active{
-  background:#F0F0ED;
+  display:block;
+  float:right;
+  margin:-10px 10px 0 0;
+  padding:5px 10px;
+  font-size:16px;
+  color:#fff;
+  background:rgb(172, 171, 170);
+  border-radius:20px;
 }
 
 .bottom-bar{
@@ -118,7 +128,7 @@
     position: fixed;
     bottom:0;
     width:100%;
-    height:40px;
+    height:50px;
     line-height:50px;
     background:#fff;
     box-shadow: 0 -5px 10px #F0F0ED;
@@ -248,4 +258,8 @@ swiper-item image {
   /* border: 2rpx solid #007bff; */
   background: #FEAB00;
   border-radius: 5px;
+}
+
+address{
+  margin-left: 30rpx;
 }

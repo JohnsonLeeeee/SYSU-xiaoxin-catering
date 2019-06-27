@@ -41,6 +41,7 @@ App({
     Console.log('xialale')
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    urlPath:'http://xiaoxin.com'
   }
 })

@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint,request
-from ..libs.web_help import ops_render,getFormatDate,iPagination,getDictFilterField,selectFilterObj
-from ..Service.Statistics import StatDailySite, StatDailyFood
-from ..Model.administrator import Adminstrator
-from ..Model.Order import Order
-from ..Config.settings import PAGE_DISPLAY, PAGE_SIZE
-from ..Model.Dish import Dish as Food
+from flask import Blueprint
+from flask import request
 import datetime
 
-route_stat = Blueprint( 'stat',__name__, url_prefix="/stat" )
+from ..libs.web_help import ops_render
+from ..libs.web_help import getFormatDate
+from ..libs.web_help import iPagination
+from ..Service.Statistics import StatDailySite
+from ..Service.Statistics import StatDailyFood
+from ..Config.settings import PAGE_DISPLAY
+from ..Config.settings import PAGE_SIZE
 
-@route_stat.route( "/index" )
+route_stat = Blueprint('stat', __name__, url_prefix="/stat")
+
+
+@route_stat.route("/index")
 def index():
     now = datetime.datetime.now()
     date_before_7days = now + datetime.timedelta(days=-7)
@@ -33,19 +37,19 @@ def index():
     }
 
     pages = iPagination(page_params)
-    offset = (page - 1) * PAGE_SIZE
 
     list = query
     resp_data['list'] = list
     resp_data['pages'] = pages
     resp_data['current'] = 'index'
     resp_data['search_con'] = {
-        'date_from':date_from,
-        'date_to':date_to
+        'date_from': date_from,
+        'date_to': date_to
     }
-    return ops_render( "stat/index.html",resp_data )
+    return ops_render("stat/index.html", resp_data)
 
-@route_stat.route( "/food" )
+
+@route_stat.route("/food")
 def food():
     now = datetime.datetime.now()
     date_before_7days = now + datetime.timedelta(days=-7)
@@ -68,7 +72,6 @@ def food():
     }
 
     pages = iPagination(page_params)
-    offset = (page - 1) * PAGE_SIZE
 
     resp_data['list'] = query
     resp_data['pages'] = pages
@@ -77,5 +80,5 @@ def food():
         'date_from': date_from,
         'date_to': date_to
     }
-    return ops_render( "stat/food.html",resp_data  )
+    return ops_render("stat/food.html", resp_data)
 

@@ -1,10 +1,13 @@
-# coding: utf-8
-from sqlalchemy import func, extract
-from datetime import date
+# -*- coding:utf-8 -*-
 import datetime
+from sqlalchemy import func
+from sqlalchemy import extract
+from datetime import date
+
 from Backend.Model.Order import Order
 from Backend.Model.Comment import Comment
 from ..Model.base import db
+
 
 class RestaurantService:
 

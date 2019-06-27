@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint, request, jsonify, redirect
-from ..libs.web_help import ops_render, getCurrentDate, iPagination, getDictFilterField
-from ..Model.base import db
+from flask import Blueprint
+from flask import request
+from sqlalchemy import or_
+
+from ..libs.web_help import ops_render
+from ..libs.web_help import iPagination
 from ..Config import settings
 from ..Model.Order import Order
 from ..Model.user import User
-from sqlalchemy import or_
+
 route_finance = Blueprint('finance', __name__, url_prefix='/finance')
 
 
@@ -21,7 +24,6 @@ def index():
 
     if 'status' in req and int(req['status']) > -1:
         query = query.filter(Order.status == int(req['status']))
-
 
     page_params = {
         'total': query.count(),
