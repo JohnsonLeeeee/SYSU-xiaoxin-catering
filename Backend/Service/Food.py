@@ -1,13 +1,14 @@
-
+# -*- coding:utf-8 -*-
 from ..Model.base import db
 from ..Model.FoodStockChangeLog import FoodStockChangeLog
-from ..Model.Dish import Dish as  Food
+from ..Model.Dish import Dish as Food
 from ..libs.web_help import getCurrentDate
+
 
 class FoodService():
 
     @staticmethod
-    def setStockChangeLog( food_id = 0,quantity = 0,note = '' ):
+    def setStockChangeLog(food_id=0, quantity=0, note=''):
 
         if food_id < 1:
             return False

@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
+import datetime
+import os
+import stat
+import uuid
+
 from werkzeug.utils import secure_filename
+
+from ..Model.Image import Image
 from ..Model.base import db
 from ..libs.web_help import getCurrentDate
-import datetime
-import  os,stat,uuid
-from ..Model.Image import Image
 
 
 UPLOAD = {
@@ -12,6 +16,7 @@ UPLOAD = {
     'prefix_path':'/static/upload/',
     'prefix_url':'/static/upload/'
 }
+
 
 class UploadService():
 	@staticmethod
