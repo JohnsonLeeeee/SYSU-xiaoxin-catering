@@ -13,7 +13,7 @@
             </block>  
         </view>  
    </view>
-<view class="goods-info" data-id ="{{item.id}}">
+<view class="goods-info">
         <view class="goods-title">{{item.title}}</view>
         <view class="goods-price" style="padding-left:35rpx;">¥ {{item.price}}</view>
         <view class="goods-price" style="color:#999;font-size:24rpx;">购买{{item.num}}次</view>

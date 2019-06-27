@@ -7,7 +7,7 @@ Page({
       price: 20,
       active: false,
       num: 1,
-      imgUrl: 'image/item6.jpg'
+      imgUrl: '../menu/image/item6.jpg'
     }]
   }
 })
