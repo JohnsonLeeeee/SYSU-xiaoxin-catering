@@ -1,5 +1,6 @@
+# -*- coding:utf-8 -*-
+import hashlib
 
-import hashlib,base64,random,string
 
 class LoginService():
 

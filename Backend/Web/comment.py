@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
-from flask import Blueprint, request, jsonify
-from ..libs.web_help import ops_render, iPagination
+from flask import Blueprint
+from flask import request
+from flask import jsonify
+from sqlalchemy import or_
+
+from ..libs.web_help import ops_render
+from ..libs.web_help import iPagination
 from ..Config import settings
 from ..Model.Comment import Comment
 from ..Model.base import db
-from sqlalchemy import or_
+
 route_comment = Blueprint('comment', __name__, url_prefix='/comment')
 
 
@@ -41,6 +46,7 @@ def index():
     resp_data['current'] = 'index'
     return ops_render("comment/index.html", resp_data)
 
+
 @route_comment.route("/blacklist")
 def blacklist():
     resp_data = {}
@@ -70,9 +76,9 @@ def blacklist():
     return ops_render("comment/blacklist.html", resp_data)
 
 
-@route_comment.route("/ops",methods=["POST"])
+@route_comment.route("/ops", methods=["POST"])
 def ops():
-    resp = { 'code':200,'msg':'操作成功~~','data':{} }
+    resp = {'code': 200, 'msg': '操作成功~~', 'data': {}}
     req = request.values
 
     id = req['id'] if 'id' in req else 0
@@ -95,7 +101,7 @@ def ops():
 
     db.session.add(comment_info)
     db.session.commit()
-    return jsonify( resp )
+    return jsonify(resp)
 
 
 

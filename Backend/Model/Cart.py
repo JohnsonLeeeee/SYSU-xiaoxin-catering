@@ -1,8 +1,11 @@
-from sqlalchemy import Integer, Column, SmallInteger, FetchedValue, ForeignKey
+# -*- coding:utf-8 -*-
+from sqlalchemy import Integer
+from sqlalchemy import Column
+from sqlalchemy import FetchedValue
+from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
+
 from .base import Base
-from .Dish import Dish
-from .Order import Order
 
 
 class Cart(Base):

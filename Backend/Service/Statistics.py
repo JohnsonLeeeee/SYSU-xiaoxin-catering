@@ -1,6 +1,7 @@
-from .Restaurant import RestaurantService
-from sqlalchemy import func, extract
+# -*- coding:utf-8 -*-
+from sqlalchemy import func
 import datetime
+
 from Backend.Model.Order import Order
 from Backend.Model.Dish import Dish
 from Backend.Model.Cart import Cart
@@ -56,11 +57,11 @@ class StatDailyFood:
         for cart in cartlist:
             oid = cart.orderid
             for item in list:
-                if db.session.query(Order).filter(Order.id == oid).all()[0].pay_time.strftime("%Y-%m-%d") >= date_from \
-                   and db.session.query(Order).filter(Order.id == oid).all()[0].pay_time.strftime("%Y-%m-%d") <= date_to \
-                   and db.session.query(Order).filter(Order.id == oid).all()[0].rid == restaurant_id:
-                    if cart.did == item[0]:
-                        item[3] = item[3] + 1
-                        item[4] += cart.quantity * cart.Dish.price
+                if db.session.query(Order).filter(Order.id == oid).all()[0].pay_time.strftime("%Y-%m-%d") >= date_from:
+                    if db.session.query(Order).filter(Order.id == oid).all()[0].pay_time.strftime("%Y-%m-%d") <= date_to:
+                        if db.session.query(Order).filter(Order.id == oid).all()[0].rid == restaurant_id:
+                            if cart.did == item[0]:
+                                item[3] = item[3] + 1
+                                item[4] += cart.quantity * cart.Dish.price
 
         return list

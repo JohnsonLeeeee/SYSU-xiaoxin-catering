@@ -1,11 +1,19 @@
+# -*- coding:utf-8 -*-
 from flask import current_app
-from sqlalchemy import Column, Integer, ForeignKey, FetchedValue, Boolean, String
-from werkzeug.security import generate_password_hash, check_password_hash
+from sqlalchemy import Column
+from sqlalchemy import Integer
+from sqlalchemy import ForeignKey
+from sqlalchemy import FetchedValue
+from sqlalchemy import Boolean
+from sqlalchemy import String
+from werkzeug.security import generate_password_hash
+from werkzeug.security import check_password_hash
 from sqlalchemy.orm import relationship
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
 from .base import db
-from .user import  User
+from .user import User
+
 
 class Adminstrator(User):
     __tablename__ = 'Adminstrator'
