@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class UrlManager(object):
     def __init__(self):
         pass
@@ -12,10 +13,10 @@ class UrlManager(object):
     def buildStaticUrl(path):
         # release_version = app.config.get( 'RELEASE_VERSION' )
         # ver = "%s"%( int( time.time() ) ) if not release_version else release_version
-        path =  "/static" + path
+        path = "/static" + path
         return UrlManager.buildUrl( path )
 
     @staticmethod
-    def buildImageUrl( path ):
+    def buildImageUrl(path):
         url = "Image/" + path
         return url

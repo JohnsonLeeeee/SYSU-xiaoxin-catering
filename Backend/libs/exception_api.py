@@ -1,4 +1,6 @@
-from flask import request, json
+# -*- coding:utf-8 -*-
+from flask import request
+from flask import json
 from werkzeug.exceptions import HTTPException
 
 
@@ -35,6 +37,7 @@ class APIException(HTTPException):
         full_path = str(request.full_path)
         main_path = full_path.split('?')
         return main_path[0]
+
 
 class Success(APIException):
     code = 201

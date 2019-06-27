@@ -1,10 +1,13 @@
+# -*- coding:utf-8 -*-
 from flask import Blueprint
+
 from . import Dish
 from . import Comment
 from . import Order
 from . import Category
 from . import Coupon
 from . import Restaurant
+
 
 def create_blueprint_v1():
     bp_v1 = Blueprint('v1', __name__)

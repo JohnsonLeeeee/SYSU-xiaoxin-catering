@@ -1,6 +1,9 @@
+# -*- coding:utf-8 -*-
 from threading import Thread
-from flask import current_app, render_template
-from flask_mail import Message,Mail
+from flask import current_app
+from flask import render_template
+from flask_mail import Message
+from flask_mail import Mail
 
 mail = Mail()
 

@@ -1,6 +1,11 @@
+# -*- coding:utf-8 -*-
+from wtforms import StringField
+from wtforms import IntegerField
+from wtforms.validators import DataRequired
+from wtforms.validators import length
+
 from .Base import BaseForm as Form
-from wtforms import StringField, IntegerField, FieldList, FormField
-from wtforms.validators import DataRequired, length, Email, Regexp
+
 
 class CommentForm(Form):
     uid = IntegerField(validators=[DataRequired()])

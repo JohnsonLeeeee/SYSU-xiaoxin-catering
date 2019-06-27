@@ -13,6 +13,7 @@ route_finance = Blueprint('finance', __name__, url_prefix='/finance')
 
 
 @route_finance.route("/index")
+# provide data for /finance/index
 def index():
     resp_data = {}
     req = request.values
@@ -43,5 +44,3 @@ def index():
     resp_data['status_mapping'] = settings.PAY_STATUS_DISPLAY_MAPPING
     resp_data['current'] = 'index'
     return ops_render("finance/index.html", resp_data)
-
-

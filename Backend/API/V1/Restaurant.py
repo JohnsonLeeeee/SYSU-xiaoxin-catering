@@ -1,4 +1,5 @@
-from flask import jsonify, g
+# -*- coding:utf-8 -*-
+from flask import jsonify
 
 from Backend.libs.MyBluePrint import MyBluePrint
 from Backend.libs.auth import auth
@@ -6,6 +7,7 @@ from Backend.Model.restaurant import Restaurant
 from Backend.Viewmodel.Restaurant import RestaurantViewModel
 
 api = MyBluePrint('restaurant')
+
 
 @api.route('/<int:rid>', methods=['GET'])
 @auth.login_required
