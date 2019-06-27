@@ -32,4 +32,3 @@ class Cart(Base):
     # def pending(self, status):
     #     self._pending = status.value
 
-

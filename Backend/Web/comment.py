@@ -14,16 +14,19 @@ route_comment = Blueprint('comment', __name__, url_prefix='/comment')
 
 
 @route_comment.route("/index")
+# provide data for the page /comment/index
 def index():
     resp_data = {}
     req = request.values
     page = int(req['p']) if ('p' in req and req['p']) else 1
     query = Comment.query.filter(Comment.status != -9999)
+    # search bar
     if 'mix_kw' in req:
         rule = or_(Comment.content.ilike("%{0}%".format(req['mix_kw'])), Comment.uid.ilike("%{0}%".format(req['mix_kw'])), Comment.rid.ilike("%{0}%".format(req['mix_kw'])),
                    Comment.status != -9999)
         query = query.filter(rule)
 
+    # select status
     if 'status' in req and int(req['status']) > -1:
         query = query.filter(Comment.status == int(req['status']))
 
@@ -48,6 +51,7 @@ def index():
 
 
 @route_comment.route("/blacklist")
+# provide data for /comment/blacklist
 def blacklist():
     resp_data = {}
     req = request.values
@@ -77,6 +81,7 @@ def blacklist():
 
 
 @route_comment.route("/ops", methods=["POST"])
+# provide data for the POST request to /comment/ops
 def ops():
     resp = {'code': 200, 'msg': '操作成功~~', 'data': {}}
     req = request.values
@@ -102,6 +107,3 @@ def ops():
     db.session.add(comment_info)
     db.session.commit()
     return jsonify(resp)
-
-
-

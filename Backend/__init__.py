@@ -29,6 +29,7 @@ login_manager = LoginManager()
 cache = Cache(config={'CACHE_TYPE': 'simple'})
 
 
+# initialize restaurant
 def create_restaurant(db):
     res = Restaurant()
     res.name = "GOGO"

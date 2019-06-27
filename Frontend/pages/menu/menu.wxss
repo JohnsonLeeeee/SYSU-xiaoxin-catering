@@ -4,9 +4,19 @@
   width:100%;
   height:80%;
   background:#fff;
+  margin-top: 75px;
 }
 .head{
   border-bottom: 10px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0 -5px 10px #F0F0ED;
+  padding: 10px;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 2;
 }
 
 .head .name{
@@ -221,13 +231,11 @@ swiper-item image {
 }
 
 .ziti {
-  position: relative;
-  bottom: 30px;
-  left: 280px;
-  right: 20px;
+  float: right;
   height: 20px;
   width: 80px;
-  margin-bottom: -17px; 
+  margin-top: 20px;
+  margin-right: 30px;
   display: flex; 
   background: #dfdfdf;
   border-radius: 5px;
@@ -259,6 +267,7 @@ swiper-item image {
   background: #FEAB00;
   border-radius: 5px;
 }
+
 
 .address{
   margin-left: 30rpx;

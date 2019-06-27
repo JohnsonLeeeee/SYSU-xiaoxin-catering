@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+import datetime
 from flask import Blueprint
 from flask import jsonify
-import datetime
 
 from ..libs.web_help import getFormatDate
 from ..Service.Statistics import StatDailySite
@@ -10,6 +10,7 @@ route_chart = Blueprint('chart_page', __name__, url_prefix="/chart")
 
 
 @route_chart.route("/dashboard")
+# provide data for chart of order count
 def dashboard():
     now = datetime.datetime.now()
     date_before_7days = now + datetime.timedelta(days=-7)
@@ -39,6 +40,7 @@ def dashboard():
 
 
 @route_chart.route("/finance")
+# provide data for chart of daily income
 def finance():
     now = datetime.datetime.now()
     date_before_7days = now + datetime.timedelta(days=-7)
@@ -65,4 +67,3 @@ def finance():
 
     resp['data'] = data
     return jsonify(resp)
-

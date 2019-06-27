@@ -59,5 +59,19 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
+  }, 
+
+  sendUserInfo: function() {
+    wx.request({
+      url: 'url',
+      method: 'POST',
+      header: {
+        icon: this.data.userInfo.avatarUrl,
+        nickname: this.data.userInfo.nickName
+      },
+      success(res) {
+        console.log(res);
+      }
+    })
+  }
 })

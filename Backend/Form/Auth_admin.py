@@ -1,6 +1,13 @@
-from wtforms import StringField, PasswordField, Form, IntegerField
-from wtforms.validators import Length, Email, \
-    ValidationError, EqualTo
+# -*- coding:utf-8 -*-
+from wtforms import StringField
+from wtforms import PasswordField
+from wtforms import Form
+from wtforms import IntegerField
+from wtforms.validators import Length
+from wtforms.validators import Email
+from wtforms.validators import ValidationError
+from wtforms.validators import EqualTo
+
 from .Base import DataRequired
 from ..Model.user import User
 from ..Model.restaurant import Restaurant

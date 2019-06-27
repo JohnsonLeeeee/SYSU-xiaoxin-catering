@@ -1,7 +1,8 @@
+# -*- coding:utf-8 -*-
+from flask import jsonify
+from datetime import datetime
 
-from flask import jsonify, g
-
-from Backend.libs.exception_api import  Success
+from Backend.libs.exception_api import Success
 from Backend.libs.MyBluePrint import MyBluePrint
 from Backend.libs.auth import auth
 from Backend.Model.base import db
@@ -9,11 +10,11 @@ from Backend.Model.Cart import Cart
 from Backend.Model.Order import Order
 from Backend.Form.Order import OrderForm
 from Backend.Viewmodel.Order import OrderViewModel
-from datetime import datetime
 
 api = MyBluePrint('order')
 
-@api.route('/<int:rid>', methods=['PUT','POST'])
+
+@api.route('/<int:rid>', methods=['PUT', 'POST'])
 @auth.login_required
 def create_order(rid):
     orderinfo = OrderForm().validate_for_api()
@@ -26,7 +27,7 @@ def create_order(rid):
         pay_price = orderinfo.total_price.data - orderinfo.coupon_discount.data
         order.pay_price = pay_price
         order.pay_time = datetime.now()
-        order.note=orderinfo.note.data
+        order.note = orderinfo.note.data
         order.rid = rid
         db.session.add(order)
 
@@ -40,12 +41,14 @@ def create_order(rid):
             db.session.add(cart)
     return Success()
 
+
 @api.route('/<int:rid>/<int:uid>', methods=['GET'])
 @auth.login_required
-def history_order(rid,uid):
-    orders = Order.query.filter_by(rid=rid,uid=uid).all()
+def history_order(rid, uid):
+    orders = Order.query.filter_by(rid=rid, uid=uid).all()
     list = [OrderViewModel.order(i) for i in orders]
     order_total_prices = [OrderViewModel.total_price(i) for i in orders]
     order_pay_prices = [OrderViewModel.pay_price(i) for i in orders]
     order_times = [OrderViewModel.create_time(i) for i in orders]
-    return jsonify(orders = list, create_time=order_times, tota_prices= order_total_prices,pay_prices=order_pay_prices, number = len(list))
+    return jsonify(orders=list, create_time=order_times, tota_prices=order_total_prices, pay_prices=order_pay_prices,
+                   number=len(list))
