@@ -33,6 +33,16 @@ Page({
           price: 20.0, 
           quantity: 1
         }]
+    ],
+    create_time: [
+      "2019-06-25T15:59:28",
+      "2019-06-25T15:59:55",
+      "2019-06-25T16:00:34"
+    ],
+    pay_prices: [
+      30,
+      60,
+      35
     ]
   },
 
@@ -119,6 +129,23 @@ Page({
   gotomenu: function () {
     wx.navigateTo({
       url: '../menu/menu'
+    })
+  },
+  showtoast: function () {
+    wx.showModal({
+      title: '提示',
+      content: '服务员马上就到~',
+      success: function (res) {
+        // 至少选中一个商品才能支付
+        if (res.confirm) {
+          wx.showToast({
+            title: '谢谢理解',
+            duration: 2000
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
     })
   }
 })
