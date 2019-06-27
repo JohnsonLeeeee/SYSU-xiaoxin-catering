@@ -1,16 +1,14 @@
-
-from collections import namedtuple
-
+# -*- coding:utf-8 -*-
+import json
+import requests
 from flask import g
+from collections import namedtuple
 from flask_httpauth import HTTPBasicAuth
 
+from ..Config.settings import MINA_APP
 
 auth = HTTPBasicAuth()
 User = namedtuple('User', ['uid', 'ac_type', 'scope'])
-
-
-import hashlib,requests,random,string,json
-from ..Config.settings import MINA_APP
 
 
 def getWeChatOpenId(code):
