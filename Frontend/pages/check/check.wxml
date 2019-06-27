@@ -1,5 +1,10 @@
 <view class="location">
+<view class="location_icon">
+<text class="iconfont icon-location"></text> 
+</view>
   <text class="head">广州大学城gogo新天地店\n</text>
+</view>
+<view class="little">
   <text class="body">广东省广州市番禺区中环东路</text>
 </view>
 <view class="takeaway"> 
@@ -23,7 +28,7 @@
   <view class="item-content">
     <view class="box">
       <view class="item" wx:for="{{items}}" wx:key="{{item.id}}">
-        <image src="image/item-m.jpg"></image>
+        <image src="../menu/image/item{{item.id}}.jpg"></image>
         <text class="title">{{item.title}}</text>
         <text class="price">￥ {{item.price}} </text>
         <view class="opera">
