@@ -27,7 +27,7 @@
 .item-content .box .item image{
   display:block;
   float:left;
-  height:80px;
+  height:60px;
   width:90px;
   margin-right:10px;
 }

@@ -102,6 +102,7 @@ Page({
     });
     //requestmenudata(index);//获取对应类别菜单
   },
+  
   // 点击去购物车结账
   card: function () {
     let that = this;

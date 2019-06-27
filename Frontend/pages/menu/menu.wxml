@@ -38,8 +38,9 @@
           <text class="title" bindtap='tapTo'>{{item.title}}</text>
           <text class="summary" bindtap='tapTo'>{{item.summary}}</text>
           <text class="price" bindtap='tapTo'>￥{{item.price}} </text>
+          
         </view>
-        <text class="{{item.active ? 'btn active' : 'btn'}}" bindtap='addOrder' data-id="{{item.id}}" data-index="{{index}}">购买</text>
+        <text class="{{item.active ? 'btn active' : 'btn'}}" bindtap='addOrder' data-id="{{item.id}}" data-index="{{index}}">加入购物车</text>
       </view>
     </view>
   </view>
@@ -55,6 +56,7 @@
     <view class="btn">
         <text class="iconfont icon-cart"></text>
         <text bindtap='card'>  购物车</text>
+        <text class="countnum"> {{orderCount.num}}</text>
     </view>
     <view class="btr">
      <text class="iconfont icon-comment"></text>

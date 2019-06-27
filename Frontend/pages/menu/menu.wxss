@@ -155,7 +155,7 @@
 .bottom-bar .btn{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height:40px;
-    width:50px;
+    width:60px;
     margin:20px 10px 0 0;
     color:rgb(7, 7, 7);
     line-height:10px;
@@ -268,6 +268,14 @@ swiper-item image {
   border-radius: 5px;
 }
 
-address{
-  margin-left: 20px;
+
+.address{
+  margin-left: 30rpx;
+}
+
+.countnum{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: bold;
+  color: rgb(177, 177, 49);
+  font-size: 25px;
 }
