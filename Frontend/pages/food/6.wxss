@@ -133,4 +133,19 @@ swiper-item image {
 .des-imgs image{
   width: 100%;
 }
-/* pages/food/6.wxss */
+
+.but {
+  margin-top: 10px;
+  margin-right: 20px;
+  background: #FEAB00;
+}
+
+.write {
+  margin: 0px;
+  background: #ffffff;
+  box-shadow: 0 -5px 10px #ccc;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+}

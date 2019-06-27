@@ -1,11 +1,12 @@
 <view class="out_head">
 <view class='title'>所有订单</view>
 <text class="number">(10)</text>
+<text class="iconfont icon-hujiao:before" bindtap='showtoast'></text>
 </view>
 <view wx:for="{{orders}}" class='orders' wx:for-item='outter' wx:for-index='index'>
  <view class="head">
   <!-- <text class="head_1">总价：</text> -->
-  <text class="head_2">支付于：</text>
+  <text class="head_2">支付于：{{create_time[index]}}</text>
     </view>
   <!--<text class='itemtitle'>订单 {{index+1}}\n</text>!-->
   <view wx:for='{{outter}}' class='list' wx:for-item='inner'>
@@ -14,7 +15,7 @@
     <text class='price'>  价格: ￥{{inner.price}} \n × {{inner.quantity}}</text>
   </view>
   <text class='state'>订单状态: 已完成</text>
-  <text class="total_price">总价： </text>
+  <text class="total_price">总价： {{pay_prices[index]}}</text>
   <button class='another' bindtap='gotomenu'>再来一单</button>
   <view class="line"></view>
 </view>
