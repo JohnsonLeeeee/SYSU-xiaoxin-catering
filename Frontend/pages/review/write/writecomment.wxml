@@ -1,7 +1,10 @@
 <!--pages/review/write/writecomment.wxml-->
 <!--星星评价-->
 <view class="container">
+<view class="head">
+<text class="iconfont icon-location" style="top:80rpx;left:10px;"></text>
 <view class='title'>GoGo新天地</view>
+</view>
   <view class="comment1-description">
     <view class="star-pos" style="display:flex;flex-direction:row;">
       <view class="stars  {{flag>=1? 'on': ''}}" bindtap="changeColor1"></view>
