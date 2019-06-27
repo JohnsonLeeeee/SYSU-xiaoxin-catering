@@ -10,5 +10,10 @@ Page({
       num: 1,
       imgUrl:'../menu/image/item1.jpg'
     }]
+  },
+  propagate: function(){
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   }
   })
