@@ -13,7 +13,7 @@
             </block>  
         </view>  
    </view>
-<view class="goods-info" data-id ="{{item.id}}">
+<view class="goods-info" wx:for="{{items}}" wx:key="e.currentTarget.dataset.id">
         <view class="goods-title">{{item.title}}</view>
         <view class="goods-price" style="padding-left:35rpx;">¥ {{item.price}}</view>
         <view class="goods-haoping" style="color:#999;font-size:24rpx;float:right;">共收到 {{item.num}} 次好评</view>
