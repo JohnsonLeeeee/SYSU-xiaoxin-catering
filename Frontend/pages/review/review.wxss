@@ -5,19 +5,21 @@
 }
 .user {
   height: 100%;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
-  color: black;
-  margin-top: 0;
+  color: #000000;
+  margin-top: 0px;
   padding-top: 0;
+  margin-left: -80px;
+  
 }
 .comment {
   font-size: 16px;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 .icon {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   margin-right: 10px;
   border-radius:50%;
 }
@@ -27,7 +29,6 @@
   padding: 0px;
   margin: 5px;
   width: 100%;
-  height: 100%;
   /* border: hidden; */
 }
 
@@ -47,6 +48,7 @@ view {
   margin-top: 0px;
   padding: 5px;
   border: black,solid,5px;
+  box-shadow: 0 0 10px #cef8ff;
 }
 
 .submit {
@@ -70,42 +72,43 @@ view {
 }
 .stars{
     background:url("https://gitee.com/zhuyz3/images/raw/master/star-dark.jpg");
-    margin: 5px;
-    width: 34rpx;
-    height: 34rpx;
-    background-size: 34rpx 34rpx;
+    margin: 3px;
+    width: 20rpx;
+    height: 20rpx;
+    background-size: 20rpx 20rpx;
     transition: 600ms;
 }
 .on{
     background:url("https://gitee.com/zhuyz3/images/raw/master/star.jpg");
-    margin: 5px;
-    width: 34rpx;
-    height: 34rpx;
-    background-size: 34rpx 34rpx;
+    margin: 3px;
+    width: 20rpx;
+    height: 20rpx;
+    background-size: 20rpx 20rpx;
     transition: 1s;
     transform: scale(1,1)
 }
-
 .comment1-description{
-  padding:-270px;
+  padding:0px;
   display:flex;
   flex-direction:row;
   height: 22px;
   margin: 0px;
   float: right;
+  margin-top: -10px;
+  margin-left: -15px;
+}
+
+.usrbox {
+  justify-content: space-between;
 }
 
 .usrbox .score{
-  /* text-align: left; */
-  font-size: 12pt;
+  text-align: left;
+  font-size: 8pt;
   color: grey;
-  padding:-70px;
-  display:flex;
-  flex-direction:row;
-  height: 100%;
-  margin-top: 60px;
-  /* padding-left: -2800px;
-  padding-right: -200px; */
+  margin-top: 40px;
+  padding-left: -2800px;
+  padding-right: -200px;
 }
 .head{
  height:100%;
@@ -126,4 +129,20 @@ display:flex;
 flex-direction:row;
 border: 5px, outset, #D8D8D8;
 background-color: #D8D8D8;
+}
+
+.rightbox {
+  float: right;
+  flex-direction: row;
+  margin-right: 0px;
+  text-align: center;
+  align-content: center;
+  height: 100%
+}
+
+.leftbox {
+  flex-direction: row;
+  margin-left: 0px;
+  text-align: center;
+  align-content: center;
 }
