@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 from flask import jsonify
 
 from Backend.libs.MyBluePrint import MyBluePrint
