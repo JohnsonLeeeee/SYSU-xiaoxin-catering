@@ -2,10 +2,6 @@
 
 <view class="indexcontainer">
  <view class="background">
-  <text class="userinfo-nickname" bindtap="gotomenu">亲爱的 {{userInfo.nickName}}</text>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
   <view class="loc">
     <image url='http://ww1.sinaimg.cn/large/006tNc79ly1g4eo8ccejcg309r09rke1.gif'></image>
     <text> </text>

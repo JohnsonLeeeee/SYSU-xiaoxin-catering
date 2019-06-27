@@ -6,10 +6,10 @@ Page({
   data: {
     currentSelectType: 'ziti',
     imgUrls: [
-      'https://gitee.com/Johnsonleeeee/image/raw/master/test2.jpg',
-      'https://gitee.com/Johnsonleeeee/image/raw/master/test3.jpg',
-      'https://gitee.com/Johnsonleeeee/image/raw/master/test4.jpg',
-      'https://gitee.com/Johnsonleeeee/image/raw/master/test5.jpg'
+      'image/item11.jpg',
+      'image/item12.jpg',
+      'image/item13.jpg'
+      
     ],
     indicatorDots: true, //是否显示面板指示点
     autoplay: true, //是否自动切换
@@ -31,10 +31,10 @@ Page({
       id: 1,
       menu: 'type 1'
     }, {
-      id: 1,
+      id: 4,
       menu: 'type 2'
     }, {
-      id: 1,
+      id: 6,
       menu: 'type 3'
     }, {
       id: 1,
@@ -52,44 +52,44 @@ Page({
     // 商品列表
     items: [{
       id: 1,
-      title: 'dish 1',
+      title: '茶香排骨',
       price: 11,
       active: false,
       num: 1
     }, {
       id: 2,
-      title: 'dish 2',
+      title: '番茄鸡肉丸',
       price: 12,
       active: false,
       num: 1
     }, {
       id: 3,
-      title: 'dish 3',
+      title: '耳光炒饭',
       price: 15,
       active: false,
       num: 1
 
     }, {
       id: 4,
-      title: 'dish 4',
+      title: '柠檬百香果',
       price: 18,
       active: false,
       num: 1
     }, {
       id: 5,
-      title: 'dish 5',
+      title: '满杯红柚',
       price: 19,
       active: false,
       num: 1
     }, {
       id: 6,
-      title: 'dish 6',
+      title: '雪花酥',
       price: 20,
       active: false,
       num: 1
     }, {
       id: 7,
-      title: 'dish 7',
+      title: '芒果冰淇凌',
       price: 21,
       active: false,
       num: 1

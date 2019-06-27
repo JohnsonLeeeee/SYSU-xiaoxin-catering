@@ -1,9 +1,13 @@
 <!--pages/review/review.wxml-->
-<view class='title'>所有评价: </view>
+<view class="head">
+<view class='title'>网友点评</view>
+<text class="number">(10)</text>
+</view>
 <view wx:for="{{reviews}}" class='review'>
   <view class='usrbox'>
     <image class='icon' src='{{item.image}}'></image>
-    <text class='user'>用户: {{item.uname}}</text>
+    <text class='user'>{{item.uname}}</text>
+    <text class="score"> 打分：</text>
     <view class="comment1-description">
       <view class="star-pos" style="display:flex;flex-direction:row;">
         <view class="stars  {{item.flag>=1? 'on': ''}}"></view>
@@ -14,8 +18,9 @@
       </view>
     </view>
   </view>
-  
+  <text class="iconfont icon-pen"></text>
   <text class='comment'>评价: {{item.comment}}</text>
+  <view class='line'></view>
 </view>
 
 <view class='write'>

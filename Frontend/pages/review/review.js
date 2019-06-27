@@ -20,7 +20,22 @@ Page({
       flag:5,
       image: 'image/item-m.jpg',
       comment: 'I like this one'
-    }],
+      }, {
+        uname: 'USER1',
+        flag: 4,
+        image: 'image/item-m.jpg',
+        comment: 'A nice canteen!'
+      }, {
+        uname: 'USER2',
+        flag: 3,
+        image: 'image/item-m.jpg',
+        comment: 'It\'s quite far from home...yet I appreciate the cook here!'
+      }, {
+        uname: 'USER3',
+        flag: 5,
+        image: 'image/item-m.jpg',
+        comment: 'I like this one'
+      }],
     tempcomment: ''
   },
 
