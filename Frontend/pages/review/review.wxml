@@ -5,20 +5,25 @@
 </view>
 <view wx:for="{{reviews}}" class='review'>
   <view class='usrbox'>
-    <image class='icon' src='{{item.image}}'></image>
-    <text class='user'>{{item.uname}}</text>
-    <text class="score"> 打分：</text>
-    <view class="comment1-description">
-      <view class="star-pos" style="display:flex;flex-direction:row;">
-        <view class="stars  {{item.flag>=1? 'on': ''}}"></view>
-        <view class="stars  {{item.flag>=2? 'on': ''}}"></view>
-        <view class="stars  {{item.flag>=3? 'on': ''}}"></view>
-        <view class="stars  {{item.flag>=4? 'on': ''}}"></view>
-        <view class="stars  {{item.flag>=5? 'on': ''}}"></view>
+    
+      <image class='icon' src='{{item.image}}'></image>
+      <text class='user'>{{item.uname}}</text>
+   
+    <view class='rightbox'>
+      <text class="score"> 打分：</text>
+      <view class="comment1-description">
+        <view class="star-pos" style="display:flex;flex-direction:row;">
+          <view class="stars  {{item.flag>=1? 'on': ''}}"></view>
+          <view class="stars  {{item.flag>=2? 'on': ''}}"></view>
+          <view class="stars  {{item.flag>=3? 'on': ''}}"></view>
+          <view class="stars  {{item.flag>=4? 'on': ''}}"></view>
+          <view class="stars  {{item.flag>=5? 'on': ''}}"></view>
+        </view>
       </view>
     </view>
+    
   </view>
-  <!-- <text class="iconfont icon-pen"></text> -->
+  <text class="iconfont icon-pen"></text>
   <text class='comment'>评价: {{item.comment}}</text>
   <view class='line'></view>
 </view>
