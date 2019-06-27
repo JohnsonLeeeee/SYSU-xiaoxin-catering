@@ -17,11 +17,7 @@
         <view class="goods-title">{{item.title}}</view>
         <view class="goods-price" style="padding-left:35rpx;">¥ {{item.price}}</view>
         <view class="goods-haoping" style="color:#999;font-size:24rpx;float:right;">共收到 {{item.num}} 次好评</view>
-        <!-- <view class="goods-info-fx">
-          <image src="https://gitee.com/Johnsonleeeee/image/raw/master/641561552254_.pic.jpg" />
-          <button open-type="share">分享</button>
-          <text>分享一下</text>
-        </view> -->
+        
    </view>
     <view class="goods-des-info">
         <view class="label-title">美食介绍</view>
@@ -31,6 +27,6 @@
     </view>
     <view class='write'>
   
-  <button class='but' bindtap='addOrder'>分享一下</button>
+  <button class='but' open-type="share">分享一下</button>
 </view>
 </view>

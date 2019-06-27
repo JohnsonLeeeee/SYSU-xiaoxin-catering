@@ -13,16 +13,11 @@
             </block>  
         </view>  
    </view>
-<view class="goods-info">
+<view class="goods-info" data-id ="{{item.id}}">
         <view class="goods-title">{{item.title}}</view>
         <view class="goods-price" style="padding-left:35rpx;">¥ {{item.price}}</view>
-        <view class="goods-price" style="color:#999;font-size:24rpx;">购买{{item.num}}次</view>
-        <view class="goods-price" style="color:#999;font-size:24rpx;">共收到 {{item.num}} 次好评</view>
-        <view class="goods-info-fx">
-          <image src="https://gitee.com/Johnsonleeeee/image/raw/master/641561552254_.pic.jpg" />
-          <button open-type="share">分享</button>
-          <text>分享一下</text>
-        </view>
+        <view class="goods-haoping" style="color:#999;font-size:24rpx;float:right;">共收到 {{item.num}} 次好评</view>
+        
    </view>
     <view class="goods-des-info">
         <view class="label-title">美食介绍</view>
@@ -30,5 +25,8 @@
             <text>这是一份美味的食物</text>
          </view>
     </view>
-    <button class="but" bindtap="addOrder">加入购物车</button>
+    <view class='write'>
+  
+  <button class='but' open-type="share">分享一下</button>
+</view>
 </view>

@@ -29,26 +29,15 @@ Page({
     orders: true,
     menus: [{
       id: 1,
-      menu: 'type 1'
+      menu: '招牌简餐'
     }, {
       id: 4,
-      menu: 'type 2'
+      menu: '佐餐饮品'
     }, {
       id: 6,
-      menu: 'type 3'
-    }, {
-      id: 1,
-      menu: 'type 4'
-    }, {
-      id: 1,
-      menu: 'type 5'
-    }, {
-      id: 1,
-      menu: 'type 6'
-    }, {
-      id: 1,
-      menu: 'type 7'
-    }],
+      menu: '甜点小食'
+    }
+    ],
     // 商品列表
     items: [{
       id: 1,
